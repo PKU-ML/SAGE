@@ -1,0 +1,466 @@
+{
+  "benchmark": "pusht",
+  "dataset": "pusht_expert_train.lance",
+  "eval_split": "test",
+  "goal_offset_steps": 100,
+  "image_size": 224,
+  "num_eval": 50,
+  "num_valid_starts": 54466,
+  "protocol_id": "sage-paper-v1",
+  "records": [
+    {
+      "episode_id": 1398,
+      "goal_frame": 141,
+      "goal_offset_steps": 100,
+      "local_episode": 1398,
+      "record_id": "test_ep1398_s0041_g0141",
+      "split": "test",
+      "start_frame": 41
+    },
+    {
+      "episode_id": 1536,
+      "goal_frame": 136,
+      "goal_offset_steps": 100,
+      "local_episode": 1536,
+      "record_id": "test_ep1536_s0036_g0136",
+      "split": "test",
+      "start_frame": 36
+    },
+    {
+      "episode_id": 2028,
+      "goal_frame": 125,
+      "goal_offset_steps": 100,
+      "local_episode": 2028,
+      "record_id": "test_ep2028_s0025_g0125",
+      "split": "test",
+      "start_frame": 25
+    },
+    {
+      "episode_id": 2075,
+      "goal_frame": 104,
+      "goal_offset_steps": 100,
+      "local_episode": 2075,
+      "record_id": "test_ep2075_s0004_g0104",
+      "split": "test",
+      "start_frame": 4
+    },
+    {
+      "episode_id": 2241,
+      "goal_frame": 104,
+      "goal_offset_steps": 100,
+      "local_episode": 2241,
+      "record_id": "test_ep2241_s0004_g0104",
+      "split": "test",
+      "start_frame": 4
+    },
+    {
+      "episode_id": 2250,
+      "goal_frame": 133,
+      "goal_offset_steps": 100,
+      "local_episode": 2250,
+      "record_id": "test_ep2250_s0033_g0133",
+      "split": "test",
+      "start_frame": 33
+    },
+    {
+      "episode_id": 2960,
+      "goal_frame": 158,
+      "goal_offset_steps": 100,
+      "local_episode": 2960,
+      "record_id": "test_ep2960_s0058_g0158",
+      "split": "test",
+      "start_frame": 58
+    },
+    {
+      "episode_id": 3290,
+      "goal_frame": 102,
+      "goal_offset_steps": 100,
+      "local_episode": 3290,
+      "record_id": "test_ep3290_s0002_g0102",
+      "split": "test",
+      "start_frame": 2
+    },
+    {
+      "episode_id": 3725,
+      "goal_frame": 112,
+      "goal_offset_steps": 100,
+      "local_episode": 3725,
+      "record_id": "test_ep3725_s0012_g0112",
+      "split": "test",
+      "start_frame": 12
+    },
+    {
+      "episode_id": 4042,
+      "goal_frame": 106,
+      "goal_offset_steps": 100,
+      "local_episode": 4042,
+      "record_id": "test_ep4042_s0006_g0106",
+      "split": "test",
+      "start_frame": 6
+    },
+    {
+      "episode_id": 4668,
+      "goal_frame": 159,
+      "goal_offset_steps": 100,
+      "local_episode": 4668,
+      "record_id": "test_ep4668_s0059_g0159",
+      "split": "test",
+      "start_frame": 59
+    },
+    {
+      "episode_id": 5138,
+      "goal_frame": 135,
+      "goal_offset_steps": 100,
+      "local_episode": 5138,
+      "record_id": "test_ep5138_s0035_g0135",
+      "split": "test",
+      "start_frame": 35
+    },
+    {
+      "episode_id": 6912,
+      "goal_frame": 101,
+      "goal_offset_steps": 100,
+      "local_episode": 6912,
+      "record_id": "test_ep6912_s0001_g0101",
+      "split": "test",
+      "start_frame": 1
+    },
+    {
+      "episode_id": 7359,
+      "goal_frame": 112,
+      "goal_offset_steps": 100,
+      "local_episode": 7359,
+      "record_id": "test_ep7359_s0012_g0112",
+      "split": "test",
+      "start_frame": 12
+    },
+    {
+      "episode_id": 8243,
+      "goal_frame": 117,
+      "goal_offset_steps": 100,
+      "local_episode": 8243,
+      "record_id": "test_ep8243_s0017_g0117",
+      "split": "test",
+      "start_frame": 17
+    },
+    {
+      "episode_id": 8836,
+      "goal_frame": 130,
+      "goal_offset_steps": 100,
+      "local_episode": 8836,
+      "record_id": "test_ep8836_s0030_g0130",
+      "split": "test",
+      "start_frame": 30
+    },
+    {
+      "episode_id": 8881,
+      "goal_frame": 113,
+      "goal_offset_steps": 100,
+      "local_episode": 8881,
+      "record_id": "test_ep8881_s0013_g0113",
+      "split": "test",
+      "start_frame": 13
+    },
+    {
+      "episode_id": 8919,
+      "goal_frame": 138,
+      "goal_offset_steps": 100,
+      "local_episode": 8919,
+      "record_id": "test_ep8919_s0038_g0138",
+      "split": "test",
+      "start_frame": 38
+    },
+    {
+      "episode_id": 8944,
+      "goal_frame": 119,
+      "goal_offset_steps": 100,
+      "local_episode": 8944,
+      "record_id": "test_ep8944_s0019_g0119",
+      "split": "test",
+      "start_frame": 19
+    },
+    {
+      "episode_id": 9113,
+      "goal_frame": 101,
+      "goal_offset_steps": 100,
+      "local_episode": 9113,
+      "record_id": "test_ep9113_s0001_g0101",
+      "split": "test",
+      "start_frame": 1
+    },
+    {
+      "episode_id": 9113,
+      "goal_frame": 110,
+      "goal_offset_steps": 100,
+      "local_episode": 9113,
+      "record_id": "test_ep9113_s0010_g0110",
+      "split": "test",
+      "start_frame": 10
+    },
+    {
+      "episode_id": 10355,
+      "goal_frame": 103,
+      "goal_offset_steps": 100,
+      "local_episode": 10355,
+      "record_id": "test_ep10355_s0003_g0103",
+      "split": "test",
+      "start_frame": 3
+    },
+    {
+      "episode_id": 10473,
+      "goal_frame": 100,
+      "goal_offset_steps": 100,
+      "local_episode": 10473,
+      "record_id": "test_ep10473_s0000_g0100",
+      "split": "test",
+      "start_frame": 0
+    },
+    {
+      "episode_id": 10656,
+      "goal_frame": 148,
+      "goal_offset_steps": 100,
+      "local_episode": 10656,
+      "record_id": "test_ep10656_s0048_g0148",
+      "split": "test",
+      "start_frame": 48
+    },
+    {
+      "episode_id": 10889,
+      "goal_frame": 116,
+      "goal_offset_steps": 100,
+      "local_episode": 10889,
+      "record_id": "test_ep10889_s0016_g0116",
+      "split": "test",
+      "start_frame": 16
+    },
+    {
+      "episode_id": 11100,
+      "goal_frame": 115,
+      "goal_offset_steps": 100,
+      "local_episode": 11100,
+      "record_id": "test_ep11100_s0015_g0115",
+      "split": "test",
+      "start_frame": 15
+    },
+    {
+      "episode_id": 12309,
+      "goal_frame": 119,
+      "goal_offset_steps": 100,
+      "local_episode": 12309,
+      "record_id": "test_ep12309_s0019_g0119",
+      "split": "test",
+      "start_frame": 19
+    },
+    {
+      "episode_id": 12409,
+      "goal_frame": 117,
+      "goal_offset_steps": 100,
+      "local_episode": 12409,
+      "record_id": "test_ep12409_s0017_g0117",
+      "split": "test",
+      "start_frame": 17
+    },
+    {
+      "episode_id": 12568,
+      "goal_frame": 115,
+      "goal_offset_steps": 100,
+      "local_episode": 12568,
+      "record_id": "test_ep12568_s0015_g0115",
+      "split": "test",
+      "start_frame": 15
+    },
+    {
+      "episode_id": 12805,
+      "goal_frame": 108,
+      "goal_offset_steps": 100,
+      "local_episode": 12805,
+      "record_id": "test_ep12805_s0008_g0108",
+      "split": "test",
+      "start_frame": 8
+    },
+    {
+      "episode_id": 13107,
+      "goal_frame": 104,
+      "goal_offset_steps": 100,
+      "local_episode": 13107,
+      "record_id": "test_ep13107_s0004_g0104",
+      "split": "test",
+      "start_frame": 4
+    },
+    {
+      "episode_id": 13139,
+      "goal_frame": 148,
+      "goal_offset_steps": 100,
+      "local_episode": 13139,
+      "record_id": "test_ep13139_s0048_g0148",
+      "split": "test",
+      "start_frame": 48
+    },
+    {
+      "episode_id": 13272,
+      "goal_frame": 110,
+      "goal_offset_steps": 100,
+      "local_episode": 13272,
+      "record_id": "test_ep13272_s0010_g0110",
+      "split": "test",
+      "start_frame": 10
+    },
+    {
+      "episode_id": 13447,
+      "goal_frame": 117,
+      "goal_offset_steps": 100,
+      "local_episode": 13447,
+      "record_id": "test_ep13447_s0017_g0117",
+      "split": "test",
+      "start_frame": 17
+    },
+    {
+      "episode_id": 14014,
+      "goal_frame": 146,
+      "goal_offset_steps": 100,
+      "local_episode": 14014,
+      "record_id": "test_ep14014_s0046_g0146",
+      "split": "test",
+      "start_frame": 46
+    },
+    {
+      "episode_id": 14017,
+      "goal_frame": 139,
+      "goal_offset_steps": 100,
+      "local_episode": 14017,
+      "record_id": "test_ep14017_s0039_g0139",
+      "split": "test",
+      "start_frame": 39
+    },
+    {
+      "episode_id": 14212,
+      "goal_frame": 102,
+      "goal_offset_steps": 100,
+      "local_episode": 14212,
+      "record_id": "test_ep14212_s0002_g0102",
+      "split": "test",
+      "start_frame": 2
+    },
+    {
+      "episode_id": 14420,
+      "goal_frame": 101,
+      "goal_offset_steps": 100,
+      "local_episode": 14420,
+      "record_id": "test_ep14420_s0001_g0101",
+      "split": "test",
+      "start_frame": 1
+    },
+    {
+      "episode_id": 14475,
+      "goal_frame": 145,
+      "goal_offset_steps": 100,
+      "local_episode": 14475,
+      "record_id": "test_ep14475_s0045_g0145",
+      "split": "test",
+      "start_frame": 45
+    },
+    {
+      "episode_id": 14492,
+      "goal_frame": 125,
+      "goal_offset_steps": 100,
+      "local_episode": 14492,
+      "record_id": "test_ep14492_s0025_g0125",
+      "split": "test",
+      "start_frame": 25
+    },
+    {
+      "episode_id": 15236,
+      "goal_frame": 140,
+      "goal_offset_steps": 100,
+      "local_episode": 15236,
+      "record_id": "test_ep15236_s0040_g0140",
+      "split": "test",
+      "start_frame": 40
+    },
+    {
+      "episode_id": 15656,
+      "goal_frame": 140,
+      "goal_offset_steps": 100,
+      "local_episode": 15656,
+      "record_id": "test_ep15656_s0040_g0140",
+      "split": "test",
+      "start_frame": 40
+    },
+    {
+      "episode_id": 15707,
+      "goal_frame": 154,
+      "goal_offset_steps": 100,
+      "local_episode": 15707,
+      "record_id": "test_ep15707_s0054_g0154",
+      "split": "test",
+      "start_frame": 54
+    },
+    {
+      "episode_id": 15980,
+      "goal_frame": 143,
+      "goal_offset_steps": 100,
+      "local_episode": 15980,
+      "record_id": "test_ep15980_s0043_g0143",
+      "split": "test",
+      "start_frame": 43
+    },
+    {
+      "episode_id": 15980,
+      "goal_frame": 153,
+      "goal_offset_steps": 100,
+      "local_episode": 15980,
+      "record_id": "test_ep15980_s0053_g0153",
+      "split": "test",
+      "start_frame": 53
+    },
+    {
+      "episode_id": 16138,
+      "goal_frame": 110,
+      "goal_offset_steps": 100,
+      "local_episode": 16138,
+      "record_id": "test_ep16138_s0010_g0110",
+      "split": "test",
+      "start_frame": 10
+    },
+    {
+      "episode_id": 16181,
+      "goal_frame": 212,
+      "goal_offset_steps": 100,
+      "local_episode": 16181,
+      "record_id": "test_ep16181_s0112_g0212",
+      "split": "test",
+      "start_frame": 112
+    },
+    {
+      "episode_id": 17078,
+      "goal_frame": 122,
+      "goal_offset_steps": 100,
+      "local_episode": 17078,
+      "record_id": "test_ep17078_s0022_g0122",
+      "split": "test",
+      "start_frame": 22
+    },
+    {
+      "episode_id": 17750,
+      "goal_frame": 106,
+      "goal_offset_steps": 100,
+      "local_episode": 17750,
+      "record_id": "test_ep17750_s0006_g0106",
+      "split": "test",
+      "start_frame": 6
+    },
+    {
+      "episode_id": 17818,
+      "goal_frame": 116,
+      "goal_offset_steps": 100,
+      "local_episode": 17818,
+      "record_id": "test_ep17818_s0016_g0116",
+      "split": "test",
+      "start_frame": 16
+    }
+  ],
+  "seed": 42,
+  "semantic_manifest_sha256": "8e1c2fb17a1a287bca97badfdd3f26834c26d13b5bde7c1f48f8a9e93eca8d1f",
+  "source_file_sha256": "eabebdcd7b45f9a6db30b9a75b80d1a4eddcf527b2d2b0fe0dc800f9fd3b3883",
+  "source_manifest_sha256": "2c1bee0b3e8a067bac04490c6718bb7b35e14774b1b5f053330907d20547acde"
+}

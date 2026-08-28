@@ -1,0 +1,44 @@
+{
+  "pusht_generator": {
+    "filename": "pusht_generator_epoch6.pt",
+    "epoch": 6,
+    "sha256": "0b3647a3a41435969d750ec58176ef5f92a419c4eacae2b5cda74b35e63f90da",
+    "size_bytes": 233878994,
+    "hf_repo": "CLTRAY/SAGE"
+  },
+  "pusht_action_prior": {
+    "filename": "pusht_action_prior_epoch3.pt",
+    "epoch": 3,
+    "sha256": "03ecab8f9d757eb8b3fc15e93481e830325428c24ede813c18f8692cc9b4bd80",
+    "size_bytes": 163404922,
+    "hf_repo": "CLTRAY/SAGE"
+  },
+  "pusht_far_action_prior": {
+    "filename": "pusht_far_action_prior_epoch3.pt",
+    "epoch": 3,
+    "sha256": "60ed6831750e478b22c259b69e671236b41164f90284cb0422fe56d99e8c1425",
+    "size_bytes": 163404602,
+    "hf_repo": "CLTRAY/SAGE"
+  },
+  "cube_generator": {
+    "filename": "cube_generator_epoch6.pt",
+    "epoch": 6,
+    "sha256": "5f48e6d8eb3fab78d8f54bb36e1e275eefaf1fb82338a9b05e8f5cf5437a1352",
+    "size_bytes": 233981650,
+    "hf_repo": "CLTRAY/SAGE"
+  },
+  "cube_action_prior": {
+    "filename": "cube_action_prior_epoch3.pt",
+    "epoch": 3,
+    "sha256": "7ab6d2baefdcf5c2edf23192db6e969621fad621e21251b784c9e2309a0fb8eb",
+    "size_bytes": 164984570,
+    "hf_repo": "CLTRAY/SAGE"
+  },
+  "cube_far_action_prior": {
+    "filename": "cube_far_action_prior_epoch3.pt",
+    "epoch": 3,
+    "sha256": "32eb053197fddcb26ee7a86ea1d43fed2e95a3366423d646721a56fc8ca9fbde",
+    "size_bytes": 164984186,
+    "hf_repo": "CLTRAY/SAGE"
+  }
+}

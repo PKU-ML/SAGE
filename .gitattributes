@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.pt binary
+*.pth binary
+*.ckpt binary
+*.h5 binary
+*.hdf5 binary

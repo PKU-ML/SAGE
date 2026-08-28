@@ -1,0 +1,32 @@
+name: sage
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - torch==2.5.1
+      - torchvision==0.20.1
+      - numpy==2.2.6
+      - stable-pretraining==0.1.7
+      - gymnasium==1.3.0
+      - ogbench==1.2.1
+      - lancedb==0.33.0
+      - pylance==7.0.0
+      - pyarrow==24.0.0
+      - h5py==3.16.0
+      - einops==0.8.2
+      - transformers==5.1.2
+      - huggingface-hub>=0.36
+      - opencv-python-headless==4.13.0.92
+      - pygame==2.6.1
+      - pymunk==6.8.0
+      - shapely==2.1.2
+      - pillow
+      - tqdm
+      - rich
+      - loguru
+      - tabulate
+      - pytest>=8,<9
