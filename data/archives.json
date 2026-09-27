@@ -1,0 +1,32 @@
+{
+  "libero_scene2_evaluation.tar": {
+    "filename": "libero_scene2_evaluation.tar",
+    "bytes": 19337093120,
+    "sha256": "334eefe83e8862d3d6d9634f4d8203b4151617c087735ed790df7479efbd0be4",
+    "publication_status": "local_only"
+  },
+  "libero_caddy_evaluation.tar": {
+    "filename": "libero_caddy_evaluation.tar",
+    "bytes": 8636231680,
+    "sha256": "0b5c7b6d0305d475220108cfee80e5d3e5bd3e9e8f890551b078c7b914d750fb",
+    "publication_status": "local_only"
+  },
+  "robotwin_a2b_evaluation.tar": {
+    "filename": "robotwin_a2b_evaluation.tar",
+    "bytes": 1363968000,
+    "sha256": "66beba1922469acc0250848e33a7ac31cac1f231a12982ce52aa91157d519cd7",
+    "publication_status": "local_only"
+  },
+  "libero_scene2_train.tar": {
+    "filename": "libero_scene2_train.tar",
+    "bytes": 78915215360,
+    "sha256": "00d56620dcbd4b8e8c6ece0b0be7040f5d6f79a88187542b814ae7218079956a",
+    "publication_status": "local_only"
+  },
+  "libero_scene2_validation.tar": {
+    "filename": "libero_scene2_validation.tar",
+    "bytes": 9881272320,
+    "sha256": "b6fca0de3e04c485a960148685a074ae763c74e48f80bd268d4676a53300823b",
+    "publication_status": "local_only"
+  }
+}

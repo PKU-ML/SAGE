@@ -1,0 +1,8 @@
+{
+  "dataset": "pusht_expert_train.lance",
+  "split": "data/splits/pusht_episode_split_seed42.json",
+  "coordinate_system": "standardized_train_action",
+  "action_mean": [-0.007726192940026522, 0.006876377854496241],
+  "action_std": [0.2083914875984192, 0.206622913479805],
+  "note": "Values are exported from the fixed PushT train-split preprocessing contract; evaluation does not load an action-prior checkpoint for normalization."
+}

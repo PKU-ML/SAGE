@@ -1,0 +1,14 @@
+{
+  "libero": {
+    "python": "3.10",
+    "packages": {"mujoco": "2.3.7", "robosuite": "1.4.0", "numpy": "2.2.6", "transformers": "5.12.0", "torch": "2.5.1", "h5py": "3.16.0"},
+    "upstream": {"repository": "https://github.com/Lifelong-Robot-Learning/LIBERO.git", "commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01"},
+    "bootstrap_validation": "pending_clean_install"
+  },
+  "robotwin": {
+    "python": "3.10",
+    "packages": {"sapien": "3.0.0b1", "mplib": "0.2.1", "numpy": "1.26.4", "transformers": "5.8.1", "torch": "2.11.0", "h5py": "3.16.0"},
+    "upstream": {"repository": "https://github.com/RoboTwin-Platform/RoboTwin.git", "release": "2.0", "source_archive": "runtime/robotwin/source_archive.json", "source_files": "runtime/robotwin/source_files.json", "assets": "runtime/robotwin/assets.json"},
+    "bootstrap_validation": "pending_clean_install_and_renderer"
+  }
+}

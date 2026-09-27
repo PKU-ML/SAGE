@@ -53,6 +53,9 @@ from sage.training import (
     update,
 )
 from sage.runtime.frame_latent_cache import FrameLatentCache
+from sage.runtime.pair_frames import (
+    configure_pair_windows, pair_context, raw_goal_pixels, validate_full_frame_cache,
+)
 
 
 class VariableActionDataset(Dataset):
@@ -70,16 +73,15 @@ class VariableActionDataset(Dataset):
     def __getitem__(self, index: int) -> dict:
         row = self.rows[int(index)]
         spec = self.specs[int(row["spec_index"])]
-        item = self.dataset[spec.dataset_index]
         cur = (self.context_len - 1) * self.frameskip
         tau = int(row["action_offset"])
         delta = int(row["goal_offset"])
+        item = pair_context(self.dataset, spec, self.context_len, tau)
         if tau % self.frameskip or delta % self.frameskip:
             raise ValueError("action/goal offsets must be divisible by frameskip")
-        local_index = cur // self.frameskip + tau // self.frameskip
-        far_index = cur // self.frameskip + delta // self.frameskip
-        item["goal_pixels"] = item["pixels"][local_index : local_index + 1]
-        item["far_goal_pixels"] = item["pixels"][far_index : far_index + 1]
+        if self.episode_base is None:
+            item["goal_pixels"] = raw_goal_pixels(self.dataset, spec, cur + tau)
+            item["far_goal_pixels"] = raw_goal_pixels(self.dataset, spec, cur + delta)
         item["action_offset"] = torch.tensor(tau, dtype=torch.long)
         item["goal_offset"] = torch.tensor(delta, dtype=torch.long)
         item["action_tokens"] = torch.tensor(tau // self.frameskip, dtype=torch.long)
@@ -87,13 +89,9 @@ class VariableActionDataset(Dataset):
         item["start"] = torch.tensor(spec.start, dtype=torch.long)
         if self.episode_base is not None:
             base = int(self.episode_base[int(spec.local_episode)]) + int(spec.start)
-            item["history_frame_indices"] = torch.arange(
-                base,
-                base + int(self.context_len),
-                dtype=torch.long,
-            )
-            item["goal_frame_index"] = torch.tensor(base + int(local_index), dtype=torch.long)
-            item["far_goal_frame_index"] = torch.tensor(base + int(far_index), dtype=torch.long)
+            item["history_frame_indices"] = base + torch.arange(self.context_len) * self.frameskip
+            item["goal_frame_index"] = torch.tensor(base + cur + tau, dtype=torch.long)
+            item["far_goal_frame_index"] = torch.tensor(base + cur + delta, dtype=torch.long)
         return item
 
 
@@ -168,13 +166,6 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--bf16", action="store_true")
     parser.add_argument("--no-resume", action="store_true")
     parser.add_argument(
-        "--save-epochs",
-        nargs="*",
-        type=int,
-        default=[],
-        help="Also save the specified epoch_XXX.pt snapshots.",
-    )
-    parser.add_argument(
         "--no-pin-memory",
         action="store_true",
         help="Disable DataLoader pin_memory; useful after CUDA/NVML driver errors.",
@@ -234,13 +225,9 @@ def build_rows(dataset, specs, args, *, split_name: str):
         ]
         return rows, len(rows)
     rows = []
-    max_delta = max(args.goal_offsets)
-    max_tau = max(args.action_offsets)
     for spec_index, spec in enumerate(specs):
         final = int(dataset.lengths[int(spec.local_episode)]) - 1
         current = int(spec.start) + (int(args.context_len) - 1) * int(args.frameskip)
-        if current + max(max_delta, max_tau) > final:
-            continue
         for delta in args.goal_offsets:
             if current + int(delta) > final:
                 continue
@@ -322,7 +309,16 @@ def prepare_batch(
     action_offsets = batch["action_offset"].to(device).float()
     if subgoal_generator is not None and float(generated_ratio) > 0.0:
         gen_stats = subgoal_stats if subgoal_stats is not None else stats
-        lowdim_gen = normalize_lowdim(lowdim, gen_stats)
+        generator_lowdim_dim = int(gen_stats["lowdim_mean"].numel())
+        if generator_lowdim_dim == 0:
+            lowdim_gen = lowdim.new_empty(lowdim.size(0), 0)
+        elif generator_lowdim_dim == lowdim.size(-1):
+            lowdim_gen = normalize_lowdim(lowdim, gen_stats)
+        else:
+            raise ValueError(
+                "Subgoal generator and action prior use incompatible lowdim "
+                f"dimensions: generator={generator_lowdim_dim}, prior={lowdim.size(-1)}"
+            )
         with torch.no_grad():
             generated = subgoal_generator(
                 history_latents,
@@ -464,8 +460,7 @@ def main() -> None:
     if str(args.policy).lower().startswith("pusht/") or "pusht" in dataset_name:
         raise ValueError(
             "PushT variable priors must use scripts/pusht/train_pusht_variable_action_prior.py. "
-            "This generic Cube/OGBench trainer filters windows by the maximum far-goal offset "
-            "and therefore changes the PushT state distribution."
+            "The generic Cube/OGBench path has different episode and action semantics."
         )
     # Reuse stats helper flags from train_action_prior.
     args.tworoom_local_goal = False
@@ -481,9 +476,10 @@ def main() -> None:
 
     split = load_json(args.split)
     max_tokens = max(args.action_offsets) // int(args.frameskip)
-    max_delta_frames = max(args.goal_offsets) // int(args.frameskip)
-    num_steps = int(args.context_len) + max(max_tokens, max_delta_frames)
-    keys_to_load = ["pixels", "action", *args.lowdim_keys]
+    num_steps = int(args.context_len) + max_tokens
+    keys_to_load = ["action", *args.lowdim_keys]
+    if not args.frame_latent_cache:
+        keys_to_load.insert(0, "pixels")
     dataset = load_swm_dataset(
         args.dataset,
         cache_dir=args.cache_dir,
@@ -491,7 +487,8 @@ def main() -> None:
         num_steps=num_steps,
         keys_to_load=list(dict.fromkeys(keys_to_load)),
     )
-    planning_horizon = max_tokens if args.dense_joint_sampling else max(max_tokens, max_delta_frames)
+    configure_pair_windows(dataset, args.context_len, min(args.action_offsets))
+    planning_horizon = max_tokens
     train_pool = build_window_specs(dataset, split, "train", context_len=args.context_len, plan_horizon=planning_horizon)
     val_pool = build_window_specs(dataset, split, "val", context_len=args.context_len, plan_horizon=planning_horizon)
     train_specs = subset_specs(train_pool, args.max_train_windows, args.seed)
@@ -505,17 +502,16 @@ def main() -> None:
         flush=True,
     )
 
-    if args.lowdim_keys:
-        stats_cpu = compute_stats(dataset, split, args.lowdim_keys, train_specs=train_specs, args=args)
-    else:
-        stats_cpu = {
-            "action_mean": torch.from_numpy(np.asarray(dataset.get_col_data("action"), dtype=np.float32).mean(axis=0).astype(np.float32)),
-            "action_std": torch.from_numpy(np.maximum(np.asarray(dataset.get_col_data("action"), dtype=np.float32).std(axis=0), 1e-6).astype(np.float32)),
-            "lowdim_mean": torch.empty(0),
-            "lowdim_std": torch.empty(0),
-            "lowdim_keys": [],
-            "goal_lowdim_keys": [],
-        }
+    # Keep visual-only runs on the same split-aware, finite-action
+    # normalization path. Cube datasets contain NaN terminal action rows, so
+    # reducing the full raw action column silently poisons every target.
+    stats_cpu = compute_stats(
+        dataset,
+        split,
+        args.lowdim_keys,
+        train_specs=train_specs,
+        args=args,
+    )
     stats = move_stats(stats_cpu, device)
 
     frame_cache = None
@@ -529,6 +525,7 @@ def main() -> None:
             frameskip=args.frameskip,
             image_size=args.image_size,
         )
+        validate_full_frame_cache(frame_cache, dataset)
         episode_base = np.asarray(frame_cache.episode_base, dtype=np.int64)
         print(f"using frame latent cache: {args.frame_latent_cache}", flush=True)
     else:
@@ -635,6 +632,7 @@ def main() -> None:
         print(f"resuming epoch={start_epoch} best_val={best_val:.4f}", flush=True)
 
     manifest = {
+        "temporal_contract": "raw_frame_indices_v2; per-pair valid endpoints; terminal frames included",
         "script": "scripts/lewm_prior/train_variable_action_prior.py",
         "dataset": args.dataset,
         "split": args.split,
@@ -744,10 +742,6 @@ def main() -> None:
         if val_nll <= best_val + 1.0e-12:
             save_bc_checkpoint(best_path, payload)
             print(f"wrote new best checkpoint: {best_path}", flush=True)
-        if int(epoch) in set(args.save_epochs):
-            snapshot_path = out_dir / f"epoch_{epoch:03d}.pt"
-            save_bc_checkpoint(snapshot_path, payload)
-            print(f"wrote epoch snapshot: {snapshot_path}", flush=True)
     print(f"done best_val_nll={best_val:.4f} wrote={latest_path}", flush=True)
 
 

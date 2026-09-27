@@ -39,6 +39,7 @@ from collections import defaultdict
 from collections.abc import Callable
 from copy import deepcopy
 from functools import partial
+from importlib import import_module
 from pathlib import Path
 from typing import Any
 
@@ -59,6 +60,7 @@ RESET_MODES = ('auto', 'wait')
 def _make_env(
     env_name, max_episode_steps, wrappers, add_pixels=True, **kwargs
 ):
+    import_module('stable_worldmodel.envs')
     if add_pixels:
         kwargs.setdefault('render_mode', 'rgb_array')
     env = gym.make(env_name, max_episode_steps=max_episode_steps, **kwargs)

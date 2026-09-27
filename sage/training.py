@@ -65,6 +65,8 @@ def _split_episodes(split: dict, name: str) -> set[int]:
     if values is None:
         values = split.get("episodes", {}).get(name)
     if values is None:
+        values = split.get(f"{name}_episode_idx")
+    if values is None:
         raise KeyError(f"Split has no {name!r} episode list")
     return {int(value) for value in values}
 
@@ -79,12 +81,29 @@ def compute_stats(
     """Compute action and low-dimensional normalization on train episodes only."""
 
     del train_specs
-    columns = set(dataset.column_names)
-    episode_key = "episode_idx" if "episode_idx" in columns else "episode"
-    episodes = np.asarray(dataset.get_col_data(episode_key), dtype=np.int64)
+    # Lance exposes only projected observation fields through column_names, while
+    # get_col_data can still read bookkeeping columns from the backing table.
+    action_values = np.asarray(dataset.get_col_data("action"), dtype=np.float32)
+    try:
+        episode_values = dataset.get_col_data("episode_idx")
+    except (KeyError, ValueError):
+        try:
+            episode_values = dataset.get_col_data("episode")
+        except (KeyError, ValueError):
+            lengths = np.asarray(dataset.lengths, dtype=np.int64)
+            episode_values = np.repeat(
+                np.arange(len(lengths), dtype=np.int64),
+                lengths,
+            )
+            if len(episode_values) != len(action_values):
+                raise ValueError(
+                    "Cannot reconstruct action episode ids from dataset lengths: "
+                    f"rows={len(action_values)} expanded_lengths={len(episode_values)}"
+                )
+    episodes = np.asarray(episode_values, dtype=np.int64)
     mask = np.isin(episodes, np.asarray(sorted(_split_episodes(split, "train"))))
 
-    action = np.asarray(dataset.get_col_data("action")[mask], dtype=np.float32)
+    action = action_values[mask]
     action = action[np.isfinite(action).all(axis=1)]
     if not action.size:
         raise ValueError("The train split contains no finite actions")
@@ -98,6 +117,7 @@ def compute_stats(
     if args is not None:
         all_lowdim_keys += list(getattr(args, "goal_lowdim_keys", []) or [])
     if all_lowdim_keys:
+        columns = set(getattr(dataset, "column_names", []))
         missing = [key for key in all_lowdim_keys if key not in columns]
         if missing:
             raise KeyError(f"Missing low-dimensional columns: {missing}")

@@ -10,7 +10,7 @@ from pathlib import Path
 import numpy as np
 
 
-def load_result(path: Path, benchmark: str, method: str, seed: int, horizon: int):
+def load_result(path: Path, benchmark: str, method: str, seed: int, horizon: int, num_eval=50):
     payload = json.loads(path.read_text(encoding="utf-8"))
     expected = {
         "protocol_kind": "paper",
@@ -22,7 +22,13 @@ def load_result(path: Path, benchmark: str, method: str, seed: int, horizon: int
     for key, value in expected.items():
         if payload.get(key) != value:
             raise ValueError(f"{path}: expected {key}={value!r}")
-    return float(payload["metrics"]["success_rate"])
+    successes = payload['metrics']['episode_successes']
+    if len(successes) != num_eval or any(type(value) is not bool for value in successes):
+        raise ValueError(f'{path}: expected {num_eval} boolean episode outcomes')
+    rate = 100. * sum(successes) / len(successes)
+    if abs(rate - float(payload['metrics']['success_rate'])) > 1e-6:
+        raise ValueError(f'{path}: reported success does not match episode outcomes')
+    return rate
 
 
 def main():
@@ -31,15 +37,21 @@ def main():
     parser.add_argument("--paper-config", default="configs/paper.json")
     parser.add_argument("--out", default="results/component_table.json")
     parser.add_argument("--expected-tolerance", type=float, default=2.0)
+    parser.add_argument('--benchmark', choices=['pusht', 'cube'])
+    parser.add_argument('--direct-root', action='store_true',
+                        help='Results root directly contains method directories; requires --benchmark')
     args = parser.parse_args()
 
     paper = json.loads(Path(args.paper_config).read_text(encoding="utf-8"))
     seeds = [int(value) for value in paper["sample_seeds"]]
     horizons = [int(value) for value in paper["horizons"]]
     methods = list(paper["methods"])
+    if args.direct_root and args.benchmark is None:
+        parser.error('--direct-root requires --benchmark')
+    benchmarks = [args.benchmark] if args.benchmark else list(paper['expected_success_percent'])
     rows = {}
     flat_rows = []
-    for benchmark in ("pusht", "cube"):
+    for benchmark in benchmarks:
         rows[benchmark] = {}
         for method in methods:
             rows[benchmark][method] = {}
@@ -48,18 +60,16 @@ def main():
                 for seed in seeds:
                     path = (
                         Path(args.root)
-                        / benchmark
+                        / ('' if args.direct_root else benchmark)
                         / method
                         / f"seed{seed}"
                         / f"h{horizon}"
                         / "results.json"
                     )
-                    values.append(load_result(path, benchmark, method, seed, horizon))
+                    values.append(load_result(path, benchmark, method, seed, horizon, paper['num_eval']))
                 mean = float(np.mean(values))
-                expected = float(
-                    paper["expected_success_percent"][benchmark][method][horizon_index]
-                )
-                if abs(mean - expected) > args.expected_tolerance:
+                expected = paper["expected_success_percent"][benchmark][method][horizon_index]
+                if expected is not None and abs(mean - float(expected)) > args.expected_tolerance:
                     raise ValueError(
                         f"{benchmark}/{method}/H{horizon}: mean {mean:.3f} "
                         f"differs from recorded {expected:.3f}"
@@ -92,7 +102,7 @@ def main():
         writer.writerows(flat_rows)
 
     markdown = []
-    for benchmark in ("pusht", "cube"):
+    for benchmark in benchmarks:
         markdown.extend(
             [
                 f"## {benchmark}",

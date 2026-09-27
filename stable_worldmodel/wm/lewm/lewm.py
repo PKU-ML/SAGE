@@ -151,4 +151,33 @@ class LeWM(nn.Module):
         return cost
 
 
-__all__ = ['LeWM']
+class MultiViewLeWM(LeWM):
+    """Shared visual encoder with camera-ordered latent slots."""
+
+    def __init__(self, *args, view_keys=("pixels", "wrist_pixels"), **kwargs):
+        super().__init__(*args, **kwargs)
+        self.view_keys = tuple(view_keys)
+        if len(self.view_keys) < 2:
+            raise ValueError("MultiViewLeWM requires at least two view keys")
+
+    def encode(self, info):
+        missing = [key for key in self.view_keys if key not in info]
+        if missing:
+            raise KeyError(f"Missing multi-view observations: {missing}")
+        views = [info[key] for key in self.view_keys]
+        if any(view.shape != views[0].shape for view in views[1:]):
+            raise ValueError("Multi-view observation shapes differ")
+        pixels = torch.stack(views, dim=2).to(next(self.encoder.parameters()).dtype)
+        b, t, num_views = pixels.shape[:3]
+        pixels = rearrange(pixels, 'b t v ... -> (b t v) ...')
+        output = self.encoder(pixels, interpolate_pos_encoding=True)
+        cls = self.projector(output.last_hidden_state[:, 0])
+        view_emb = rearrange(cls, '(b t v) d -> b t v d', b=b, t=t, v=num_views)
+        info['view_emb'] = view_emb
+        info['emb'] = rearrange(view_emb, 'b t v d -> b t (v d)')
+        if 'action' in info:
+            info['act_emb'] = self.action_encoder(info['action'])
+        return info
+
+
+__all__ = ['LeWM', 'MultiViewLeWM']

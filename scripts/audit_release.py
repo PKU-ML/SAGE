@@ -30,8 +30,8 @@ FORBIDDEN_PATH_PARTS = {
     "backups",
 }
 FORBIDDEN_PATTERNS = {
-    "private path": re.compile(r"/data[0-9]+/ltchen|C:\\\\Users\\\\ccclt", re.I),
-    "private host": re.compile(r"222\\.29\\.(?:2\\.246|136\\.18)", re.I),
+    "private path": re.compile(r"/data[0-9]*/ltchen|/home/ltchen|C:[/\\]+Users[/\\]+ccclt", re.I),
+    "private host": re.compile(r"222\.29\.(?:2\.(?:245|246)|136\.18)", re.I),
     "development naming": re.compile(
         r"cherry.?pick|best[_ -]?seed|INVALID_|bak_20\\d{6}|watch_20\\d{6}",
         re.I,
@@ -42,6 +42,8 @@ FORBIDDEN_PATTERNS = {
 def audit_tree() -> list[str]:
     errors: list[str] = []
     for path in ROOT.rglob("*"):
+        if any(part in {".git", "__pycache__", ".pytest_cache"} for part in path.parts):
+            continue
         if any(part in FORBIDDEN_PATH_PARTS for part in path.parts):
             errors.append(f"forbidden path: {path.relative_to(ROOT)}")
         if not path.is_file() or path.suffix.lower() not in TEXT_SUFFIXES:
@@ -67,6 +69,7 @@ def audit_protocol() -> list[str]:
         "far_goal_prior_cem",
         "lewm_generator",
         "generator_prior_top",
+        "final_goal_scoring",
         "sage",
     ]:
         errors.append("paper method list changed")
@@ -226,8 +229,8 @@ def audit_method_semantics() -> list[str]:
             errors.append(f"{benchmark} is missing true Gaussian CEM")
         if "forbid warm starts" not in text:
             errors.append(f"{benchmark} Gaussian CEM does not reject warm starts")
-        if '"normalization_only"' not in text:
-            errors.append(f"{benchmark} does not record normalization-only priors")
+        if '"action_stats"' not in text:
+            errors.append(f"{benchmark} does not record independent action statistics")
     return errors
 
 

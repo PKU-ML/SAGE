@@ -1,0 +1,36 @@
+{
+  "world_model/weights.pt": {
+    "filename": "weights.pt",
+    "role": "world_model",
+    "sha256": "723c04362475266b557304a8dcef2f55e0221d51ebc7d9ec96b16f1e0d69c921",
+    "bytes": 357468564,
+    "source_sha256": "7a873b29375127b45ce2326dd26c8633de71cb7d4cc3548ded0f50be14d70ea1",
+    "state_sha256": "7053b8a5cc5871d8df7034cbce70a5d40f853553de014a7797c62e4911687b22",
+    "tensor_identity_verified": true,
+    "selected_epoch": null
+  },
+  "generator.pt": {
+    "filename": "generator.pt",
+    "role": "generator",
+    "sha256": "7bb244201c5a38280612b71fac655f924be2924a64ff8ff51e67d8bb54ecdca2",
+    "bytes": 252741882,
+    "source_sha256": "68e7a7a633297c69c582398ac2ed17cb30a6d2becd2044d7e85fe7782000e32e",
+    "state_sha256": "174989ee575a9c5604db58f37f7541be8ab8ed8105fb3128f8cfaaa54ba4d0b0",
+    "tensor_identity_verified": true,
+    "selected_epoch": 1
+  },
+  "prior.pt": {
+    "filename": "prior.pt",
+    "role": "prior",
+    "sha256": "de1261b167aa0241a3df85fa7b684d7f46ec5e680485b2969e2dffe4bfbf42b0",
+    "bytes": 55521051,
+    "source_sha256": "0dadcc30642aa795234e1ccf8f28f8c77cba8073c9cd77b29aa3df6de79599ce",
+    "state_sha256": "e47895fb8fda64331db38e6096805779a38b42f46370c3853024e5d3226e3244",
+    "tensor_identity_verified": true,
+    "selected_epoch": 4
+  },
+  "world_model/config.json": {
+    "sha256": "1ee29c93273b01295c5d67570587636cfcfda799cd3fafb28a4962b22e881769",
+    "bytes": 1240
+  }
+}

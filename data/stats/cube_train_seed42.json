@@ -1,0 +1,20 @@
+{
+  "dataset": "cube_single_expert.h5",
+  "split": "data/splits/ogbench_cube_single_split_seed42.json",
+  "coordinate_system": "standardized_train_action",
+  "action_mean": [
+    0.010805031284689903,
+    -0.0033120557200163603,
+    0.0026056328788399696,
+    0.000584277615416795,
+    0.15925130248069763
+  ],
+  "action_std": [
+    0.28916093707084656,
+    0.3931340277194977,
+    0.6432734131813049,
+    0.39314329624176025,
+    0.25023582577705383
+  ],
+  "num_train_actions": 1600000
+}

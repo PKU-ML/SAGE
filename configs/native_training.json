@@ -1,0 +1,18 @@
+{
+  "libero_scene2": {
+    "window_sha256": {
+      "generator": {"train": "1a666af7cc5df300dc1d55e4b9d72904d312d23e16c9fcee8be55374ee6a9fab", "validation": "f20576ece6f951a52ec6d4841ba936d6ef53906d2890bd795d02156d35f7b14e"},
+      "prior": {"train": "0794ad719941cab8af728b5e579f93c53f391078169be97ccabce84f928155b3", "validation": "44f12e128b400b12b5b05746b3d510e93d287c8cb8edad0b31c76e0744751606"}
+    },
+    "generator": {"hidden_dim": 768, "num_heads": 8, "depth": 4, "epochs": 6, "batch_size": 512, "seed": 217, "selected_epoch": 6, "train_windows": 1531174, "validation_windows": 190766},
+    "prior": {"hidden_dim": 512, "num_heads": 8, "depth": 3, "num_modes": 8, "epochs": 4, "batch_size": 256, "seed": 218, "selected_epoch": 4, "train_windows": 1651174, "validation_windows": 205766}
+  },
+  "libero_caddy": {
+    "window_sha256": {
+      "generator": {"train": "57ccafd1edcaf345b4b537561b8fa1f664f818b96f53788aa485cc72a363bbaf", "validation": "f71a6937aff83f87b95e6bb294b028685dc54daba1e223af87c873cc300956e9"},
+      "prior": {"train": "5ae0eb44281234a5c2a9dd4428b4adc67356f7a53ead38281ff82951763db118", "validation": "a516946eea368d534073452b9043c0b05a55f3ca5dfd6bfd25ae47befed66b38"}
+    },
+    "generator": {"hidden_dim": 768, "num_heads": 8, "depth": 4, "epochs": 6, "batch_size": 512, "seed": 217, "selected_epoch": 5, "train_windows": 1605237, "validation_windows": 200544},
+    "prior": {"hidden_dim": 512, "num_heads": 8, "depth": 3, "num_modes": 8, "epochs": 4, "batch_size": 256, "seed": 218, "selected_epoch": 4, "train_windows": 1725237, "validation_windows": 215544}
+  }
+}

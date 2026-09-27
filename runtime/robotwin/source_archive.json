@@ -1,0 +1,10 @@
+{
+  "robotwin_a2b_runtime.tar.gz": {
+    "filename": "robotwin_a2b_runtime.tar.gz",
+    "sha256": "71f68ca0fc6d466a0776a7c28741e730a92e23f5ba7f0f56d341ee32f2c2cf77",
+    "publication_status": "local_only",
+    "license": "MIT; included as LICENSE in the archive",
+    "scope": "A2B environment source and task configuration only",
+    "relocation": "Task output path relocated; recorded-path evaluation skips unused cuRobo arm planning. Native MPlib TOPP and gripper interpolation are retained. Original source hashes and the patch are included alongside this registry."
+  }
+}

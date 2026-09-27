@@ -34,3 +34,9 @@ python scripts/sanitize_manifests.py \
 ```
 
 Always run `python scripts/audit_release.py` afterward.
+# Native datasets
+
+The locked LIBERO/RoboTwin query manifests and per-file SHA256 inventories are
+under `data/manifests/`. See [NATIVE.md](NATIVE.md) for installation and replay
+requirements. Dataset files are not embedded in this repository, and additional
+native datasets have not yet been published.

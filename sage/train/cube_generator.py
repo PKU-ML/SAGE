@@ -43,6 +43,9 @@ from sage.training import (
     subset_specs,
 )
 from sage.runtime.frame_latent_cache import FrameLatentCache
+from sage.runtime.pair_frames import (
+    configure_pair_windows, pair_context, raw_goal_pixels, validate_full_frame_cache,
+)
 
 
 class SubgoalPairDataset(Dataset):
@@ -72,29 +75,24 @@ class SubgoalPairDataset(Dataset):
 
     def __getitem__(self, index: int) -> dict:
         spec = self.specs[int(self.pair_spec_indices[index])]
-        item = self.dataset[spec.dataset_index]
         cur = (self.context_len - 1) * self.frameskip
         goal_step = int(self.pair_goal_offsets[index])
         subgoal_step = int(self.pair_subgoal_offsets[index])
+        item = pair_context(self.dataset, spec, self.context_len, subgoal_step)
         if goal_step % self.frameskip or subgoal_step % self.frameskip:
             raise ValueError("goal/subgoal offsets must be divisible by frameskip")
-        goal_index = cur // self.frameskip + goal_step // self.frameskip
-        subgoal_index = cur // self.frameskip + subgoal_step // self.frameskip
-        item["goal_pixels"] = item["pixels"][goal_index : goal_index + 1]
-        item["subgoal_pixels"] = item["pixels"][subgoal_index : subgoal_index + 1]
+        if self.episode_base is None:
+            item["goal_pixels"] = raw_goal_pixels(self.dataset, spec, cur + goal_step)
+            item["subgoal_pixels"] = raw_goal_pixels(self.dataset, spec, cur + subgoal_step)
         item["episode_id"] = torch.tensor(spec.episode_id, dtype=torch.long)
         item["start"] = torch.tensor(spec.start, dtype=torch.long)
         item["goal_offset"] = torch.tensor(goal_step, dtype=torch.long)
         item["subgoal_offset"] = torch.tensor(subgoal_step, dtype=torch.long)
         if self.episode_base is not None:
             base = int(self.episode_base[int(spec.local_episode)]) + int(spec.start)
-            item["history_frame_indices"] = torch.arange(
-                base,
-                base + int(self.context_len),
-                dtype=torch.long,
-            )
-            item["goal_frame_index"] = torch.tensor(base + int(goal_index), dtype=torch.long)
-            item["subgoal_frame_index"] = torch.tensor(base + int(subgoal_index), dtype=torch.long)
+            item["history_frame_indices"] = base + torch.arange(self.context_len) * self.frameskip
+            item["goal_frame_index"] = torch.tensor(base + cur + goal_step, dtype=torch.long)
+            item["subgoal_frame_index"] = torch.tensor(base + cur + subgoal_step, dtype=torch.long)
         return item
 
 
@@ -210,8 +208,10 @@ def build_pairs(dataset, specs, args, *, split_name: str):
     goal_offsets: list[int] = []
     subgoal_offsets: list[int] = []
     for spec_index, _spec in enumerate(specs):
+        current = _spec.start + (args.context_len - 1) * args.frameskip
+        final = int(dataset.lengths[_spec.local_episode]) - 1
         for offset in args.goal_offsets:
-            if offset <= 0:
+            if offset <= 0 or current + offset > final:
                 continue
             if offset % args.frameskip:
                 raise ValueError(f"goal offset {offset} must be divisible by frameskip={args.frameskip}")
@@ -370,10 +370,11 @@ def main() -> None:
     device = torch.device(args.device if torch.cuda.is_available() else "cpu")
 
     split = load_json(args.split)
-    max_goal_frames = max(args.goal_offsets) // args.frameskip
     max_subgoal_frames = max(int(x) for x in args.subgoal_offsets) // int(args.frameskip)
-    num_steps = int(args.context_len) + max(max_goal_frames, max_subgoal_frames)
-    keys_to_load = ["pixels", *args.lowdim_keys]
+    num_steps = int(args.context_len) + max_subgoal_frames
+    keys_to_load = [*args.lowdim_keys]
+    if not args.frame_latent_cache:
+        keys_to_load.insert(0, "pixels")
     dataset = load_swm_dataset(
         args.dataset,
         cache_dir=args.cache_dir,
@@ -381,7 +382,8 @@ def main() -> None:
         num_steps=num_steps,
         keys_to_load=list(dict.fromkeys(keys_to_load)),
     )
-    planning_horizon = max_subgoal_frames if args.dense_joint_sampling else max_goal_frames
+    configure_pair_windows(dataset, args.context_len, min(args.subgoal_offsets))
+    planning_horizon = max_subgoal_frames
     train_specs = build_window_specs(
         dataset,
         split,
@@ -396,6 +398,8 @@ def main() -> None:
         context_len=args.context_len,
         plan_horizon=planning_horizon,
     )
+    train_pool_count = len(train_specs)
+    val_pool_count = len(val_specs)
     train_specs = subset_specs(train_specs, args.max_train_windows, args.seed)
     val_specs = subset_specs(val_specs, args.max_val_windows, args.seed + 1)
     if not train_specs or not val_specs:
@@ -433,6 +437,7 @@ def main() -> None:
             frameskip=args.frameskip,
             image_size=args.image_size,
         )
+        validate_full_frame_cache(frame_cache, dataset)
         episode_base = np.asarray(frame_cache.episode_base, dtype=np.int64)
         print(f"using frame latent cache: {args.frame_latent_cache}", flush=True)
     else:
@@ -528,6 +533,7 @@ def main() -> None:
         print(f"resumed epoch={start_epoch} best_val={best_val:.4f}", flush=True)
 
     manifest = {
+        "temporal_contract": "raw_frame_indices_v2; per-pair valid endpoints; terminal frames included",
         "script": "scripts/lewm_prior/train_subgoal_prior.py",
         "prior_type": "pusht_subgoal_prior_v1",
         "dataset": args.dataset,
@@ -538,7 +544,9 @@ def main() -> None:
         "selected_val_windows": len(val_specs),
         "selected_train_pairs": int(len(train_idx)),
         "selected_val_pairs": int(len(val_idx)),
-        "train_pool_windows": int(len(split_episode_sets(split)["train"])),
+        "train_episode_count": int(len(split_episode_sets(split)["train"])),
+        "train_pool_windows": train_pool_count,
+        "val_pool_windows": val_pool_count,
         "stats_lowdim_keys": list(args.lowdim_keys),
         "scientific_hypothesis": (
             "Expert replay trajectories supervise p(z_{t+S}|history,z_{t+H},H,S). "

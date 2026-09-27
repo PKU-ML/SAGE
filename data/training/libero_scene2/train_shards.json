@@ -1,0 +1,806 @@
+{
+  "suite": "libero_scene2",
+  "split": "train",
+  "shards": [
+    {
+      "path": "episodes/train/shard_0000.hdf5",
+      "sha256": "329b8680d15022fee64ce9a7d93f2f02410884bfe29de61519789e2817d2dd46",
+      "bytes": 493024758
+    },
+    {
+      "path": "episodes/train/shard_0001.hdf5",
+      "sha256": "28f969043aa1942488bf361709f3e4ceb3173dddd8a739391dad80cbf370532b",
+      "bytes": 512656149
+    },
+    {
+      "path": "episodes/train/shard_0002.hdf5",
+      "sha256": "2d060b1be81ad4a8e4fd6aafee7aa54815f6c06c1096016ee06a72bd0db488c5",
+      "bytes": 494969148
+    },
+    {
+      "path": "episodes/train/shard_0003.hdf5",
+      "sha256": "634420a01a8af3f342c699a3241efda5cb960f997863cd4fcb8e2c37987949f3",
+      "bytes": 491914724
+    },
+    {
+      "path": "episodes/train/shard_0004.hdf5",
+      "sha256": "d8ea35c5ffc58d153daa1e0686f8744de0e34540d72027ac80bb426c269e6527",
+      "bytes": 511360567
+    },
+    {
+      "path": "episodes/train/shard_0005.hdf5",
+      "sha256": "a033332caa2ef5fbe1bcfb3c33636a300b52753551d604463435e3b1b272aa0e",
+      "bytes": 486413825
+    },
+    {
+      "path": "episodes/train/shard_0006.hdf5",
+      "sha256": "3181fab5724fc59b35ff934bbbce8826d61aaa65166a8f75aab0c30f9032f0dc",
+      "bytes": 507312051
+    },
+    {
+      "path": "episodes/train/shard_0007.hdf5",
+      "sha256": "985f479e2e4bd6b6ba532863a8505597b93a9939ca5fbb3811c906d97e8b8011",
+      "bytes": 501194845
+    },
+    {
+      "path": "episodes/train/shard_0008.hdf5",
+      "sha256": "2a9d5c2baa63be9a9a524659695204902ba42769558221ed307598e7f3f9b4a0",
+      "bytes": 513460854
+    },
+    {
+      "path": "episodes/train/shard_0009.hdf5",
+      "sha256": "d55d48bfaf4b6d512b1595b1219cf83cc8e0010a0967a47d4a4c5f5932bc3c10",
+      "bytes": 492521244
+    },
+    {
+      "path": "episodes/train/shard_0010.hdf5",
+      "sha256": "f77b6e65ba657a4c2b508d8531057e93513c605c486db2ea0c14b0095749a65d",
+      "bytes": 514079622
+    },
+    {
+      "path": "episodes/train/shard_0011.hdf5",
+      "sha256": "c853a105c2dc6e2ad078b0f74efc09e1d9057d403013f68e7977e44afa3ec628",
+      "bytes": 484627576
+    },
+    {
+      "path": "episodes/train/shard_0012.hdf5",
+      "sha256": "936b28de7f05d7e5c371561c14eaf9aa1dd7fd37ef7eb3067dbcdb69771b42f9",
+      "bytes": 507842936
+    },
+    {
+      "path": "episodes/train/shard_0013.hdf5",
+      "sha256": "050fc1af8536628efe0258e2b41637e53d4d34c22c09367bc4827e6db50a221a",
+      "bytes": 487161484
+    },
+    {
+      "path": "episodes/train/shard_0014.hdf5",
+      "sha256": "c39dbd12a987e6cca688392b649a23c173b5992742e68abb836a272cc0338f50",
+      "bytes": 495449885
+    },
+    {
+      "path": "episodes/train/shard_0015.hdf5",
+      "sha256": "ffe1434b7fd348c059d55e3d5ff4b27cf8de0caf2213e05ae2b614a02cccd3c0",
+      "bytes": 515517168
+    },
+    {
+      "path": "episodes/train/shard_0016.hdf5",
+      "sha256": "3c4cba5190b2e8836e37f88eae016fab78d6de50d2a243df9bf12024e04c9c71",
+      "bytes": 503361948
+    },
+    {
+      "path": "episodes/train/shard_0017.hdf5",
+      "sha256": "27e73c4a1e507149dd0591fe0b2692e2dfe8423d1425aaec05c122af9476ff3c",
+      "bytes": 503778960
+    },
+    {
+      "path": "episodes/train/shard_0018.hdf5",
+      "sha256": "2b5541b58cf861303b93700143a545190f063501542a62c349ef7f4f07e2cdfc",
+      "bytes": 514361030
+    },
+    {
+      "path": "episodes/train/shard_0019.hdf5",
+      "sha256": "e57a2a3dd59657d095615f108ddccb1ea32e44144e8293875d56eae23a37d4d6",
+      "bytes": 509163258
+    },
+    {
+      "path": "episodes/train/shard_0020.hdf5",
+      "sha256": "7ce37b32cd931080bae11e19157dee9ab546e4e7116c99aa98b606122ceda2b4",
+      "bytes": 504461529
+    },
+    {
+      "path": "episodes/train/shard_0021.hdf5",
+      "sha256": "d074630d15e9e83fbcaa128ec0513abe3ddca26337692882395b7db71dbec633",
+      "bytes": 501237132
+    },
+    {
+      "path": "episodes/train/shard_0022.hdf5",
+      "sha256": "dcc40711d77c49e0b51da381b54c928d63abe262d48d7dc0555f2a02733d8d6e",
+      "bytes": 483304250
+    },
+    {
+      "path": "episodes/train/shard_0023.hdf5",
+      "sha256": "fafa9a2740eeabee68d5f9a92b4a478cf72926be96905576e279d6c65304eddb",
+      "bytes": 496827632
+    },
+    {
+      "path": "episodes/train/shard_0024.hdf5",
+      "sha256": "3d940b5d0fac0fce393c032e77562f7dfeb40c8da2fda161e5bf3ed872251ccc",
+      "bytes": 499634687
+    },
+    {
+      "path": "episodes/train/shard_0025.hdf5",
+      "sha256": "fa9b2e92e4a9c338c46ec46adb4fd712e759cd457e680afc14d55c78ba8e64a3",
+      "bytes": 497914748
+    },
+    {
+      "path": "episodes/train/shard_0026.hdf5",
+      "sha256": "d1828df21f9fbd01c8599a714853e158396611c3deabb80720d8e51f807af38c",
+      "bytes": 487421632
+    },
+    {
+      "path": "episodes/train/shard_0027.hdf5",
+      "sha256": "e1ac792eaa0d62bf670ded6f2223afd2ed120d4aee2435a515790a66d79f237a",
+      "bytes": 493020977
+    },
+    {
+      "path": "episodes/train/shard_0028.hdf5",
+      "sha256": "a3819e695a4c0b7d1f38fe870cb9d303acf6393da42f06586b993b2bf903abae",
+      "bytes": 489693301
+    },
+    {
+      "path": "episodes/train/shard_0029.hdf5",
+      "sha256": "7284a4c0f7a221a4360d789ffc240edd976e8c88f3470b520f1fd5d1449ff486",
+      "bytes": 492051791
+    },
+    {
+      "path": "episodes/train/shard_0030.hdf5",
+      "sha256": "809e76ea572c436b050953c8538505cdbb18738137ccbc52862c2ca81576df95",
+      "bytes": 491818220
+    },
+    {
+      "path": "episodes/train/shard_0031.hdf5",
+      "sha256": "eed3ab943332ac11ecec638185e9923d17786bcd2628fb16ec804d7b56ba1947",
+      "bytes": 516502898
+    },
+    {
+      "path": "episodes/train/shard_0032.hdf5",
+      "sha256": "0b93069366ccbca700cc3d5464b9c65a3142bba9392df5a558f724d6e1dd864a",
+      "bytes": 443627256
+    },
+    {
+      "path": "episodes/train/shard_0033.hdf5",
+      "sha256": "b084be943cc2a2637f311c2c8a6f038ef2cad23b3e9f17697aadd7e203cbf587",
+      "bytes": 445719765
+    },
+    {
+      "path": "episodes/train/shard_0034.hdf5",
+      "sha256": "270f164bbae05b054fa1a9ff0948a8fa215048cff12b3b52a298ba7b17b3fa73",
+      "bytes": 457226357
+    },
+    {
+      "path": "episodes/train/shard_0035.hdf5",
+      "sha256": "cb8f5562dd72d7f83a2ffe2df340a7134446ea4d3d6169a97a7e6adf7d1a40e4",
+      "bytes": 463374196
+    },
+    {
+      "path": "episodes/train/shard_0036.hdf5",
+      "sha256": "56f0f75299a6f14a28c38fcfff6cdaeca725867b1c0f94fb527d73a96dbb64ed",
+      "bytes": 454486123
+    },
+    {
+      "path": "episodes/train/shard_0037.hdf5",
+      "sha256": "4666a14c0b1082c466e23160de50a04364d93f89b34f80a18d1a18eec4b7fdae",
+      "bytes": 459516600
+    },
+    {
+      "path": "episodes/train/shard_0038.hdf5",
+      "sha256": "25efd65ec198e06e886844c50ad45bb8c258e18f2f81c4a6d3181d4e72831d12",
+      "bytes": 438748746
+    },
+    {
+      "path": "episodes/train/shard_0039.hdf5",
+      "sha256": "68e9cfbfac940d54abc21709eb0351508031b42583da3a04a21f48e33d74cc9c",
+      "bytes": 467018344
+    },
+    {
+      "path": "episodes/train/shard_0040.hdf5",
+      "sha256": "f8992be72c6d18540269dfcd6ff0483ec5696d855ea2ffeba95f38f1b6cf025c",
+      "bytes": 449759721
+    },
+    {
+      "path": "episodes/train/shard_0041.hdf5",
+      "sha256": "59127ea51c9b1c0d07de83c77cbc6c13ea90ac453e12736dabe2a3ffbe5eb673",
+      "bytes": 442384000
+    },
+    {
+      "path": "episodes/train/shard_0042.hdf5",
+      "sha256": "f4c8f8b5155090f4aa45bfebcab646d27576e58aae021355f7afd7113606b36a",
+      "bytes": 444880129
+    },
+    {
+      "path": "episodes/train/shard_0043.hdf5",
+      "sha256": "1119853fc1c1af95f219e6dad5791d542e1346c45d6027f103caae03de12944c",
+      "bytes": 453201692
+    },
+    {
+      "path": "episodes/train/shard_0044.hdf5",
+      "sha256": "da8fed105f9064710d58200d0263b7fc34fe253363a48b12f9e4b8d6325ec467",
+      "bytes": 467367151
+    },
+    {
+      "path": "episodes/train/shard_0045.hdf5",
+      "sha256": "e5acd4515aa5cd4314a42b93848c3ef46e0efc098cfc44ea570f10f9f2cf1045",
+      "bytes": 451604829
+    },
+    {
+      "path": "episodes/train/shard_0046.hdf5",
+      "sha256": "8c4d107c03c5c9b7e4fe5a8ef3913c8656c44beb5acc78e2a4bb88217bc01736",
+      "bytes": 457124406
+    },
+    {
+      "path": "episodes/train/shard_0047.hdf5",
+      "sha256": "35adb13efe93b046f2eff6cd3ffcf7cf287ea8dad09d1b343f5b6a523e21589f",
+      "bytes": 459116385
+    },
+    {
+      "path": "episodes/train/shard_0048.hdf5",
+      "sha256": "079cdddfffe141593213182500a6cc4504bc2e7bb90ffbadfef0233d4ffe1aa2",
+      "bytes": 443736168
+    },
+    {
+      "path": "episodes/train/shard_0049.hdf5",
+      "sha256": "c6250a098247d4d07912dd620351a5b15eb87309c2d10ab3b493ece17247b1ca",
+      "bytes": 468768275
+    },
+    {
+      "path": "episodes/train/shard_0050.hdf5",
+      "sha256": "e9a8ba145c15818404e06a8c5bdb4b57c678d3661d8056fcfd2545cce3f1a5b0",
+      "bytes": 443333521
+    },
+    {
+      "path": "episodes/train/shard_0051.hdf5",
+      "sha256": "c5687d639337c40fb638d7e2c8e2719bcb22502b56abc3d00a7de1c8a1a485f8",
+      "bytes": 436387219
+    },
+    {
+      "path": "episodes/train/shard_0052.hdf5",
+      "sha256": "930ee180155044c18b70fbc5fdd865796717030998a11bea7ad6e68562c335e8",
+      "bytes": 467332468
+    },
+    {
+      "path": "episodes/train/shard_0053.hdf5",
+      "sha256": "ef57d565765f4f352045670fb3018c0ccb0ceae8e6c91cca7c4f5fd2399287ce",
+      "bytes": 449705516
+    },
+    {
+      "path": "episodes/train/shard_0054.hdf5",
+      "sha256": "10cadfc5b20515fe5b8099bc07fa2dc0bd61af5cab1d14a6463e9537b5b491d6",
+      "bytes": 442217211
+    },
+    {
+      "path": "episodes/train/shard_0055.hdf5",
+      "sha256": "6bfcddac069a604de0f2e9fcc486cf4d33ce27148890a0dce1fdaedf6fea8620",
+      "bytes": 469150828
+    },
+    {
+      "path": "episodes/train/shard_0056.hdf5",
+      "sha256": "dbc5f575d56416cf03052151bdb050d3296dc4e0f7ac57555a9746992d3030f3",
+      "bytes": 472988058
+    },
+    {
+      "path": "episodes/train/shard_0057.hdf5",
+      "sha256": "17e8b5dd757358a16ebd483a1fb1bf1baa2b57bef9d59a2fbf25047f48b313e3",
+      "bytes": 458665731
+    },
+    {
+      "path": "episodes/train/shard_0058.hdf5",
+      "sha256": "1eb0a853468205f395fe20855653449baf08b5d4f556336b074a44b76b02ec79",
+      "bytes": 440201529
+    },
+    {
+      "path": "episodes/train/shard_0059.hdf5",
+      "sha256": "92049b78e9f6eac3788553c58bd9288e0b0406a829e100672f685a01164da211",
+      "bytes": 450370655
+    },
+    {
+      "path": "episodes/train/shard_0060.hdf5",
+      "sha256": "ae779c99a2683aad0216073dbca022667e5f90475acd6969e4b98bbca45aecb3",
+      "bytes": 445057116
+    },
+    {
+      "path": "episodes/train/shard_0061.hdf5",
+      "sha256": "38503de3c1195d6632c8d6ddc097521c81c63efc25e9a6610d29d571392eea37",
+      "bytes": 457341282
+    },
+    {
+      "path": "episodes/train/shard_0062.hdf5",
+      "sha256": "c74604cad24c7a9adb45c57eb33f8b5eb491c2311bdebd6c96f9724343bc090d",
+      "bytes": 452502760
+    },
+    {
+      "path": "episodes/train/shard_0063.hdf5",
+      "sha256": "d9ca2ba7756a35bb9b5943deaa3896efeac1f7ed199da1b9197dd0a726801fa1",
+      "bytes": 444597246
+    },
+    {
+      "path": "episodes/train/shard_0064.hdf5",
+      "sha256": "96a73d9b95fea6f2d3fbd22583ba27f18284d48198aa5ce6b70b60278c08f002",
+      "bytes": 475978933
+    },
+    {
+      "path": "episodes/train/shard_0065.hdf5",
+      "sha256": "4acd58a8be8dfc3ee6d4c71698c262226ca2c254f725a92b1695b317139fe74b",
+      "bytes": 492565993
+    },
+    {
+      "path": "episodes/train/shard_0066.hdf5",
+      "sha256": "012fde9ccd78a4f57b342891a0daffa6dc16752fb016e60c8c87cc7007938cb3",
+      "bytes": 477270712
+    },
+    {
+      "path": "episodes/train/shard_0067.hdf5",
+      "sha256": "34e1b3f92742bc15573cdf4b3d73474e7a13a8159ab899ada6c0fae03f58fa2e",
+      "bytes": 497721274
+    },
+    {
+      "path": "episodes/train/shard_0068.hdf5",
+      "sha256": "7086afe06a4bf650f443f14414c2b601640f723da763b3f7ab8c34073843db4d",
+      "bytes": 481566408
+    },
+    {
+      "path": "episodes/train/shard_0069.hdf5",
+      "sha256": "a22b5ccc175cbeda385908e945e60d497e2b42a203a933161b92bbaa04229bc1",
+      "bytes": 486282641
+    },
+    {
+      "path": "episodes/train/shard_0070.hdf5",
+      "sha256": "92fd93c12e6cdf9bef3e6930d0272c258574fd30c4eb6c5256dfc30aff0d9468",
+      "bytes": 474881154
+    },
+    {
+      "path": "episodes/train/shard_0071.hdf5",
+      "sha256": "6cf8f981e12f86473cb64831e4c817fb40387d90f6b14906df74adc7456f545c",
+      "bytes": 473166318
+    },
+    {
+      "path": "episodes/train/shard_0072.hdf5",
+      "sha256": "1ec2b4ebb3c466a8c39a50edb6540a815a1fc571a41e0fef661b542580264830",
+      "bytes": 476786932
+    },
+    {
+      "path": "episodes/train/shard_0073.hdf5",
+      "sha256": "6e143b3b51deb35e5e0defb28725e463e1ae7fc43f91b18b6397f143d2cc75a5",
+      "bytes": 479199012
+    },
+    {
+      "path": "episodes/train/shard_0074.hdf5",
+      "sha256": "c70804e565de72365862fcfd94ff859c85d0c7c894e687abff2db0a78e27b5f8",
+      "bytes": 492051652
+    },
+    {
+      "path": "episodes/train/shard_0075.hdf5",
+      "sha256": "ee95ecd7f2db5722d2b1702318d9b0f3fcb76f82b5a2990f10dfe6f25e118d55",
+      "bytes": 494582069
+    },
+    {
+      "path": "episodes/train/shard_0076.hdf5",
+      "sha256": "a484abe3dc8b0677d9935b7c19cc4be3bbebeed6d895afefc1985ee544698886",
+      "bytes": 476687525
+    },
+    {
+      "path": "episodes/train/shard_0077.hdf5",
+      "sha256": "af49acaa81cde5dc5c3daf7525f0fc22aebc7feed7125323109f5616d328e84e",
+      "bytes": 481289489
+    },
+    {
+      "path": "episodes/train/shard_0078.hdf5",
+      "sha256": "171cb0d551805986551c967349b1a88839a0534d2eeb4b160e985b1e68de302c",
+      "bytes": 474664240
+    },
+    {
+      "path": "episodes/train/shard_0079.hdf5",
+      "sha256": "055493714ae19f294d538966b0cd7270ac232ce722abd4e2af5577c2a98e87ac",
+      "bytes": 482834026
+    },
+    {
+      "path": "episodes/train/shard_0080.hdf5",
+      "sha256": "f0725b53662bd5b00674fda1237262ebba7e5692c139b374a09fa36f93ac08b2",
+      "bytes": 489097054
+    },
+    {
+      "path": "episodes/train/shard_0081.hdf5",
+      "sha256": "722cfa533068b1bab925e17f1f9ff538f2378cb450c99feb132a437f5889b592",
+      "bytes": 470004916
+    },
+    {
+      "path": "episodes/train/shard_0082.hdf5",
+      "sha256": "3321dc734fe25118a8f6358505471d271f1c9af0225d486747019fd26386424b",
+      "bytes": 485166308
+    },
+    {
+      "path": "episodes/train/shard_0083.hdf5",
+      "sha256": "9acf64703062af18ddfaa927731ec0b8c64d9708f6ad4fe63400b2a115525e9a",
+      "bytes": 484764600
+    },
+    {
+      "path": "episodes/train/shard_0084.hdf5",
+      "sha256": "b50f3255776a5ca85e1c3462244a5f5f8773c98cd4760d0dfd36e2b508f90d14",
+      "bytes": 493338578
+    },
+    {
+      "path": "episodes/train/shard_0085.hdf5",
+      "sha256": "642c604f01accf449e0be76ef03a4a9927f304b9aa029ef36709f600fdfb4eeb",
+      "bytes": 481546352
+    },
+    {
+      "path": "episodes/train/shard_0086.hdf5",
+      "sha256": "615d932f98e702dda2f0c961c0fd552026cfd77fbf7a7a81226888e74d43e5a4",
+      "bytes": 490666485
+    },
+    {
+      "path": "episodes/train/shard_0087.hdf5",
+      "sha256": "bbba893c73c8a66fd9cf1f5ebb3fb1a7b41bf6ac7df636dad0d61f54a68a3c6f",
+      "bytes": 538938954
+    },
+    {
+      "path": "episodes/train/shard_0088.hdf5",
+      "sha256": "255723032186b8f29b9ddccbff5c5c37618595b5f5e1e30df0f12b545f61bef4",
+      "bytes": 476920302
+    },
+    {
+      "path": "episodes/train/shard_0089.hdf5",
+      "sha256": "c52eea65a7988027806f4e08c2f4271b8b8d4dce2b339496ac8f76c7c616816c",
+      "bytes": 481778563
+    },
+    {
+      "path": "episodes/train/shard_0090.hdf5",
+      "sha256": "6fbbb3e0948fd7a0ac2bd75fb2901e43fbf7e33d99b26775219fe4a30c2b879f",
+      "bytes": 485222568
+    },
+    {
+      "path": "episodes/train/shard_0091.hdf5",
+      "sha256": "6a449503ceec73ac494a05a79170f809b99960eed0676bee2ae6c12f64bec810",
+      "bytes": 505315008
+    },
+    {
+      "path": "episodes/train/shard_0092.hdf5",
+      "sha256": "67202f0a83caa738d23604ec17e4ec52639f00dd17c03caaa9e0bf5533017a1c",
+      "bytes": 480741708
+    },
+    {
+      "path": "episodes/train/shard_0093.hdf5",
+      "sha256": "b359d3445a07a85d846c4a424ccff08f8d8e2582b6a68d14fef829dd1952a17f",
+      "bytes": 508852006
+    },
+    {
+      "path": "episodes/train/shard_0094.hdf5",
+      "sha256": "1817c84a7fd1933d5949f2c67ab930c8337b8ccb76daac02d313c1172da12ec2",
+      "bytes": 466503473
+    },
+    {
+      "path": "episodes/train/shard_0095.hdf5",
+      "sha256": "f30c4fdd5ac5a83db8d8e5d12fe9a91e946a8f01bb3c7bd34096a9fae729453c",
+      "bytes": 474949631
+    },
+    {
+      "path": "episodes/train/shard_0096.hdf5",
+      "sha256": "948ffdee8b7e51a7cab46c5f9a21a4969aa18b11a4234dffce7d814a36febb05",
+      "bytes": 545652280
+    },
+    {
+      "path": "episodes/train/shard_0097.hdf5",
+      "sha256": "1f87cfd11ccb1635172d901427ec220de61357f48268abb2f43697024766c41e",
+      "bytes": 465882931
+    },
+    {
+      "path": "episodes/train/shard_0098.hdf5",
+      "sha256": "7e3afc6cafccde3bdc5e2430bbb22a5cbd20183318b24ff47c6485a2f4633e2e",
+      "bytes": 471936526
+    },
+    {
+      "path": "episodes/train/shard_0099.hdf5",
+      "sha256": "09d10aac456e238478f8879329317c3d2aa3e5ad3ae6f384cc759adf42f75bd4",
+      "bytes": 516439555
+    },
+    {
+      "path": "episodes/train/shard_0100.hdf5",
+      "sha256": "758cecf1f5eec33a2146b866e7a7508b9540639f34af20cbbda8e34ca0cb9ebf",
+      "bytes": 456240913
+    },
+    {
+      "path": "episodes/train/shard_0101.hdf5",
+      "sha256": "0fe6785569d6ad44bf8050daaaf1eb533d891ddff2b5eace27e8aaed531e1278",
+      "bytes": 499242027
+    },
+    {
+      "path": "episodes/train/shard_0102.hdf5",
+      "sha256": "6d6bf2e9762e8d1a918f92dcc2a8e53232712bcdb94768aaa0a1a16fc829c699",
+      "bytes": 460274984
+    },
+    {
+      "path": "episodes/train/shard_0103.hdf5",
+      "sha256": "60b450b1d5253b9d789d659281d799a50dbe96ce150188d9d933be21cf4a555d",
+      "bytes": 497892032
+    },
+    {
+      "path": "episodes/train/shard_0104.hdf5",
+      "sha256": "ba72881a0a09a035d0686aa4c758c9a5f7133545caae2af05571e9d88d303ffc",
+      "bytes": 452975605
+    },
+    {
+      "path": "episodes/train/shard_0105.hdf5",
+      "sha256": "92fcd6c64d54c817892be7806e1ff26bd75c54b10890f315940dcafbe605b032",
+      "bytes": 453034664
+    },
+    {
+      "path": "episodes/train/shard_0106.hdf5",
+      "sha256": "9d19fd305946b6dcd35aeb94bb7c23b7258c79e9a372001741765f43b105b900",
+      "bytes": 462289910
+    },
+    {
+      "path": "episodes/train/shard_0107.hdf5",
+      "sha256": "e1817e2aef6b1df1a6c812c61c7fdc375a539f217cec886e21665f0f02a6588a",
+      "bytes": 469379958
+    },
+    {
+      "path": "episodes/train/shard_0108.hdf5",
+      "sha256": "5275d0ead4002c3e7f67aa65eafa340bccac1b88a138c351ee3f9f924515bf5d",
+      "bytes": 460666882
+    },
+    {
+      "path": "episodes/train/shard_0109.hdf5",
+      "sha256": "8f966a143022bfac93c839b6edb8f6c76a1a54b0340f42726226a08316f74708",
+      "bytes": 471915231
+    },
+    {
+      "path": "episodes/train/shard_0110.hdf5",
+      "sha256": "6ff14b164a5a69039fde8943a8ee1efeaf14389dccce308e302b7fc3b6c290da",
+      "bytes": 475217248
+    },
+    {
+      "path": "episodes/train/shard_0111.hdf5",
+      "sha256": "cab0cf2539af64e68c17e645056f7c45705de58c6ccfe60435924ec48092601a",
+      "bytes": 469398148
+    },
+    {
+      "path": "episodes/train/shard_0112.hdf5",
+      "sha256": "2c02e7a9fadba2e258a283d23362d43b7cc5572bfa0d06d681e5c4cd2b988609",
+      "bytes": 543406053
+    },
+    {
+      "path": "episodes/train/shard_0113.hdf5",
+      "sha256": "0986fca6defc1b02941abb529299b4b36256ee364eb582f8d083468fa405aaf4",
+      "bytes": 462653384
+    },
+    {
+      "path": "episodes/train/shard_0114.hdf5",
+      "sha256": "39f90cd2ac727d594d3f19c00b3e03a85abc5bb0821c64d9ed0251736551792f",
+      "bytes": 462387746
+    },
+    {
+      "path": "episodes/train/shard_0115.hdf5",
+      "sha256": "26b65ab8a28c8101d4b4859414dde93fc3a799ca0eb832b699cebd04e997c813",
+      "bytes": 452299623
+    },
+    {
+      "path": "episodes/train/shard_0116.hdf5",
+      "sha256": "35db3e5e285a63c2365a4749c595b086e3b821e45b28e919d08e988e198506f0",
+      "bytes": 456700864
+    },
+    {
+      "path": "episodes/train/shard_0117.hdf5",
+      "sha256": "c90e44740ac826ff2252e7232280d1cda74dba6cfa816f6026750c69227af9b0",
+      "bytes": 457683166
+    },
+    {
+      "path": "episodes/train/shard_0118.hdf5",
+      "sha256": "5c8173aac62bcd01d62bfb6445160d3b0876f5bf30767f0f12f1e73604a86a90",
+      "bytes": 483526968
+    },
+    {
+      "path": "episodes/train/shard_0119.hdf5",
+      "sha256": "2ae73b166fe26111e7678c1a6d693c0503d62b6040e8433f9473494682577c75",
+      "bytes": 461078707
+    },
+    {
+      "path": "episodes/train/shard_0120.hdf5",
+      "sha256": "f1dfb61dc399c4bf961c0a91ec62c4c101742dcff2461a1758baf2d8ba8a025b",
+      "bytes": 456674037
+    },
+    {
+      "path": "episodes/train/shard_0121.hdf5",
+      "sha256": "8be015ee70855ae02f4439346c48cc242546c2e4930a8a4d1508cde496b8fff7",
+      "bytes": 482814877
+    },
+    {
+      "path": "episodes/train/shard_0122.hdf5",
+      "sha256": "999337d9b79c15c21345d834bae3068c1171a86c3759bd0da8a6e2bb65907b4c",
+      "bytes": 470630031
+    },
+    {
+      "path": "episodes/train/shard_0123.hdf5",
+      "sha256": "047b5eba1fc1202509019772a63eb0e1c01305bed9de419ef2c3e420beea05c9",
+      "bytes": 455280066
+    },
+    {
+      "path": "episodes/train/shard_0124.hdf5",
+      "sha256": "59dfcd766bb43f70e76701fb92dfaad617014c7f3b0b130aa171aae7b80bf23e",
+      "bytes": 465235677
+    },
+    {
+      "path": "episodes/train/shard_0125.hdf5",
+      "sha256": "3388e75236d553258ca07fbd614fe77d9a95575dd87a65d72708b233a2f5eb29",
+      "bytes": 468703276
+    },
+    {
+      "path": "episodes/train/shard_0126.hdf5",
+      "sha256": "74084bd6a9327469c15d85b8df20d20ab8c2569fc5364dd915d8baf7665e67d8",
+      "bytes": 518327203
+    },
+    {
+      "path": "episodes/train/shard_0127.hdf5",
+      "sha256": "67cdff948c08c88de236a60a3b373465635737abcdb2ae05d9e5fbc393879765",
+      "bytes": 496220140
+    },
+    {
+      "path": "episodes/train/shard_0128.hdf5",
+      "sha256": "e7488e5b7c0899fbb249e3a04273f8be6ca307c4dbd8b95ccc4f799c9ca239de",
+      "bytes": 560485705
+    },
+    {
+      "path": "episodes/train/shard_0129.hdf5",
+      "sha256": "8aefe73d69640427ee2cb730a5ad59113aee8d5b5dbb76aec8d9f744db567c06",
+      "bytes": 541106094
+    },
+    {
+      "path": "episodes/train/shard_0130.hdf5",
+      "sha256": "1aa553fbb36e9cbe045ff6efd683f59f56f60e732f6bbd451177db7b96632863",
+      "bytes": 529865718
+    },
+    {
+      "path": "episodes/train/shard_0131.hdf5",
+      "sha256": "036d8a7d0ffd0c5c3907baec2ae63b58e8469bc6dba9061c39b2ca39981d1859",
+      "bytes": 540626514
+    },
+    {
+      "path": "episodes/train/shard_0132.hdf5",
+      "sha256": "b38b77700a9b8ddbeea50db7666dce437c77bef72dc8ce744a8e4fc5b52b1931",
+      "bytes": 534760984
+    },
+    {
+      "path": "episodes/train/shard_0133.hdf5",
+      "sha256": "fb8023fe4dd17deb827ebb8598a8c752890a0642fc28d12cfc21036a11cace36",
+      "bytes": 550374336
+    },
+    {
+      "path": "episodes/train/shard_0134.hdf5",
+      "sha256": "bf8604e58e1f33e543d73ca495d5a4123b594463e7d2a7fe757b18b6b0f4675c",
+      "bytes": 542798471
+    },
+    {
+      "path": "episodes/train/shard_0135.hdf5",
+      "sha256": "d30a5c7b2b8c257370e9b6fee170de6eb29ff973b8043fa0fc3b6c11d22c1069",
+      "bytes": 532967256
+    },
+    {
+      "path": "episodes/train/shard_0136.hdf5",
+      "sha256": "8d96e9d45084879824e5c9f5c98debb2d5cd2bb212af8bda1274d1a977668a05",
+      "bytes": 539150477
+    },
+    {
+      "path": "episodes/train/shard_0137.hdf5",
+      "sha256": "58b0c7e03ff182e2f557ba8f660a9fd61156de5c3b753431ab11aded392eb485",
+      "bytes": 574259429
+    },
+    {
+      "path": "episodes/train/shard_0138.hdf5",
+      "sha256": "92d61ce289f2b33e449d3ed5e25bf27f9230708882a7ea460d637b556d718848",
+      "bytes": 532716058
+    },
+    {
+      "path": "episodes/train/shard_0139.hdf5",
+      "sha256": "803edb0413c8fdcd6a9aea8c5777d5d4dfd8d0f3c60b6ab3c6a21a663db543c7",
+      "bytes": 547670321
+    },
+    {
+      "path": "episodes/train/shard_0140.hdf5",
+      "sha256": "a31db920ad5ce7425639b29b4df225d111b2aa0e31a922d803adbce19ce3b0ea",
+      "bytes": 554477558
+    },
+    {
+      "path": "episodes/train/shard_0141.hdf5",
+      "sha256": "fe7a1963eb4fbd327608baa1236b2c63539f33ca5cf3be1e9099c3f59463814f",
+      "bytes": 555879537
+    },
+    {
+      "path": "episodes/train/shard_0142.hdf5",
+      "sha256": "64af928c22c0198ff1afee2a67940ee6910d98feae929b58893b16697aa69309",
+      "bytes": 554968614
+    },
+    {
+      "path": "episodes/train/shard_0143.hdf5",
+      "sha256": "d7faedc772f7ca29e97164a5d084abd25bd277fa3fc5554e2c0701146ff66856",
+      "bytes": 550040051
+    },
+    {
+      "path": "episodes/train/shard_0144.hdf5",
+      "sha256": "d00771a66c0b9c65faca63c0bff3cfa10d4786a18e41cbdf7cefed48fe4b2043",
+      "bytes": 565064494
+    },
+    {
+      "path": "episodes/train/shard_0145.hdf5",
+      "sha256": "6f9870e7277b807a6696803739414e625ed4346fde040a720a57f67e11108db0",
+      "bytes": 577225728
+    },
+    {
+      "path": "episodes/train/shard_0146.hdf5",
+      "sha256": "33a009d8e38a101e729f713bf5cf6dec425d7f9fd7fc05ba7b8467b07d3b0bd8",
+      "bytes": 558595415
+    },
+    {
+      "path": "episodes/train/shard_0147.hdf5",
+      "sha256": "d69c8bb0a69fb8296ab641af3057458577859f46deea9a14f0b1e1a2fe937102",
+      "bytes": 542189188
+    },
+    {
+      "path": "episodes/train/shard_0148.hdf5",
+      "sha256": "75d2beafac5eeff3926025dc9fd538f77514902bc9f2c41330ee20b95747be99",
+      "bytes": 548063931
+    },
+    {
+      "path": "episodes/train/shard_0149.hdf5",
+      "sha256": "9aefb0a7aa71fe301b8451f86e827979400ba15ab00b67d75c044eb1bf33f8eb",
+      "bytes": 579781027
+    },
+    {
+      "path": "episodes/train/shard_0150.hdf5",
+      "sha256": "85e40d72ab306db7e6ec1455023ebd3a77d33326701568348f0855efbe52c6bf",
+      "bytes": 546830133
+    },
+    {
+      "path": "episodes/train/shard_0151.hdf5",
+      "sha256": "3b562ceca8f3427304dbaa35f6fcc9e87fc49e20e3e3cef7cefc83513cada03c",
+      "bytes": 556553979
+    },
+    {
+      "path": "episodes/train/shard_0152.hdf5",
+      "sha256": "ed2a87c248c636a0e2d1bb32b92192a0f04af676ce5772fe5b5d1dbdb8d8272e",
+      "bytes": 568357638
+    },
+    {
+      "path": "episodes/train/shard_0153.hdf5",
+      "sha256": "e5a67de0f4ff14180748890e4371299c1e0bdf4fb642a933cb0470e253fa4e36",
+      "bytes": 532866649
+    },
+    {
+      "path": "episodes/train/shard_0154.hdf5",
+      "sha256": "d4bc074d20687dc77de56b73a32662c5b21f7bc34e212c8e5ae6293453ab9b78",
+      "bytes": 556076993
+    },
+    {
+      "path": "episodes/train/shard_0155.hdf5",
+      "sha256": "776af9e0a87bf8ec373d25b73066d550a7b2bfc8cc62c66fdcf31725cdd3c85c",
+      "bytes": 536125729
+    },
+    {
+      "path": "episodes/train/shard_0156.hdf5",
+      "sha256": "014f44b733956f41f9052f58ef05f6e5934c85e00a17129b8f7dc6f8899fc90a",
+      "bytes": 575431772
+    },
+    {
+      "path": "episodes/train/shard_0157.hdf5",
+      "sha256": "45798c0133a0a45429988523b78b8481e939fd148c4686efb456d4136792e3f0",
+      "bytes": 551911509
+    },
+    {
+      "path": "episodes/train/shard_0158.hdf5",
+      "sha256": "fdc0e5c9db4ad0e02fb59cf0cd7274f4deba27e9fe4e7ac3bac3a145a94a6848",
+      "bytes": 549187163
+    },
+    {
+      "path": "episodes/train/shard_0159.hdf5",
+      "sha256": "a3eef45c16608ba68d9e65dcac47de5ef4ca3388128ca4ea5ce2bbbf8cd3fd05",
+      "bytes": 583686627
+    }
+  ]
+}

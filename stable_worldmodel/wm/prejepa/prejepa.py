@@ -48,7 +48,10 @@ class PreJEPA(torch.nn.Module):
 
         for key in emb_keys:
             extr_enc = self.extra_encoders[key]
-            extra_input = info[f'{prefix}{key}'].float()  # (B, T, dim)
+            extra_dtype = next(extr_enc.parameters()).dtype
+            extra_input = info[f'{prefix}{key}'].to(
+                dtype=extra_dtype
+            )  # (B, T, dim)
             extra_embed = extr_enc(
                 extra_input
             )  # (B, T, dim) -> (B, T, emb_dim)

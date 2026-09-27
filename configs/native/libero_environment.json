@@ -1,0 +1,79 @@
+{
+  "env_kwargs": {
+    "robots": [
+      "Panda"
+    ],
+    "controller_configs": {
+      "type": "OSC_POSE",
+      "input_max": 1,
+      "input_min": -1,
+      "output_max": [
+        0.05,
+        0.05,
+        0.05,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "output_min": [
+        -0.05,
+        -0.05,
+        -0.05,
+        -0.5,
+        -0.5,
+        -0.5
+      ],
+      "kp": 150,
+      "damping_ratio": 1,
+      "impedance_mode": "fixed",
+      "kp_limits": [
+        0,
+        300
+      ],
+      "damping_ratio_limits": [
+        0,
+        10
+      ],
+      "position_limits": null,
+      "orientation_limits": null,
+      "uncouple_pos_ori": true,
+      "control_delta": true,
+      "interpolation": null,
+      "ramp_ratio": 0.2
+    },
+    "has_renderer": false,
+    "has_offscreen_renderer": true,
+    "ignore_done": true,
+    "use_camera_obs": true,
+    "camera_depths": false,
+    "camera_names": [
+      "robot0_eye_in_hand",
+      "agentview"
+    ],
+    "reward_shaping": true,
+    "control_freq": 20,
+    "camera_heights": 128,
+    "camera_widths": 128,
+    "camera_segmentations": null
+  },
+  "suites": {
+    "libero_scene2": {
+      "problem_name": "libero_living_room_tabletop_manipulation",
+      "tasks": {
+        "alphabet": "LIVING_ROOM_SCENE2_pick_up_the_alphabet_soup_and_put_it_in_the_basket.bddl",
+        "tomato": "LIVING_ROOM_SCENE2_pick_up_the_tomato_sauce_and_put_it_in_the_basket.bddl",
+        "butter": "LIVING_ROOM_SCENE2_pick_up_the_butter_and_put_it_in_the_basket.bddl",
+        "milk": "LIVING_ROOM_SCENE2_pick_up_the_milk_and_put_it_in_the_basket.bddl",
+        "orange": "LIVING_ROOM_SCENE2_pick_up_the_orange_juice_and_put_it_in_the_basket.bddl"
+      }
+    },
+    "libero_caddy": {
+      "problem_name": "libero_study_tabletop_manipulation",
+      "tasks": {
+        "front": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_front_compartment_of_the_caddy.bddl",
+        "left": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_left_compartment_of_the_caddy.bddl",
+        "right": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_right_compartment_of_the_caddy.bddl"
+      }
+    }
+  }
+}

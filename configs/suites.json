@@ -1,0 +1,155 @@
+{
+  "lewm-pusht": {
+    "benchmark": "pusht",
+    "config": "configs/paper.json",
+    "world_model": "pusht_lewm_object.ckpt",
+    "generator": "pusht_generator.pt",
+    "prior": "pusht_action_prior.pt",
+    "far_prior": "pusht_far_action_prior.pt",
+    "methods": [
+      "base_cem",
+      "far_goal_prior_cem",
+      "lewm_generator",
+      "generator_prior_top",
+      "final_goal_scoring",
+      "sage"
+    ]
+  },
+  "visual-pusht": {
+    "benchmark": "pusht",
+    "config": "configs/paper.json",
+    "world_model": "pusht_lewm_object.ckpt",
+    "generator": "pusht_visual_generator.pt",
+    "prior": "pusht_visual_prior.pt",
+    "methods": [
+      "sage"
+    ]
+  },
+  "dino-pusht": {
+    "benchmark": "pusht",
+    "config": "configs/paper_dinowm_k128_cem6.json",
+    "world_model": "pusht_dinowm_object.ckpt",
+    "generator": "pusht_dino_generator.pt",
+    "prior": "pusht_dino_prior.pt",
+    "methods": [
+      "base_cem",
+      "generator_prior_top",
+      "sage"
+    ]
+  },
+  "lewm-cube": {
+    "benchmark": "cube",
+    "config": "configs/paper.json",
+    "world_model": "cube_lewm_object.ckpt",
+    "generator": "cube_generator.pt",
+    "prior": "cube_action_prior.pt",
+    "far_prior": "cube_far_action_prior.pt",
+    "methods": [
+      "base_cem",
+      "far_goal_prior_cem",
+      "lewm_generator",
+      "generator_prior_top",
+      "final_goal_scoring",
+      "sage"
+    ]
+  },
+  "visual-cube": {
+    "benchmark": "cube",
+    "config": "configs/paper.json",
+    "world_model": "cube_lewm_object.ckpt",
+    "generator": "cube_visual_generator.pt",
+    "prior": "cube_visual_prior.pt",
+    "methods": [
+      "sage"
+    ]
+  },
+  "dino-cube": {
+    "benchmark": "cube",
+    "config": "configs/paper_dinowm_cube_k128_cem6.json",
+    "world_model": "cube_dinowm/weights.pt",
+    "generator": "cube_dino_generator.pt",
+    "prior": "cube_dino_prior.pt",
+    "methods": [
+      "base_cem",
+      "generator_prior_top",
+      "sage"
+    ],
+    "companion_assets": [
+      "cube_dinowm/config.json"
+    ]
+  },
+  "libero_scene2": {
+    "benchmark": "libero_scene2",
+    "engine": "native",
+    "world_model": "libero_scene2/world_model/weights.pt",
+    "generator": "libero_scene2/generator.pt",
+    "prior": "libero_scene2/prior.pt",
+    "companion_assets": [
+      "libero_scene2/world_model/config.json",
+      "libero_scene2/action_stats.json"
+    ],
+    "methods": [
+      "base",
+      "prior_top",
+      "sage"
+    ],
+    "horizons": [
+      30,
+      60,
+      90,
+      120
+    ],
+    "queries_per_horizon": 150,
+    "full_episode": true,
+    "status": "acceptance_pending"
+  },
+  "libero_caddy": {
+    "benchmark": "libero_caddy",
+    "engine": "native",
+    "world_model": "libero_caddy/world_model/weights.pt",
+    "generator": "libero_caddy/generator.pt",
+    "prior": "libero_caddy/prior.pt",
+    "companion_assets": [
+      "libero_caddy/world_model/config.json",
+      "libero_caddy/action_stats.json"
+    ],
+    "methods": [
+      "base",
+      "prior_top",
+      "sage"
+    ],
+    "horizons": [
+      30,
+      60,
+      90,
+      120
+    ],
+    "queries_per_horizon": 150,
+    "full_episode": true,
+    "status": "acceptance_pending"
+  },
+  "robotwin_a2b": {
+    "benchmark": "robotwin_a2b",
+    "engine": "native",
+    "world_model": "robotwin_a2b/world_model/weights.pt",
+    "generator": "robotwin_a2b/generator.pt",
+    "prior": "robotwin_a2b/prior.pt",
+    "companion_assets": [
+      "robotwin_a2b/world_model/config.json"
+    ],
+    "methods": [
+      "base",
+      "prior_top",
+      "sage"
+    ],
+    "horizons": [
+      30,
+      60,
+      90,
+      120
+    ],
+    "queries_per_horizon": 150,
+    "full_episode": false,
+    "status": "acceptance_pending"
+  }
+}

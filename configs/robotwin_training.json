@@ -1,0 +1,54 @@
+{
+  "suite": "robotwin_a2b",
+  "cache_stride": 1,
+  "subgoal_steps": 15,
+  "generator_selected_epoch": 1,
+  "prior_selected_epoch": 4,
+  "generator": {
+    "model_config": {
+      "latent_dim": 1152,
+      "lowdim_dim": 0,
+      "hidden_dim": 896,
+      "num_heads": 8,
+      "depth": 4,
+      "max_goal_offset": 210,
+      "predict_residual_from": "goal",
+      "pooling": "decoder",
+      "goal_condition_mode": "goal"
+    },
+    "windows": {
+      "train": {
+        "count": 948823,
+        "sha256": "c2c44fedb0c63649a68d2a417d1110ba32cda978fa356e1d3d7e7ed3f4759a6d"
+      },
+      "validation": {
+        "count": 118500,
+        "sha256": "10e2e9cddacafbb93806ba10e191100086a5ad7e7644856c309fd199d84acc71"
+      }
+    }
+  },
+  "prior": {
+    "model_config": {
+      "latent_dim": 1152,
+      "lowdim_dim": 0,
+      "action_dim": 14,
+      "max_plan_horizon": 15,
+      "hidden_dim": 512,
+      "num_heads": 8,
+      "depth": 3,
+      "num_modes": 8,
+      "dropout": 0.0,
+      "max_goal_offset": 210
+    },
+    "windows": {
+      "train": {
+        "count": 1068823,
+        "sha256": "827f2f48f60da3358629a862a824deddfe41c4ebb56bd9170c43713f904d545c"
+      },
+      "validation": {
+        "count": 133500,
+        "sha256": "f6a1cfb806ed12df70ea702808d10fec1711d5e2d1191555dc389cd3cf17ce01"
+      }
+    }
+  }
+}

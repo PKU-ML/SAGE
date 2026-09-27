@@ -84,7 +84,9 @@ class FrameLatentCache:
         if local_episode < 0 or local_episode >= int(self.episode_base.shape[0]):
             raise IndexError(f"local_episode out of cache range: {local_episode}")
         index = int(self.episode_base[local_episode]) + start
-        if index < 0 or index >= int(self.latents.shape[0]):
+        end = (int(self.episode_base[local_episode + 1])
+               if local_episode + 1 < len(self.episode_base) else len(self.latents))
+        if start < 0 or index >= end:
             raise IndexError(
                 f"frame cache index out of range: episode={local_episode} start={start} index={index}"
             )

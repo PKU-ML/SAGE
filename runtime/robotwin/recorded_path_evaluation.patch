@@ -1,0 +1,70 @@
+--- a/envs/robot/planner.py
++++ b/envs/robot/planner.py
+@@ -270,10 +270,10 @@
+             result_q = t3d.quaternions.mat2quat(wRb.T @ wRt)
+             return result_p, result_q
+     
+-except Exception as e:
+-    print('[planner.py]: Something wrong happened when importing CuroboPlanner! Please check if Curobo is installed correctly. If the problem still exists, you can install Curobo from https://github.com/NVlabs/curobo manually.')
+-    print('Exception traceback:')
+-    traceback.print_exc()
++except ModuleNotFoundError as e:
++    if e.name != "curobo" and not e.name.startswith("curobo."):
++        raise
++    CuroboPlanner = None
+ 
+ 
+ # ********************** MplibPlanner **********************
+--- a/envs/robot/robot.py
++++ b/envs/robot/robot.py
+@@ -16,6 +16,15 @@
+ import torch.multiprocessing as mp
+ 
+ 
++class ReplayOnlyPlanner:
++    """Recorded arm paths, with the unchanged native gripper interpolation."""
++
++    plan_grippers = MplibPlanner.plan_grippers
++
++    def __getattr__(self, name):
++        raise RuntimeError(f"Replay-only runtime cannot perform arm planning: {name}")
++
++
+ class Robot:
+ 
+     def __init__(self, scene, need_topp=False, **kwargs):
+@@ -36,6 +45,7 @@
+         right_robot_file = kwargs["right_robot_file"]
+ 
+         self.need_topp = need_topp
++        self.need_plan = kwargs.get("need_plan", True)
+ 
+         self.left_urdf_path = os.path.join(left_robot_file, left_embodiment_args["urdf_path"])
+         self.left_srdf_path = left_embodiment_args.get("srdf_path", None)
+@@ -124,6 +134,11 @@
+     def reset(self, scene, need_topp=False, **kwargs):
+         self._init_robot_(scene, need_topp, **kwargs)
+ 
++        if not self.need_plan:
++            self.set_planner(scene=scene)
++            self.init_joints()
++            return
++
+         if self.communication_flag:
+             if hasattr(self, "left_conn") and self.left_conn:
+                 self.left_conn.send({"cmd": "reset"})
+@@ -264,7 +279,13 @@
+             abs_left_curobo_yml_path = abs_left_curobo_yml_path.replace("curobo.yml", "curobo_left.yml")
+             abs_right_curobo_yml_path = abs_right_curobo_yml_path.replace("curobo.yml", "curobo_right.yml")
+ 
+-        if not self.communication_flag:
++        if not self.need_plan:
++            self.communication_flag = False
++            self.left_planner = ReplayOnlyPlanner()
++            self.right_planner = ReplayOnlyPlanner()
++        elif CuroboPlanner is None:
++            raise ImportError("cuRobo is required for generating new arm paths, not recorded-path evaluation")
++        elif not self.communication_flag:
+             self.left_planner = CuroboPlanner(self.left_entity_origion_pose,
+                                               self.left_arm_joints_name,
+                                               [joint.get_name() for joint in self.left_entity.get_active_joints()],

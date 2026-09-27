@@ -20,3 +20,9 @@ datasets/
 .DS_Store
 *.lance/
 wandb/
+build/
+dist/
+*.egg-info/
+.env
+.env.*
+!.env.example

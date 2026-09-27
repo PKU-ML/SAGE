@@ -1,0 +1,1126 @@
+[
+  {
+    "id": "pusht_base_matched",
+    "historical_counts": {
+      "reported/H150": [
+        7,
+        150
+      ],
+      "reported/H100": [
+        13,
+        150
+      ],
+      "reported/H125": [
+        13,
+        150
+      ],
+      "reported/H75": [
+        31,
+        150
+      ]
+    }
+  },
+  {
+    "id": "cube_base_matched",
+    "historical_counts": {
+      "reported/H150": [
+        31,
+        150
+      ],
+      "reported/H100": [
+        88,
+        150
+      ],
+      "reported/H125": [
+        68,
+        150
+      ],
+      "reported/H75": [
+        100,
+        150
+      ]
+    }
+  },
+  {
+    "id": "pusht_base_short",
+    "historical_counts": {
+      "reported/H50": [
+        84,
+        150
+      ],
+      "reported/H25": [
+        134,
+        150
+      ]
+    }
+  },
+  {
+    "id": "cube_base_short",
+    "historical_counts": {
+      "reported/H50": [
+        84,
+        150
+      ],
+      "reported/H25": [
+        100,
+        150
+      ]
+    }
+  },
+  {
+    "id": "pusht_sage",
+    "historical_counts": {
+      "reported/H150": [
+        97,
+        150
+      ],
+      "reported/H50": [
+        122,
+        150
+      ],
+      "reported/H100": [
+        109,
+        150
+      ],
+      "reported/H125": [
+        103,
+        150
+      ],
+      "reported/H25": [
+        141,
+        150
+      ],
+      "reported/H75": [
+        122,
+        150
+      ]
+    }
+  },
+  {
+    "id": "cube_sage",
+    "historical_counts": {
+      "reported/H150": [
+        101,
+        150
+      ],
+      "reported/H50": [
+        114,
+        150
+      ],
+      "reported/H100": [
+        128,
+        150
+      ],
+      "reported/H125": [
+        116,
+        150
+      ],
+      "reported/H25": [
+        148,
+        150
+      ],
+      "reported/H75": [
+        129,
+        150
+      ]
+    }
+  },
+  {
+    "id": "pusht_subgoal_scoring",
+    "historical_counts": {
+      "base/H150": [
+        88,
+        150
+      ],
+      "base/H50": [
+        113,
+        150
+      ],
+      "base/H100": [
+        109,
+        150
+      ],
+      "base/H125": [
+        100,
+        150
+      ],
+      "base/H25": [
+        136,
+        150
+      ],
+      "base/H75": [
+        106,
+        150
+      ]
+    }
+  },
+  {
+    "id": "cube_subgoal_scoring",
+    "historical_counts": {
+      "reported/H150": [
+        77,
+        150
+      ],
+      "reported/H50": [
+        95,
+        150
+      ],
+      "reported/H100": [
+        106,
+        150
+      ],
+      "reported/H125": [
+        89,
+        150
+      ],
+      "reported/H25": [
+        137,
+        150
+      ],
+      "reported/H75": [
+        114,
+        150
+      ]
+    }
+  },
+  {
+    "id": "pusht_top",
+    "historical_counts": {
+      "reported/H150": [
+        24,
+        150
+      ],
+      "reported/H50": [
+        63,
+        150
+      ],
+      "reported/H100": [
+        43,
+        150
+      ],
+      "reported/H125": [
+        36,
+        150
+      ],
+      "reported/H25": [
+        83,
+        150
+      ],
+      "reported/H75": [
+        53,
+        150
+      ]
+    }
+  },
+  {
+    "id": "cube_top",
+    "historical_counts": {
+      "reported/H150": [
+        2,
+        150
+      ],
+      "reported/H50": [
+        104,
+        150
+      ],
+      "reported/H100": [
+        113,
+        150
+      ],
+      "reported/H125": [
+        91,
+        150
+      ],
+      "reported/H25": [
+        133,
+        150
+      ],
+      "reported/H75": [
+        91,
+        150
+      ]
+    }
+  },
+  {
+    "id": "pusht_far_prior",
+    "historical_counts": {
+      "reported/H150": [
+        16,
+        150
+      ],
+      "reported/H50": [
+        86,
+        150
+      ],
+      "reported/H100": [
+        22,
+        150
+      ],
+      "reported/H125": [
+        24,
+        150
+      ],
+      "reported/H25": [
+        137,
+        150
+      ],
+      "reported/H75": [
+        28,
+        150
+      ]
+    }
+  },
+  {
+    "id": "cube_far_prior",
+    "historical_counts": {
+      "reported/H150": [
+        62,
+        150
+      ],
+      "reported/H50": [
+        111,
+        150
+      ],
+      "reported/H100": [
+        120,
+        150
+      ],
+      "reported/H125": [
+        88,
+        150
+      ],
+      "reported/H25": [
+        147,
+        150
+      ],
+      "reported/H75": [
+        125,
+        150
+      ]
+    }
+  },
+  {
+    "id": "prism_pusht",
+    "historical_counts": {
+      "reported/H150": [
+        26,
+        150
+      ],
+      "reported/H50": [
+        82,
+        150
+      ],
+      "reported/H100": [
+        29,
+        150
+      ],
+      "reported/H125": [
+        23,
+        150
+      ],
+      "reported/H25": [
+        139,
+        150
+      ],
+      "reported/H75": [
+        40,
+        150
+      ]
+    }
+  },
+  {
+    "id": "prism_cube_legacy_mppi",
+    "historical_counts": {
+      "reported/H150": [
+        31,
+        150
+      ],
+      "reported/H50": [
+        50,
+        150
+      ],
+      "reported/H100": [
+        79,
+        150
+      ],
+      "reported/H125": [
+        42,
+        150
+      ],
+      "reported/H25": [
+        94,
+        150
+      ],
+      "reported/H75": [
+        76,
+        150
+      ]
+    }
+  },
+  {
+    "id": "pusht_final_scoring",
+    "historical_counts": {
+      "subgoal_prior_final_cost/H75": [
+        35,
+        150
+      ],
+      "subgoal_prior_final_cost/H125": [
+        20,
+        150
+      ],
+      "subgoal_prior_final_cost/H25": [
+        141,
+        150
+      ],
+      "subgoal_prior_final_cost/H50": [
+        83,
+        150
+      ],
+      "subgoal_prior_final_cost/H100": [
+        21,
+        150
+      ],
+      "subgoal_prior_final_cost/H150": [
+        10,
+        150
+      ]
+    }
+  },
+  {
+    "id": "cube_final_scoring",
+    "historical_counts": {
+      "subgoal_prior_final_cost/H75": [
+        124,
+        150
+      ],
+      "subgoal_prior_final_cost/H125": [
+        89,
+        150
+      ],
+      "subgoal_prior_final_cost/H25": [
+        149,
+        150
+      ],
+      "subgoal_prior_final_cost/H50": [
+        111,
+        150
+      ],
+      "subgoal_prior_final_cost/H100": [
+        118,
+        150
+      ],
+      "subgoal_prior_final_cost/H150": [
+        55,
+        150
+      ]
+    }
+  },
+  {
+    "id": "visual_pusht",
+    "historical_counts": {
+      "sage/H75": [
+        117,
+        150
+      ],
+      "sage/H125": [
+        102,
+        150
+      ],
+      "sage/H25": [
+        140,
+        150
+      ],
+      "sage/H50": [
+        125,
+        150
+      ],
+      "sage/H100": [
+        108,
+        150
+      ],
+      "sage/H150": [
+        92,
+        150
+      ]
+    }
+  },
+  {
+    "id": "visual_cube",
+    "historical_counts": {
+      "sage/H75": [
+        126,
+        150
+      ],
+      "sage/H125": [
+        114,
+        150
+      ],
+      "sage/H25": [
+        145,
+        150
+      ],
+      "sage/H50": [
+        115,
+        150
+      ],
+      "sage/H100": [
+        120,
+        150
+      ],
+      "sage/H150": [
+        84,
+        150
+      ]
+    }
+  },
+  {
+    "id": "dino_pusht_base_cem",
+    "historical_counts": {
+      "base_cem/H75": [
+        12,
+        150
+      ],
+      "base_cem/H125": [
+        3,
+        150
+      ],
+      "base_cem/H25": [
+        94,
+        150
+      ],
+      "base_cem/H50": [
+        19,
+        150
+      ],
+      "base_cem/H100": [
+        3,
+        150
+      ],
+      "base_cem/H150": [
+        2,
+        150
+      ]
+    }
+  },
+  {
+    "id": "dino_pusht_generator_prior_top",
+    "historical_counts": {
+      "generator_prior_top/H75": [
+        6,
+        150
+      ],
+      "generator_prior_top/H125": [
+        1,
+        150
+      ],
+      "generator_prior_top/H25": [
+        37,
+        150
+      ],
+      "generator_prior_top/H50": [
+        17,
+        150
+      ],
+      "generator_prior_top/H100": [
+        2,
+        150
+      ],
+      "generator_prior_top/H150": [
+        1,
+        150
+      ]
+    }
+  },
+  {
+    "id": "dino_pusht_sage",
+    "historical_counts": {
+      "sage/H75": [
+        41,
+        150
+      ],
+      "sage/H125": [
+        13,
+        150
+      ],
+      "sage/H25": [
+        105,
+        150
+      ],
+      "sage/H50": [
+        48,
+        150
+      ],
+      "sage/H100": [
+        16,
+        150
+      ],
+      "sage/H150": [
+        13,
+        150
+      ]
+    }
+  },
+  {
+    "id": "dino_cube_base_cem_short",
+    "historical_counts": {
+      "base_cem/H75": [
+        111,
+        150
+      ],
+      "base_cem/H50": [
+        74,
+        150
+      ]
+    }
+  },
+  {
+    "id": "dino_cube_base_cem_remaining",
+    "historical_counts": {
+      "base_cem/H125": [
+        65,
+        150
+      ],
+      "base_cem/H25": [
+        98,
+        150
+      ],
+      "base_cem/H100": [
+        95,
+        150
+      ],
+      "base_cem/H150": [
+        34,
+        150
+      ]
+    }
+  },
+  {
+    "id": "dino_cube_generator_prior_top_short",
+    "historical_counts": {
+      "generator_prior_top/H75": [
+        140,
+        150
+      ],
+      "generator_prior_top/H50": [
+        136,
+        150
+      ]
+    }
+  },
+  {
+    "id": "dino_cube_generator_prior_top_remaining",
+    "historical_counts": {
+      "generator_prior_top/H125": [
+        143,
+        150
+      ],
+      "generator_prior_top/H25": [
+        137,
+        150
+      ],
+      "generator_prior_top/H100": [
+        146,
+        150
+      ],
+      "generator_prior_top/H150": [
+        141,
+        150
+      ]
+    }
+  },
+  {
+    "id": "dino_cube_sage_short",
+    "historical_counts": {
+      "sage/H75": [
+        141,
+        150
+      ],
+      "sage/H50": [
+        137,
+        150
+      ]
+    }
+  },
+  {
+    "id": "dino_cube_sage_remaining",
+    "historical_counts": {
+      "sage/H125": [
+        142,
+        150
+      ],
+      "sage/H25": [
+        150,
+        150
+      ],
+      "sage/H100": [
+        146,
+        150
+      ],
+      "sage/H150": [
+        132,
+        150
+      ]
+    }
+  },
+  {
+    "id": "scene2_sage_top",
+    "historical_counts": {
+      "prior_top/H120": [
+        149,
+        150
+      ],
+      "prior_top/H30": [
+        150,
+        150
+      ],
+      "prior_top/H60": [
+        150,
+        150
+      ],
+      "prior_top/H90": [
+        148,
+        150
+      ],
+      "prior_top/Hfull": [
+        53,
+        150
+      ],
+      "sage/H120": [
+        149,
+        150
+      ],
+      "sage/H30": [
+        150,
+        150
+      ],
+      "sage/H60": [
+        150,
+        150
+      ],
+      "sage/H90": [
+        150,
+        150
+      ],
+      "sage/Hfull": [
+        73,
+        150
+      ]
+    }
+  },
+  {
+    "id": "scene2_base_tail",
+    "historical_counts": {
+      "base/H120": [
+        1,
+        150
+      ],
+      "base/H90": [
+        1,
+        150
+      ],
+      "base/H60": [
+        15,
+        150
+      ],
+      "base/H30": [
+        124,
+        150
+      ]
+    }
+  },
+  {
+    "id": "scene2_base_full",
+    "historical_counts": {
+      "base/Hfull": [
+        0,
+        150
+      ]
+    }
+  },
+  {
+    "id": "caddy_sage_top_tail",
+    "historical_counts": {
+      "sage/H60": [
+        112,
+        150
+      ],
+      "prior_top/H120": [
+        76,
+        150
+      ],
+      "prior_top/H60": [
+        75,
+        150
+      ],
+      "sage/H30": [
+        126,
+        150
+      ],
+      "prior_top/H90": [
+        80,
+        150
+      ],
+      "sage/H90": [
+        109,
+        150
+      ],
+      "prior_top/H30": [
+        97,
+        150
+      ],
+      "sage/H120": [
+        115,
+        150
+      ]
+    }
+  },
+  {
+    "id": "caddy_sage_top_full",
+    "historical_counts": {
+      "prior_top/Hfull": [
+        58,
+        150
+      ],
+      "sage/Hfull": [
+        87,
+        150
+      ]
+    }
+  },
+  {
+    "id": "caddy_base_tail",
+    "historical_counts": {
+      "base/H60": [
+        31,
+        150
+      ],
+      "base/H120": [
+        4,
+        150
+      ],
+      "base/H90": [
+        20,
+        150
+      ],
+      "base/H30": [
+        54,
+        150
+      ]
+    }
+  },
+  {
+    "id": "caddy_base_full",
+    "historical_counts": {
+      "base/Hfull": [
+        0,
+        150
+      ]
+    }
+  },
+  {
+    "id": "a2b_sage_top",
+    "historical_counts": {
+      "prior_top/H30": [
+        13,
+        150
+      ],
+      "prior_top/H90": [
+        6,
+        150
+      ],
+      "sage/H120": [
+        18,
+        150
+      ],
+      "prior_top/H120": [
+        0,
+        150
+      ],
+      "sage/H90": [
+        21,
+        150
+      ],
+      "prior_top/H60": [
+        15,
+        150
+      ],
+      "sage/H60": [
+        21,
+        150
+      ],
+      "sage/H30": [
+        23,
+        150
+      ]
+    }
+  },
+  {
+    "id": "a2b_base",
+    "historical_counts": {
+      "base/H60": [
+        0,
+        150
+      ],
+      "base/H120": [
+        19,
+        150
+      ],
+      "base/H30": [
+        0,
+        150
+      ],
+      "base/H90": [
+        11,
+        150
+      ]
+    }
+  },
+  {
+    "id": "pusht_training_seed_248",
+    "historical_counts": {
+      "sage/H50": [
+        123,
+        150
+      ],
+      "sage/H100": [
+        103,
+        150
+      ],
+      "sage/H150": [
+        95,
+        150
+      ]
+    }
+  },
+  {
+    "id": "pusht_training_seed_348",
+    "historical_counts": {
+      "sage/H50": [
+        120,
+        150
+      ],
+      "sage/H100": [
+        108,
+        150
+      ],
+      "sage/H150": [
+        89,
+        150
+      ]
+    }
+  },
+  {
+    "id": "estimated_h_reference",
+    "historical_counts": {
+      "sage/H150": [
+        95,
+        150
+      ],
+      "sage/H50": [
+        121,
+        150
+      ],
+      "sage/H100": [
+        101,
+        150
+      ]
+    }
+  },
+  {
+    "id": "estimated_h_estimated",
+    "historical_counts": {
+      "sage/H150": [
+        102,
+        150
+      ],
+      "sage/H50": [
+        117,
+        150
+      ],
+      "sage/H100": [
+        105,
+        150
+      ]
+    }
+  },
+  {
+    "id": "capacity_small",
+    "historical_counts": {
+      "reported/H150": [
+        23,
+        50
+      ],
+      "reported/H50": [
+        29,
+        50
+      ],
+      "reported/H100": [
+        35,
+        50
+      ],
+      "reported/H125": [
+        24,
+        50
+      ],
+      "reported/H25": [
+        46,
+        50
+      ],
+      "reported/H75": [
+        33,
+        50
+      ]
+    }
+  },
+  {
+    "id": "capacity_main",
+    "historical_counts": {
+      "reported/H150": [
+        27,
+        50
+      ],
+      "reported/H50": [
+        39,
+        50
+      ],
+      "reported/H100": [
+        36,
+        50
+      ],
+      "reported/H125": [
+        34,
+        50
+      ],
+      "reported/H25": [
+        45,
+        50
+      ],
+      "reported/H75": [
+        43,
+        50
+      ]
+    }
+  },
+  {
+    "id": "schedule_long",
+    "historical_counts": {
+      "all25/H150": [
+        24,
+        50
+      ],
+      "all15/H150": [
+        30,
+        50
+      ],
+      "coarse_to_fine/H150": [
+        25,
+        50
+      ],
+      "fine_to_coarse/H150": [
+        27,
+        50
+      ],
+      "all25/H50": [
+        40,
+        50
+      ],
+      "fine_tail/H50": [
+        42,
+        50
+      ],
+      "all25/H100": [
+        32,
+        50
+      ],
+      "coarse_to_fine/H100": [
+        32,
+        50
+      ],
+      "short_tail/H100": [
+        35,
+        50
+      ],
+      "fine_to_coarse/H100": [
+        36,
+        50
+      ],
+      "all25/H125": [
+        31,
+        50
+      ],
+      "coarse_to_fine/H125": [
+        28,
+        50
+      ],
+      "short_tail/H125": [
+        40,
+        50
+      ],
+      "fine_to_coarse/H125": [
+        32,
+        50
+      ],
+      "all25/H75": [
+        38,
+        50
+      ],
+      "all15/H75": [
+        43,
+        50
+      ],
+      "coarse_to_fine/H75": [
+        42,
+        50
+      ],
+      "fine_to_coarse/H75": [
+        35,
+        50
+      ],
+      "all25_tail20/H120": [
+        29,
+        50
+      ],
+      "all15/H120": [
+        32,
+        50
+      ],
+      "coarse_to_fine/H120": [
+        34,
+        50
+      ],
+      "fine_to_coarse/H120": [
+        29,
+        50
+      ]
+    }
+  },
+  {
+    "id": "schedule_supplement",
+    "historical_counts": {
+      "15_15_15_15_15_25_25_25/H150": [
+        28,
+        50
+      ],
+      "25_25_25_15_15_15_15_15/H150": [
+        26,
+        50
+      ],
+      "15_20_15/H50": [
+        38,
+        50
+      ],
+      "20_15_15/H50": [
+        39,
+        50
+      ],
+      "25_25_15_15_15_15_15/H125": [
+        33,
+        50
+      ],
+      "15_15_15_15_15_25_25/H125": [
+        34,
+        50
+      ]
+    }
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "episodes/test/front/shard_000.hdf5": {
+    "bytes": 2231844087,
+    "sha256": "a46c7697afcf14bfea4d687b09d3b6be6c288022b78c6798673e79cf260228b0",
+    "filename": "episodes/test/front/shard_000.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/front/shard_001.hdf5": {
+    "bytes": 765163159,
+    "sha256": "97fd82adcbbc4dd28d8461e2f325ebd20799ee38fcc9ce20f80824bb213e1b29",
+    "filename": "episodes/test/front/shard_001.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/left/shard_000.hdf5": {
+    "bytes": 2494231591,
+    "sha256": "c13a7ffe9b0e4488cf806b4db61ce7bd95c65c2f10886cc81e073ea77da8e864",
+    "filename": "episodes/test/left/shard_000.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/left/shard_001.hdf5": {
+    "bytes": 815051362,
+    "sha256": "806e2b7624ef565c116ba37d57146c89270f3b809d1662229938fc075bfc42da",
+    "filename": "episodes/test/left/shard_001.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/right/shard_000.hdf5": {
+    "bytes": 1750495380,
+    "sha256": "a121977700ca82f9e584b36d629fa701e47501c588a7d7a41354e9be252c1a0c",
+    "filename": "episodes/test/right/shard_000.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/right/shard_001.hdf5": {
+    "bytes": 579433243,
+    "sha256": "8e30ed2b125514c5a0e0a7603309b9697edd356b2a846cd1814eb48cabe022ff",
+    "filename": "episodes/test/right/shard_001.hdf5",
+    "publication_status": "local_only"
+  }
+}

@@ -47,6 +47,7 @@ def parse_args():
     p.add_argument('--architecture', choices=['pooled','transformer'], default='pooled')
     p.add_argument('--hidden-dim', type=int, default=512); p.add_argument('--num-heads', type=int, default=8); p.add_argument('--depth', type=int, default=3); p.add_argument('--num-modes', type=int, default=8); p.add_argument('--pooling', choices=['attention','mean'], default='attention')
     p.add_argument('--history-len', type=int, default=3); p.add_argument('--frameskip', type=int, default=5); p.add_argument('--image-size', type=int, default=224)
+    p.add_argument('--image-normalization', choices=['imagenet','dinowm'], default='imagenet')
     p.add_argument('--action-offsets', nargs='+', type=int, default=[10,15,20,25,30,35])
     p.add_argument('--goal-offsets', nargs='+', type=int, default=None)
     p.add_argument('--subgoal-generator-checkpoint', default=None)
@@ -183,9 +184,9 @@ def build_rows(dataset, specs, args, split_name:str):
 
 def prepare_batch(batch, lewm, stats, args, device, subgoal_generator=None, subgoal_stats=None, generated_ratio:float=0.0):
     dtype=next(lewm.parameters()).dtype
-    hist_pix=image_batch_to_lewm(batch['pixels'][:,:args.history_len].to(device), args.image_size).to(dtype)
-    goal_pix=image_batch_to_lewm(batch['goal_pixels'].to(device), args.image_size).to(dtype)
-    far_goal_pix=image_batch_to_lewm(batch['far_goal_pixels'].to(device), args.image_size).to(dtype)
+    hist_pix=image_batch_to_lewm(batch['pixels'][:,:args.history_len].to(device), args.image_size, args.image_normalization).to(dtype)
+    goal_pix=image_batch_to_lewm(batch['goal_pixels'].to(device), args.image_size, args.image_normalization).to(dtype)
+    far_goal_pix=image_batch_to_lewm(batch['far_goal_pixels'].to(device), args.image_size, args.image_normalization).to(dtype)
     with torch.no_grad():
         hist_z=encode_lewm_context(lewm, hist_pix); goal_z=encode_lewm_context(lewm, goal_pix); far_goal_z=encode_lewm_context(lewm, far_goal_pix)
     if args.conditioning_goal_source == 'far':
@@ -198,11 +199,12 @@ def prepare_batch(batch, lewm, stats, args, device, subgoal_generator=None, subg
         lowdim_gen=normalize_lowdim(lowdim, gen_stats)
         with torch.no_grad():
             generated=subgoal_generator(hist_z, far_goal_z, lowdim_gen, goal_offsets, action_offsets)['prediction'].float()
+        nonterminal=(goal_offsets > action_offsets).view(-1,1,1)
         if float(generated_ratio) >= 1.0:
-            goal_z=generated
+            goal_z=torch.where(nonterminal, generated, goal_z)
         else:
             mask=(torch.rand(goal_z.size(0), device=device) < float(generated_ratio)).view(-1,1,1)
-            goal_z=torch.where(mask, generated, goal_z)
+            goal_z=torch.where(mask & nonterminal, generated, goal_z)
     target_full=target_action_chunk(batch, args.history_len, max(args.action_offsets)//args.frameskip).to(device)
     target_n=normalize_action_blocks(target_full, stats)
     return hist_z, goal_z, far_goal_z, lowdim_n, target_full, target_n, batch['action_tokens'].to(device).long(), goal_offsets, action_offsets

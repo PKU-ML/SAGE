@@ -27,6 +27,7 @@ METHODS = (
     "far_goal_prior_cem",
     "lewm_generator",
     "generator_prior_top",
+    "final_goal_scoring",
     "sage",
 )
 
@@ -35,6 +36,7 @@ METHOD_DESCRIPTIONS = {
     "far_goal_prior_cem": "far-goal action-prior proposals refined by LeWM CEM",
     "lewm_generator": "zero-mean Gaussian CEM scored against generated subgoals",
     "generator_prior_top": "generated subgoals with the prior top mode; no LeWM ranking",
+    "final_goal_scoring": "subgoal-conditioned proposals scored against the final goal",
     "sage": "generated subgoals and action-prior proposals refined by LeWM CEM",
 }
 
@@ -129,8 +131,13 @@ class CubeSAGEModel(torch.nn.Module):
         return encode_lewm_context(self.lewm, goal[:, -1:])
 
     def _lowdim(self, info: dict, stats: dict):
+        lowdim_keys = list(stats.get("lowdim_keys", self.lowdim_keys))
+        if not lowdim_keys:
+            pixels = info.get("prior_pixels", info["pixels"])
+            batch = int(pixels.shape[0])
+            return torch.empty(batch, 0, device=self.device, dtype=torch.float32)
         parts = []
-        for key in self.lowdim_keys:
+        for key in lowdim_keys:
             if key not in info:
                 raise KeyError(f"Missing action-prior input {key!r}")
             value = info[key]
@@ -285,6 +292,58 @@ class CubeSAGEModel(torch.nn.Module):
             for key, value in info.items()
             if key != "prior_pixels" and not key.startswith("_")
         }
+        if getattr(self, "score_final_goal", False):
+            if self.lewm.__class__.__name__ == "PreJEPA":
+                raise ValueError("Final-goal Scoring is the LeWM component ablation")
+            cost_info["goal_emb"] = self._goal(info)
+            return self.lewm.get_cost(cost_info, actions)
+        if self.lewm.__class__.__name__ == "PreJEPA":
+            batch = actions.size(0)
+            remaining = self._steps(
+                info, "_remaining_steps", self.goal_offset_steps, batch, self.device
+            )
+            duration = self._steps(
+                info,
+                "_option_duration_steps",
+                actions.size(2) * self.action_block,
+                batch,
+                self.device,
+            )
+            chunk_size = int(os.environ.get("DINO_COST_CHUNK", "16"))
+            if bool(torch.all(remaining <= duration)):
+                return torch.cat(
+                    [
+                        self.lewm.get_cost(
+                            dict(cost_info), actions[:, start : start + chunk_size]
+                        )
+                        for start in range(0, actions.size(1), chunk_size)
+                    ],
+                    dim=1,
+                )
+
+            target = self.local_goal(info)
+            target = target[:, -1] if target.ndim >= 3 else target
+            if target.ndim == 3:
+                target = target.mean(dim=-2)
+            costs = []
+            for start in range(0, actions.size(1), chunk_size):
+                action_chunk = actions[:, start : start + chunk_size]
+                if action_chunk.size(1) != chunk_size and hasattr(
+                    self.lewm, "_init_cached_info"
+                ):
+                    del self.lewm._init_cached_info
+                rollout = self.lewm.rollout(dict(cost_info), action_chunk)
+                predicted = rollout["predicted_pixels_emb"][:, :, -1]
+                if predicted.ndim == 4:
+                    predicted = predicted.mean(dim=-2)
+                costs.append(
+                    torch.nn.functional.mse_loss(
+                        predicted,
+                        target[:, None].expand_as(predicted),
+                        reduction="none",
+                    ).mean(dim=-1)
+                )
+            return torch.cat(costs, dim=1)
         cost_info["goal_emb"] = self.local_goal(info)
         return self.lewm.get_cost(cost_info, actions)
 
@@ -517,6 +576,20 @@ class CubeScheduledPolicy(swm.policy.WorldModelPolicy):
 
     def _inject_lowdim(self, info: dict, count: int):
         envs = self._envs(count)
+        if "robot_proprio" in self.lowdim_keys:
+            rows = []
+            for env in envs:
+                ob = env.compute_ob_info()
+                rows.append(np.concatenate([
+                    ob['proprio/joint_pos'], ob['proprio/joint_vel'],
+                    (ob['proprio/effector_pos'] - np.array([0.425, 0., 0.])) * 10.,
+                    np.atleast_1d(np.cos(ob['proprio/effector_yaw'])),
+                    np.atleast_1d(np.sin(ob['proprio/effector_yaw'])),
+                    np.atleast_1d(ob['proprio/gripper_opening'] * 3.),
+                    np.atleast_1d(ob['proprio/gripper_contact']),
+                ]).astype(np.float32))
+            info['robot_proprio'] = np.stack(rows)
+            assert info['robot_proprio'].shape == (count, 19)
         if "observation" in self.lowdim_keys and "observation" not in info:
             rows = []
             for env in envs:
@@ -664,7 +737,15 @@ def parse_args():
     parser.add_argument("--dataset", required=True)
     parser.add_argument("--policy", default="quentinll/lewm-cube")
     parser.add_argument("--generator")
-    parser.add_argument("--action-prior", required=True)
+    parser.add_argument("--action-prior")
+    parser.add_argument(
+        "--action-stats",
+        default=str(
+            Path(__file__).resolve().parents[2]
+            / "data/stats/cube_train_seed42.json"
+        ),
+        help="Train-split action normalization, independent of the action prior.",
+    )
     parser.add_argument("--manifest", required=True)
     parser.add_argument("--paper-config", default="configs/paper.json")
     parser.add_argument("--out-dir", required=True)
@@ -698,10 +779,11 @@ def main():
     if args.seed not in paper["sample_seeds"]:
         raise ValueError(f"Seed {args.seed} is not a paper sample seed")
 
-    uses_generator = args.method in {"lewm_generator", "generator_prior_top", "sage"}
+    uses_generator = args.method in {"lewm_generator", "generator_prior_top", "final_goal_scoring", "sage"}
     uses_prior = args.method in {
         "far_goal_prior_cem",
         "generator_prior_top",
+        "final_goal_scoring",
         "sage",
     }
     if uses_generator != bool(args.generator):
@@ -713,12 +795,41 @@ def main():
         )
     else:
         generator, generator_stats, generator_ckpt = None, None, None
-    loaded_prior, prior_stats, prior_ckpt = load_action_prior(args.action_prior, device)
-    prior = loaded_prior if uses_prior else None
-    run_args = prior_ckpt.get("run_manifest", {}).get("args", {})
+    action_stats_payload = load_json(args.action_stats)
+    action_stats = {
+        "action_mean": torch.as_tensor(
+            action_stats_payload["action_mean"], device=device, dtype=torch.float32
+        ),
+        "action_std": torch.as_tensor(
+            action_stats_payload["action_std"], device=device, dtype=torch.float32
+        ),
+    }
+    prior_stats = {}
+    if uses_prior:
+        if not args.action_prior:
+            raise ValueError(f"{args.method} requires --action-prior")
+        loaded_prior, prior_stats, prior_ckpt = load_action_prior(
+            args.action_prior, device
+        )
+        for key in ("action_mean", "action_std"):
+            if not torch.allclose(
+                prior_stats[key].float(), action_stats[key], atol=1.0e-6, rtol=1.0e-6
+            ):
+                raise ValueError(
+                    f"Action-prior {key} does not match independent train-split stats"
+                )
+        prior = loaded_prior
+        component_stats = prior_stats
+        run_args = prior_ckpt.get("run_manifest", {}).get("args", {})
+    else:
+        prior = None
+        prior_ckpt = None
+        component_stats = generator_stats or {}
+        run_args = (generator_ckpt or {}).get("run_manifest", {}).get("args", {})
+    runtime_stats = {**component_stats, **action_stats}
     lowdim_keys = [
-        *prior_stats.get("lowdim_keys", run_args.get("lowdim_keys", ["observation"])),
-        *prior_stats.get("goal_lowdim_keys", run_args.get("goal_lowdim_keys", [])),
+        *runtime_stats.get("lowdim_keys", run_args.get("lowdim_keys", [])),
+        *runtime_stats.get("goal_lowdim_keys", run_args.get("goal_lowdim_keys", [])),
     ]
     context = int(run_args.get("context_len", run_args.get("history_len", 3)))
     lewm = load_lewm(args.policy, device=device, bf16=args.bf16)
@@ -727,7 +838,7 @@ def main():
         generator=generator,
         generator_stats=generator_stats or prior_stats,
         prior=prior,
-        prior_stats=prior_stats,
+        prior_stats=runtime_stats,
         lowdim_keys=lowdim_keys,
         context_length=context,
         goal_offset_steps=horizon,
@@ -735,13 +846,14 @@ def main():
         device=device,
     ).to(device)
     model.eval().requires_grad_(False)
+    model.score_final_goal = args.method == "final_goal_scoring"
     planner = paper["planner"]
     if args.method == "generator_prior_top":
         solver = PriorTopMode(model)
     else:
         solver_type = (
             PriorInitializedCEM
-            if args.method in {"far_goal_prior_cem", "sage"}
+            if args.method in {"far_goal_prior_cem", "final_goal_scoring", "sage"}
             else GaussianCEM
         )
         solver = solver_type(
@@ -754,8 +866,8 @@ def main():
         )
     process = {
         "action": FixedScaler(
-            prior_stats["action_mean"].detach().cpu().numpy(),
-            prior_stats["action_std"].detach().cpu().numpy(),
+            action_stats["action_mean"].detach().cpu().numpy(),
+            action_stats["action_std"].detach().cpu().numpy(),
         )
     }
     dtype = torch.bfloat16 if args.bf16 else torch.float32
@@ -802,7 +914,7 @@ def main():
     )
     result = {
         "protocol_id": paper["protocol_id"],
-        "protocol_kind": "paper",
+        "protocol_kind": "paper" if int(manifest["num_eval"]) == int(paper["num_eval"]) else "subset",
         "benchmark": "cube",
         "method": args.method,
         "method_description": METHOD_DESCRIPTIONS[args.method],
@@ -836,11 +948,20 @@ def main():
                 if uses_generator
                 else None
             ),
-            "action_prior": {
-                "path": args.action_prior,
-                "sha256": sha256_file(args.action_prior),
-                "epoch": prior_ckpt.get("epoch"),
-                "role": "proposal_generation" if uses_prior else "normalization_only",
+            "action_prior": (
+                {
+                    "path": args.action_prior,
+                    "sha256": sha256_file(args.action_prior),
+                    "epoch": prior_ckpt.get("epoch"),
+                    "role": "proposal_generation",
+                }
+                if uses_prior
+                else None
+            ),
+            "action_stats": {
+                "path": args.action_stats,
+                "sha256": sha256_file(args.action_stats),
+                "coordinate_system": action_stats_payload["coordinate_system"],
             },
         },
     }

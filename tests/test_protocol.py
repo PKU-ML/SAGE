@@ -16,6 +16,7 @@ def test_paper_schedule():
         "far_goal_prior_cem",
         "lewm_generator",
         "generator_prior_top",
+        "final_goal_scoring",
         "sage",
     ]
     for horizon in payload["horizons"]:

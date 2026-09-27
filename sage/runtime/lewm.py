@@ -138,7 +138,11 @@ def assert_no_split_overlap(split: dict) -> None:
                 raise ValueError(f"Episode split overlap between {a} and {b}: {sorted(overlap)[:10]}")
 
 
-def image_batch_to_lewm(pixels: torch.Tensor, image_size: int = 224) -> torch.Tensor:
+def image_batch_to_lewm(
+    pixels: torch.Tensor,
+    image_size: int = 224,
+    normalization: str = "imagenet",
+) -> torch.Tensor:
     """Convert raw Lance pixels [B,T,C,H,W] uint8 to LeWM normalized float."""
 
     if pixels.ndim != 5:
@@ -153,8 +157,16 @@ def image_batch_to_lewm(pixels: torch.Tensor, image_size: int = 224) -> torch.Te
         mode="bilinear",
         align_corners=False,
     ).reshape(b, t, c, int(image_size), int(image_size))
-    mean = IMAGENET_MEAN.to(device=x.device, dtype=x.dtype)
-    std = IMAGENET_STD.to(device=x.device, dtype=x.dtype)
+    if normalization == "imagenet":
+        mean = IMAGENET_MEAN
+        std = IMAGENET_STD
+    elif normalization == "dinowm":
+        mean = torch.full((1, 1, 3, 1, 1), 0.5)
+        std = torch.full((1, 1, 3, 1, 1), 0.5)
+    else:
+        raise ValueError(f"Unsupported image normalization: {normalization}")
+    mean = mean.to(device=x.device, dtype=x.dtype)
+    std = std.to(device=x.device, dtype=x.dtype)
     return (x - mean) / std
 
 

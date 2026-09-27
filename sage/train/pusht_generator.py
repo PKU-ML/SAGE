@@ -126,6 +126,11 @@ def parse_args():
     parser.add_argument("--history-len", type=int, default=3)
     parser.add_argument("--frameskip", type=int, default=5)
     parser.add_argument("--image-size", type=int, default=224)
+    parser.add_argument(
+        "--image-normalization",
+        choices=["imagenet", "dinowm"],
+        default="imagenet",
+    )
     parser.add_argument("--subgoal-offset", type=int, default=25)
     parser.add_argument(
         "--subgoal-offsets",
@@ -364,14 +369,17 @@ def prepare_batch(batch, lewm, stats, args, device):
     history_pixels = image_batch_to_lewm(
         batch["pixels"][:, : args.history_len].to(device),
         args.image_size,
+        args.image_normalization,
     ).to(dtype)
     goal_pixels = image_batch_to_lewm(
         batch["goal_pixels"].to(device),
         args.image_size,
+        args.image_normalization,
     ).to(dtype)
     subgoal_pixels = image_batch_to_lewm(
         batch["subgoal_pixels"].to(device),
         args.image_size,
+        args.image_normalization,
     ).to(dtype)
     with torch.no_grad():
         history_latents = encode_lewm_context(lewm, history_pixels)

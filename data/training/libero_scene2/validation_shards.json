@@ -1,0 +1,106 @@
+{
+  "suite": "libero_scene2",
+  "split": "validation",
+  "shards": [
+    {
+      "path": "episodes/validation/shard_0000.hdf5",
+      "sha256": "a36de0f7a10dce0a8e2d6c4fdb4586d4be63a73310c8c0eb19c64b9439badfab",
+      "bytes": 502136522
+    },
+    {
+      "path": "episodes/validation/shard_0001.hdf5",
+      "sha256": "6f709b529f31e245a2945536ccccd9afd96903c6071a1a4e86acb1425fbea4f6",
+      "bytes": 488674193
+    },
+    {
+      "path": "episodes/validation/shard_0002.hdf5",
+      "sha256": "ea193137a4ecbe02e1986fa187ca25d7ead7d39e9d9af5a7a174a77efc692ca5",
+      "bytes": 501440999
+    },
+    {
+      "path": "episodes/validation/shard_0003.hdf5",
+      "sha256": "3e2f5b99273c6f56d1e62e2fa0af442092aebbccf79cf25530fb717c46f46bec",
+      "bytes": 504331799
+    },
+    {
+      "path": "episodes/validation/shard_0004.hdf5",
+      "sha256": "d641bc667ccb9be35ca0e005905468f63434fe707d178c9408d1bbeaf4d9f967",
+      "bytes": 453424756
+    },
+    {
+      "path": "episodes/validation/shard_0005.hdf5",
+      "sha256": "9f026e19d7cc4d853cfc843bcd991e0453866a9cbb74a0d295b6241b077162c0",
+      "bytes": 457193217
+    },
+    {
+      "path": "episodes/validation/shard_0006.hdf5",
+      "sha256": "c9a855dd5a9a32bfb2ab8db21f3a2c34b02f8342061ecafe46127c44e4b2e1cd",
+      "bytes": 444168498
+    },
+    {
+      "path": "episodes/validation/shard_0007.hdf5",
+      "sha256": "6eae2cd64ed043c91772d5e4164ac61f5f90983a5cf50c9dccbb79cd761b5390",
+      "bytes": 449293797
+    },
+    {
+      "path": "episodes/validation/shard_0008.hdf5",
+      "sha256": "8297b154018ddf6abb8efeed8072e0da08463555dbef10da785a3c07a58fc1c6",
+      "bytes": 493137279
+    },
+    {
+      "path": "episodes/validation/shard_0009.hdf5",
+      "sha256": "f01a108e7624265f2f0b02c8952cca63e27ce8c4232fbc2e39649d229f0d1227",
+      "bytes": 474662887
+    },
+    {
+      "path": "episodes/validation/shard_0010.hdf5",
+      "sha256": "1b854c62b734c22b01f49f5969660509843098572d86917b128c4c9d54e99e28",
+      "bytes": 486468813
+    },
+    {
+      "path": "episodes/validation/shard_0011.hdf5",
+      "sha256": "67dfc2bfe49a4693dabd723769114030cda22d603c3c16c9c8b827799e2fb8aa",
+      "bytes": 506454949
+    },
+    {
+      "path": "episodes/validation/shard_0012.hdf5",
+      "sha256": "da222b713084549cce840947a2e83821f13e8f28a241d3ef5f08d54e54f6b7ca",
+      "bytes": 514827272
+    },
+    {
+      "path": "episodes/validation/shard_0013.hdf5",
+      "sha256": "e6886b7939b7c35a67972042790e01ac6912ae678a2ab1681ebb61ca746ca7b4",
+      "bytes": 450717923
+    },
+    {
+      "path": "episodes/validation/shard_0014.hdf5",
+      "sha256": "f4bc04f02510fcc5eda48906826526915a099df5eb0693b7720b192be5660d98",
+      "bytes": 452317305
+    },
+    {
+      "path": "episodes/validation/shard_0015.hdf5",
+      "sha256": "880a21958e00e1efdf62329ee512ffd452f0b84b6cb99e14f0a70f5d74306d22",
+      "bytes": 470741517
+    },
+    {
+      "path": "episodes/validation/shard_0016.hdf5",
+      "sha256": "5beb42023afa024525c725864456cd26875b72c3a6330b838c54c8951caefd6c",
+      "bytes": 541417790
+    },
+    {
+      "path": "episodes/validation/shard_0017.hdf5",
+      "sha256": "bd8a89ba57d37006ac3958deb663d691dc57cbc769d70169f0cba9b69bf97f6c",
+      "bytes": 580372323
+    },
+    {
+      "path": "episodes/validation/shard_0018.hdf5",
+      "sha256": "5c96d8bf468a16bcf96dc9201c65496f32f7c4905859c5a73d412807cb3c33f6",
+      "bytes": 572405537
+    },
+    {
+      "path": "episodes/validation/shard_0019.hdf5",
+      "sha256": "e42bfaf5bab3927ab705695aa9dbb029646ec3eb72e3260f2b3131b7009dde60",
+      "bytes": 537054742
+    }
+  ]
+}

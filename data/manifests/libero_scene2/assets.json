@@ -1,0 +1,236 @@
+{
+  "episodes/test/alphabet/alphabet_test_shard000_seed3000000_n50.hdf5": {
+    "bytes": 490946790,
+    "sha256": "63337dba61d174e03c0c3f152d1417b263db8fad2f9f94a6b5bd87ad633f0ea8",
+    "filename": "episodes/test/alphabet/alphabet_test_shard000_seed3000000_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test_extension/alphabet/alphabet_test_shard005_seed3000250_n50.hdf5": {
+    "bytes": 487304269,
+    "sha256": "1cd00236018a850746ed33749af99e9477685336ee21670a5b95663a65a285fe",
+    "filename": "episodes/test_extension/alphabet/alphabet_test_shard005_seed3000250_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test_extension/milk/milk_test_shard005_seed3300250_n50.hdf5": {
+    "bytes": 472406889,
+    "sha256": "727a1eb40c01afc3cdd135532e57cd5224e7ac6f072d1c59136956578d1df459",
+    "filename": "episodes/test_extension/milk/milk_test_shard005_seed3300250_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/alphabet/alphabet_test_shard002_seed3000100_n50.hdf5": {
+    "bytes": 503930697,
+    "sha256": "e178b9fefc83681ddf9e95c194021a455741deac7143b8555024f9c74c7a10ad",
+    "filename": "episodes/test/alphabet/alphabet_test_shard002_seed3000100_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/tomato/tomato_test_shard002_seed3100100_n50.hdf5": {
+    "bytes": 433121687,
+    "sha256": "696365989f6a2b402cfe2c80c34fcdc20e53299f8f50febd25a1f74372a5bd9e",
+    "filename": "episodes/test/tomato/tomato_test_shard002_seed3100100_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/milk/milk_test_shard003_seed3300150_n50.hdf5": {
+    "bytes": 454333007,
+    "sha256": "494e144f9c093fe28deff2eb7f3b179b30bfc238bee05a09f30775813cfe2ebf",
+    "filename": "episodes/test/milk/milk_test_shard003_seed3300150_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/orange/orange_test_shard002_seed3400100_n50.hdf5": {
+    "bytes": 541325353,
+    "sha256": "c147fbbddd367a75670765209237b38897ab022b9033f6713f9100afb7758432",
+    "filename": "episodes/test/orange/orange_test_shard002_seed3400100_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test_extension/tomato/tomato_test_shard004_seed3100200_n50.hdf5": {
+    "bytes": 472140545,
+    "sha256": "e0d7e5a2bb501ed0dd0b1baa16e2acf4eebcd7632050081cf3b1409f94f6598d",
+    "filename": "episodes/test_extension/tomato/tomato_test_shard004_seed3100200_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/butter/butter_test_shard000_seed3200000_n50.hdf5": {
+    "bytes": 484422578,
+    "sha256": "a3f4a2dd3f7dbb66c611a184304b5045e7f405d9d5fbe2b4121f3af5f0080b9b",
+    "filename": "episodes/test/butter/butter_test_shard000_seed3200000_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/orange/orange_test_shard000_seed3400000_n50.hdf5": {
+    "bytes": 540589547,
+    "sha256": "4d6140b820406f963bc661e9b852e8779ce410f2c3090a835d4b907899a3870d",
+    "filename": "episodes/test/orange/orange_test_shard000_seed3400000_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test_extension/alphabet/alphabet_test_shard006_seed3000300_n50.hdf5": {
+    "bytes": 490216410,
+    "sha256": "50b451e66c9d1be910cdd784d6225b5907c0a3a33d61241bd05160809a9b8c84",
+    "filename": "episodes/test_extension/alphabet/alphabet_test_shard006_seed3000300_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/orange/orange_test_shard001_seed3400050_n50.hdf5": {
+    "bytes": 546173732,
+    "sha256": "5f02ff35c8a1656308825bda98c2ec201a70e73b47fa83645d6736c9d5a10cec",
+    "filename": "episodes/test/orange/orange_test_shard001_seed3400050_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test_extension/alphabet/alphabet_test_shard004_seed3000200_n50.hdf5": {
+    "bytes": 499719708,
+    "sha256": "fd47d1e48d01cbd6f1b1ea1ea6d0636d13114a0ec866ebf341ba21c118db4dc8",
+    "filename": "episodes/test_extension/alphabet/alphabet_test_shard004_seed3000200_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/orange/orange_test_shard003_seed3400150_n50.hdf5": {
+    "bytes": 523559496,
+    "sha256": "ca1dc2a26fee5d42206fad206b82bc2518ab2199a956987051440a042824efcd",
+    "filename": "episodes/test/orange/orange_test_shard003_seed3400150_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/butter/butter_test_shard003_seed3200150_n50.hdf5": {
+    "bytes": 509355034,
+    "sha256": "4b230c8fcd2dc03934ca0d3dfbbb69b6076252d46bf1228a59f1c1711b125364",
+    "filename": "episodes/test/butter/butter_test_shard003_seed3200150_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/milk/milk_test_shard001_seed3300050_n50.hdf5": {
+    "bytes": 486010587,
+    "sha256": "091d04f0b46b14a40777d2060c9edd3833aba4171c9a251f87323537daf3b386",
+    "filename": "episodes/test/milk/milk_test_shard001_seed3300050_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/tomato/tomato_test_shard001_seed3100050_n50.hdf5": {
+    "bytes": 455909002,
+    "sha256": "547d7bff6f5ef3cdf9d61b856cb61c8ac625e0643aa60dd9eb49227100af9aa5",
+    "filename": "episodes/test/tomato/tomato_test_shard001_seed3100050_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/milk/milk_test_shard002_seed3300100_n50.hdf5": {
+    "bytes": 459115761,
+    "sha256": "396bdba1bd8c3f69da856dd5db4698cf2a903738f181da7ba526e91eb9e53252",
+    "filename": "episodes/test/milk/milk_test_shard002_seed3300100_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test_extension/butter/butter_test_shard005_seed3200250_n50.hdf5": {
+    "bytes": 492879325,
+    "sha256": "dfb8efe6339f02415e2c5be7678f97a65d2520b731c4651e2578a96e127a6726",
+    "filename": "episodes/test_extension/butter/butter_test_shard005_seed3200250_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/butter/butter_test_shard001_seed3200050_n50.hdf5": {
+    "bytes": 482426067,
+    "sha256": "99491fb244920f5a13eeea972ea09491a9eebd3ab4e4b8eff9ac3eb0f263888d",
+    "filename": "episodes/test/butter/butter_test_shard001_seed3200050_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/butter/butter_test_shard002_seed3200100_n50.hdf5": {
+    "bytes": 500518765,
+    "sha256": "16796faf2248236fca34430cfe2f30c182194d0a845510342addeb2a7380c1fe",
+    "filename": "episodes/test/butter/butter_test_shard002_seed3200100_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test_extension/orange/orange_test_shard005_seed3400250_n50.hdf5": {
+    "bytes": 576822460,
+    "sha256": "ed5e07cceccbdafeca5bd100534cc846c73b62a1b9783d1f36baec2b32160e44",
+    "filename": "episodes/test_extension/orange/orange_test_shard005_seed3400250_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test_extension/tomato/tomato_test_shard007_seed3100350_n50.hdf5": {
+    "bytes": 463799498,
+    "sha256": "79c7de4b833bb727fbe0941c1a112ec2136a34d52c0505221575bb6d384b7250",
+    "filename": "episodes/test_extension/tomato/tomato_test_shard007_seed3100350_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test_extension/orange/orange_test_shard007_seed3400350_n50.hdf5": {
+    "bytes": 553711149,
+    "sha256": "f2ec3f8bf9c05a4bba428cad329a14ee38ddae7b28795ac8f621ade04615c998",
+    "filename": "episodes/test_extension/orange/orange_test_shard007_seed3400350_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test_extension/milk/milk_test_shard007_seed3300350_n50.hdf5": {
+    "bytes": 502397367,
+    "sha256": "fd1c55998f479d7cf11fbfa70e18a4717b3c4f72e067950e04facf039c3ddd71",
+    "filename": "episodes/test_extension/milk/milk_test_shard007_seed3300350_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test_extension/milk/milk_test_shard006_seed3300300_n50.hdf5": {
+    "bytes": 459366641,
+    "sha256": "08be63041326faba733b0d88b222f4adac551cb43928703f76397d7b04e0eec1",
+    "filename": "episodes/test_extension/milk/milk_test_shard006_seed3300300_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test_extension/alphabet/alphabet_test_shard007_seed3000350_n50.hdf5": {
+    "bytes": 504937194,
+    "sha256": "189f9f9c637042c5e6631fabeb1b6a6a53864df19a5bd9dc8ba9acbfde754020",
+    "filename": "episodes/test_extension/alphabet/alphabet_test_shard007_seed3000350_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test_extension/tomato/tomato_test_shard005_seed3100250_n50.hdf5": {
+    "bytes": 463585502,
+    "sha256": "18765a787841b920b29cbc8ed68eaa99740683ed281d3144de5caf1043ecc398",
+    "filename": "episodes/test_extension/tomato/tomato_test_shard005_seed3100250_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test_extension/butter/butter_test_shard004_seed3200200_n50.hdf5": {
+    "bytes": 502736256,
+    "sha256": "0343d515603fb2a5c475f3d8476cd01ba27fc2c9cc954ed91eb57edcc1aa9869",
+    "filename": "episodes/test_extension/butter/butter_test_shard004_seed3200200_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test_extension/orange/orange_test_shard004_seed3400200_n50.hdf5": {
+    "bytes": 546164787,
+    "sha256": "5a419b10436e2eb308e285d6ec3f7dab0ebf6532b1559aaf9bf8a7fab5908560",
+    "filename": "episodes/test_extension/orange/orange_test_shard004_seed3400200_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/tomato/tomato_test_shard000_seed3100000_n50.hdf5": {
+    "bytes": 472917425,
+    "sha256": "74707eca760ac2faeb22beedc5e8e6ec054c10269fe31777228e9cff65771747",
+    "filename": "episodes/test/tomato/tomato_test_shard000_seed3100000_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test_extension/tomato/tomato_test_shard006_seed3100300_n50.hdf5": {
+    "bytes": 453108572,
+    "sha256": "a2f2e84097c06991272446771217b02b77b51a368ef4c744b40f2e51917bfcd1",
+    "filename": "episodes/test_extension/tomato/tomato_test_shard006_seed3100300_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/alphabet/alphabet_test_shard003_seed3000150_n50.hdf5": {
+    "bytes": 507048561,
+    "sha256": "8d5885c5081c330e204c22cce316a31f0c4022561f90405ab3ddb23090ceb992",
+    "filename": "episodes/test/alphabet/alphabet_test_shard003_seed3000150_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test_extension/butter/butter_test_shard007_seed3200350_n50.hdf5": {
+    "bytes": 518005606,
+    "sha256": "4fddb4a838bd8efced5b28d79c5656d799bd5bc2a3371b8aab28bbd7da0b6706",
+    "filename": "episodes/test_extension/butter/butter_test_shard007_seed3200350_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test_extension/orange/orange_test_shard006_seed3400300_n50.hdf5": {
+    "bytes": 524992561,
+    "sha256": "1f34a6893e75b7339c4074c2f0536d7fc276a8fca9fe9fce06f526379925f10a",
+    "filename": "episodes/test_extension/orange/orange_test_shard006_seed3400300_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/milk/milk_test_shard000_seed3300000_n50.hdf5": {
+    "bytes": 504353449,
+    "sha256": "8d381a5c853c5e631bd8bc0e7647ff4b1518997c9aa2cfeccc476983bab9f217",
+    "filename": "episodes/test/milk/milk_test_shard000_seed3300000_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test_extension/butter/butter_test_shard006_seed3200300_n50.hdf5": {
+    "bytes": 473302462,
+    "sha256": "a72a8b9c01b68839471247644f00fc0f30395f9409175678c4e6972c49366549",
+    "filename": "episodes/test_extension/butter/butter_test_shard006_seed3200300_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test_extension/milk/milk_test_shard004_seed3300200_n50.hdf5": {
+    "bytes": 506480209,
+    "sha256": "3544bd56a1e1047fdd7a35acdd3e8af3a3969cf7e2b3978928fac2185e18a64b",
+    "filename": "episodes/test_extension/milk/milk_test_shard004_seed3300200_n50.hdf5",
+    "publication_status": "local_only"
+  },
+  "episodes/test/tomato/tomato_test_shard003_seed3100150_n50.hdf5": {
+    "bytes": 476915186,
+    "sha256": "e5feeb369630f3da5675c0674cf7e6a4392b8dfd2438f445e4a80243302ca9bf",
+    "filename": "episodes/test/tomato/tomato_test_shard003_seed3100150_n50.hdf5",
+    "publication_status": "local_only"
+  }
+}
