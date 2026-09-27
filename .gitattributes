@@ -4,3 +4,4 @@
 *.ckpt binary
 *.h5 binary
 *.hdf5 binary
+data/manifests/**/*.json -text
