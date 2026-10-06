@@ -3,7 +3,7 @@
 Official implementation of **[SAGE: Subgoal-Conditioned Action Generation for
 Latent World Model Planning](https://arxiv.org/abs/2607.17973)**.
 
-[Paper](https://arxiv.org/abs/2607.17973) | [Checkpoints](https://huggingface.co/CLTRAY/SAGE)
+[Paper](https://arxiv.org/abs/2607.17973) | [Models](https://huggingface.co/CLTRAY/SAGE) | [Datasets](https://huggingface.co/datasets/CLTRAY/SAGE-data)
 
 SAGE plans with a frozen latent world model. A subgoal generator predicts
 intermediate targets, an action prior proposes goal-directed action sequences,
@@ -44,7 +44,7 @@ METHODS="base_cem sage" bash scripts/eval_pusht.sh
 | Experiments | Instructions |
 |:---|:---|
 | PushT / OGBench Cube, visual-only, DINO-WM | [Protocols](REPRODUCING.md) |
-| LIBERO / RoboTwin | [Setup and evaluation](NATIVE.md) |
+| LIBERO / RoboTwin | [Download and reproduce](QUICKSTART_NATIVE.md) / [Detailed setup](NATIVE.md) |
 | Datasets and manifests | [Data layout](DATA.md) |
 
 ## Training

@@ -123,7 +123,7 @@
     "bytes": 186031726,
     "filename": "libero_scene2/world_model/weights.pt",
     "repo_id": "CLTRAY/SAGE",
-    "publication_status": "local_only",
+    "publication_status": "published",
     "state_sha256": "3fd6e835e4a24052d8f5323284226c26c78e9297c608794582d41bca50aade2b"
   },
   "libero_scene2/generator.pt": {
@@ -131,7 +131,7 @@
     "bytes": 184395066,
     "filename": "libero_scene2/generator.pt",
     "repo_id": "CLTRAY/SAGE",
-    "publication_status": "local_only",
+    "publication_status": "published",
     "state_sha256": "a0ad52615def16d76ccf61b18c4efa149643a695bb17b5c6e969e1a8690d1c8d"
   },
   "libero_scene2/prior.pt": {
@@ -139,7 +139,7 @@
     "bytes": 55372187,
     "filename": "libero_scene2/prior.pt",
     "repo_id": "CLTRAY/SAGE",
-    "publication_status": "local_only",
+    "publication_status": "published",
     "state_sha256": "fc50fbf5170000f4c49598493dbbf626a87563f1e1b09321a2ecd385696e0fed"
   },
   "libero_scene2/world_model/config.json": {
@@ -147,7 +147,7 @@
     "bytes": 1202,
     "filename": "libero_scene2/world_model/config.json",
     "repo_id": "CLTRAY/SAGE",
-    "publication_status": "local_only",
+    "publication_status": "published",
     "bundled_file": "configs/world_models/libero_scene2.json"
   },
   "libero_caddy/world_model/weights.pt": {
@@ -155,7 +155,7 @@
     "bytes": 186031726,
     "filename": "libero_caddy/world_model/weights.pt",
     "repo_id": "CLTRAY/SAGE",
-    "publication_status": "local_only",
+    "publication_status": "published",
     "state_sha256": "8d4caceb9f0dc202db0745c3ea1f1772698beeb21ed81e9ac030d4ed8f30c061"
   },
   "libero_caddy/generator.pt": {
@@ -163,7 +163,7 @@
     "bytes": 184395066,
     "filename": "libero_caddy/generator.pt",
     "repo_id": "CLTRAY/SAGE",
-    "publication_status": "local_only",
+    "publication_status": "published",
     "state_sha256": "d6b36168698ffb48a860180e1e61822cec8c1a8bb00883c8808fb258453b5860"
   },
   "libero_caddy/prior.pt": {
@@ -171,7 +171,7 @@
     "bytes": 55372187,
     "filename": "libero_caddy/prior.pt",
     "repo_id": "CLTRAY/SAGE",
-    "publication_status": "local_only",
+    "publication_status": "published",
     "state_sha256": "4438d2b66764782135110f3a5856918152e6c8f9507265cc98494d1d7dfda7c7"
   },
   "libero_caddy/world_model/config.json": {
@@ -179,7 +179,7 @@
     "bytes": 1202,
     "filename": "libero_caddy/world_model/config.json",
     "repo_id": "CLTRAY/SAGE",
-    "publication_status": "local_only",
+    "publication_status": "published",
     "bundled_file": "configs/world_models/libero_caddy.json"
   },
   "robotwin_a2b/world_model/weights.pt": {
@@ -187,7 +187,7 @@
     "bytes": 357468564,
     "filename": "robotwin_a2b/world_model/weights.pt",
     "repo_id": "CLTRAY/SAGE",
-    "publication_status": "local_only",
+    "publication_status": "published",
     "state_sha256": "7053b8a5cc5871d8df7034cbce70a5d40f853553de014a7797c62e4911687b22"
   },
   "robotwin_a2b/generator.pt": {
@@ -195,7 +195,7 @@
     "bytes": 252741882,
     "filename": "robotwin_a2b/generator.pt",
     "repo_id": "CLTRAY/SAGE",
-    "publication_status": "local_only",
+    "publication_status": "published",
     "state_sha256": "174989ee575a9c5604db58f37f7541be8ab8ed8105fb3128f8cfaaa54ba4d0b0"
   },
   "robotwin_a2b/prior.pt": {
@@ -203,7 +203,7 @@
     "bytes": 55521051,
     "filename": "robotwin_a2b/prior.pt",
     "repo_id": "CLTRAY/SAGE",
-    "publication_status": "local_only",
+    "publication_status": "published",
     "state_sha256": "e47895fb8fda64331db38e6096805779a38b42f46370c3853024e5d3226e3244"
   },
   "robotwin_a2b/world_model/config.json": {
@@ -211,7 +211,7 @@
     "bytes": 1240,
     "filename": "robotwin_a2b/world_model/config.json",
     "repo_id": "CLTRAY/SAGE",
-    "publication_status": "local_only",
+    "publication_status": "published",
     "bundled_file": "configs/world_models/robotwin_a2b.json"
   },
   "libero_scene2/action_stats.json": {

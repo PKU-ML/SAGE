@@ -38,5 +38,8 @@ Always run `python scripts/audit_release.py` afterward.
 
 The locked LIBERO/RoboTwin query manifests and per-file SHA256 inventories are
 under `data/manifests/`. See [NATIVE.md](NATIVE.md) for installation and replay
-requirements. Dataset files are not embedded in this repository, and additional
-native datasets have not yet been published.
+requirements. Download evaluation, training, and validation archives from
+[CLTRAY/SAGE-data](https://huggingface.co/datasets/CLTRAY/SAGE-data).
+See the [reproduction guide](QUICKSTART_NATIVE.md) for downloading and installing
+one suite with its matching checkpoints. Dataset files are not embedded in this
+repository.

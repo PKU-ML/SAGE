@@ -2,7 +2,10 @@
 
 Run from the repository root on Linux with an NVIDIA GPU. Model weights,
 datasets and simulator assets are installed separately from the source code.
-Native assets currently require a supplied local mirror.
+Start with the [download and reproduction guide](QUICKSTART_NATIVE.md).
+Model bundles are on [HF SAGE](https://huggingface.co/CLTRAY/SAGE), and trajectory
+archives are on [HF SAGE-data](https://huggingface.co/datasets/CLTRAY/SAGE-data).
+Simulator source and scene assets are installed separately as described below.
 
 ## Environment
 
@@ -70,29 +73,30 @@ it does not fix a broken driver or certify rendering.
 
 ## Checkpoints
 
-The local weight mirror has one directory per native suite. Install, then verify:
+Download the matching bundle directly from Hugging Face, then verify:
 
 ```bash
-python -m sage.assets --suite libero_scene2 --source-dir "$WEIGHT_MIRROR" --out-dir checkpoints
+python -m sage.assets --suite libero_scene2 --out-dir checkpoints
 python -m sage.assets --suite libero_scene2 --out-dir checkpoints --verify-only
 python -m sage.native_models checkpoints/libero_scene2
 ```
 
-If supplied as a separate native-weight tar archive, extract it into the
-checkpoint directory first, then run the same `--verify-only` and model-load
-commands. The archive contains registered inference weights and their companion
-configuration files only; it is not a dataset or a simulator asset package.
+For an offline copy, add `--source-dir "$WEIGHT_MIRROR"` to the install command.
+Each bundle contains `world_model/weights.pt`, `world_model/config.json`,
+`generator.pt`, and `prior.pt`; LIBERO action statistics are installed alongside
+them. All three learned components must come from the same suite.
 
 Use `libero_caddy` or `robotwin_a2b` for the other bundles. The filenames in
-`configs/assets.json` are also the planned HF filenames. The loader never treats
-an unpublished checkpoint as an available download. Configurations and action
+`configs/assets.json` match the published HF filenames. Configurations and action
 statistics ship with the code. Optimizers and private training paths do not ship
 with the inference weights.
 
 ## Data
 
 Each suite's `data/manifests/<suite>/assets.json` lists the exact files needed by
-its locked queries. The data mirror is rooted at that suite's directory:
+its locked queries. The [quick start](QUICKSTART_NATIVE.md#2-download-matching-models-and-evaluation-data)
+downloads and installs the corresponding HF archive. For an existing local data
+mirror rooted at the suite's directory, use:
 
 ```bash
 python -m sage.assets --registry data/manifests/libero_scene2/assets.json \
@@ -104,7 +108,9 @@ python -m sage.native_data --queries data/manifests/libero_scene2/tail.json \
 Installation verifies every SHA256. The second command checks query dependency
 paths, not simulator replay. Missing files are not replaced with new episodes.
 
-Archive filenames, sizes and SHA256 hashes are listed in `data/archives.json`.
+Published archive names and download instructions are on
+[SAGE-data](https://huggingface.co/datasets/CLTRAY/SAGE-data).
+Training archives must first be merged in `.parts.json` order and SHA256-verified.
 For a supplied dataset tar archive, install it directly with file-level checksum
 verification against the repository's locked registry:
 
@@ -257,8 +263,8 @@ The launcher checks training-window counts and ordered-array SHA256. Both suites
 prior for four epochs. The prior uses the generator selected by validation,
 not automatically its last epoch. `configs/native_training.json` records the
 selected historical epochs and window counts. Cache construction and training
-entry points are integrated; full training-data packaging and GPU training
-acceptance are still pending. Both LIBERO component CLIs have passed a one-batch
+entry points are integrated; training and validation archives are available on
+SAGE-data. Both LIBERO component CLIs have passed a one-batch
 training/validation/checkpoint handoff test; this is not a full retraining result.
 
 ## RoboTwin Component Training
@@ -266,8 +272,8 @@ training/validation/checkpoint handoff test; this is not a full retraining resul
 Use the ordered stride-1 training and validation manifests and the matching
 three-view world model. These entry points preserve every raw frame, terminal
 goal, and eligible 15-action window; they do not expand a stride-5 cache.
-Ordered manifests are in `data/training/robotwin_a2b/`; downloadable archives
-are still being prepared. Set `TRAIN_MANIFEST` and `VAL_MANIFEST` to the two
+Ordered manifests are in `data/training/robotwin_a2b/`; training and validation
+archives are available on SAGE-data. Set `TRAIN_MANIFEST` and `VAL_MANIFEST` to the two
 JSON files there.
 
 ```bash
