@@ -135,7 +135,8 @@
     "generator": "robotwin_a2b/generator.pt",
     "prior": "robotwin_a2b/prior.pt",
     "companion_assets": [
-      "robotwin_a2b/world_model/config.json"
+      "robotwin_a2b/world_model/config.json",
+      "robotwin_a2b/action_stats.npz"
     ],
     "methods": [
       "base",

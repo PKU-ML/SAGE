@@ -16,6 +16,7 @@ datasets/
 *.pkl
 *.npy
 *.npz
+!data/stats/native/robotwin_a2b.npz
 *.tmp
 .DS_Store
 *.lance/

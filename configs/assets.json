@@ -214,6 +214,15 @@
     "publication_status": "published",
     "bundled_file": "configs/world_models/robotwin_a2b.json"
   },
+  "robotwin_a2b/action_stats.npz": {
+    "sha256": "b8921f1b24e2c808e7fdbb93823a90d379d80dc1e638940416dd50290ec1774d",
+    "bytes": 862,
+    "filename": "robotwin_a2b/action_stats.npz",
+    "repo_id": "CLTRAY/SAGE",
+    "revision": "14872f9544b9878252a366dabbedfcc27b07ffeb",
+    "publication_status": "published",
+    "bundled_file": "data/stats/native/robotwin_a2b.npz"
+  },
   "libero_scene2/action_stats.json": {
     "sha256": "6bd6c3b954fa72592bede292751415b0ece8d3e8c59ee0634f34bae65c7650e9",
     "bytes": 505,

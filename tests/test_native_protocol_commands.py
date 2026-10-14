@@ -33,6 +33,10 @@ class NativeProtocolCommandsTest(unittest.TestCase):
             command = self.command('robotwin_a2b', group)
             self.assertEqual(command[command.index('--seed') + 1], str(42 + group))
             self.assertEqual(command[command.index('--max-new-queries') + 1], '8')
+            stats = Path(command[command.index('--action-stats') + 1])
+            self.assertEqual(stats.name, 'action_stats.npz')
+            self.assertEqual(stats.parent.name, 'robotwin_a2b')
+            self.assertEqual(stats.parent.parent.name, 'checkpoints')
 
 
 if __name__ == '__main__':

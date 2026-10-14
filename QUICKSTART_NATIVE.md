@@ -63,6 +63,7 @@ checkpoints/<suite>/
   generator.pt
   prior.pt
   action_stats.json       # LIBERO
+  action_stats.npz        # RoboTwin A2B
 ```
 
 `weights.pt` is the world model only. Do not mix components between suites.
@@ -103,6 +104,8 @@ and replay requirements.
 
 Use the separate environment in `runtime/robotwin/environment.yml` and set
 `SUITE=robotwin_a2b`. Download models and evaluation data using step 2.
+The model installer includes the paper's action normalization statistics in
+`checkpoints/robotwin_a2b/action_stats.npz`; the evaluator uses this exact file.
 Install the matching source and simulator assets from HF SAGE-data into a fresh
 runtime directory. These are separate from the trajectory archives:
 

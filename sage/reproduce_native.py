@@ -56,7 +56,7 @@ def main():
                         "--lewm-checkpoint", str(bundle / "world_model/weights.pt"),
                         "--generator-checkpoint", str(bundle / "generator.pt"),
                         "--prior-checkpoint", str(bundle / "prior.pt"),
-                        "--action-stats", str(root / "data/stats/native/robotwin_a2b.npz"),
+                        "--action-stats", str(bundle / "action_stats.npz"),
                         "--controller", "gaussian_lewm" if method == "base" else method,
                         "--max-new-queries", "8",
                         "--horizon", str(horizon), "--seed", str(42 + group)]
