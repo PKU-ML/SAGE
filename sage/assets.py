@@ -46,7 +46,7 @@ def install(registry, out_dir, *, repo_id=None, revision=None, source_dir=None,
                                    "Use --source-dir with the local release mirror.")
             from huggingface_hub import hf_hub_download
             source = hf_hub_download(repo_id=repo_id or entry["repo_id"],
-                                     filename=relative.as_posix(),
+                                     filename=entry.get("hf_filename", relative.as_posix()),
                                      repo_type=entry.get("repo_type", "model"),
                                      revision=revision or entry.get("revision", "main"))
             shutil.copyfile(source, temporary)
@@ -67,6 +67,13 @@ def main():
     parser.add_argument("--source-dir", type=Path)
     parser.add_argument("--verify-only", action="store_true")
     args = parser.parse_args()
+    if (args.registry.resolve() == (root / 'runtime/robotwin/assets.json').resolve()
+            and args.source_dir is None and not args.suite):
+        from sage.robotwin_runtime import install_registry
+        count = install_registry(args.registry.resolve().parent, 'assets', args.out_dir,
+                                 Path('downloads'), verify_only=args.verify_only)
+        print(f'verified {count} RoboTwin simulator assets')
+        return
     registry = json.loads(args.registry.read_text(encoding="utf-8"))
     if args.suite:
         suite = json.loads((root / "configs/suites.json").read_text())[args.suite]
@@ -75,6 +82,9 @@ def main():
         registry = {name: registry[name] for name in names}
     install(registry, args.out_dir, repo_id=args.repo_id, revision=args.revision,
             source_dir=args.source_dir, verify_only=args.verify_only, project_root=root)
+    if args.registry.resolve() == (root / 'runtime/robotwin/assets.json').resolve():
+        bootstrap = json.loads((root / 'runtime/robotwin/bootstrap_assets.json').read_text())
+        install(bootstrap, args.out_dir, verify_only=args.verify_only, project_root=root)
 
 
 if __name__ == "__main__":

@@ -1,6 +1,8 @@
 import hashlib
 import tempfile
 import unittest
+from types import SimpleNamespace
+from unittest.mock import Mock, patch
 from pathlib import Path
 
 from sage.assets import install, safe_relative
@@ -33,6 +35,19 @@ class ReleaseAssetsTest(unittest.TestCase):
     def test_unpublished_asset_cannot_silently_download(self):
         with self.assertRaisesRegex(RuntimeError, "not yet published"):
             install({"a.pt": {"sha256": "0" * 64, "publication_status": "local_only"}}, self.root)
+
+    def test_hf_path_can_differ_from_installed_filename(self):
+        source = self.root / 'downloaded'
+        source.write_bytes(b'fixture')
+        download = Mock(return_value=str(source))
+        entry = {'filename': 'runtime.tar.gz', 'hf_filename': 'runtime/robotwin/runtime.tar.gz',
+                 'sha256': hashlib.sha256(b'fixture').hexdigest(), 'repo_id': 'owner/data',
+                 'repo_type': 'dataset', 'revision': 'pinned'}
+        with patch.dict('sys.modules', {'huggingface_hub': SimpleNamespace(hf_hub_download=download)}):
+            install({'runtime.tar.gz': entry}, self.root / 'out')
+        download.assert_called_once_with(repo_id='owner/data',
+            filename='runtime/robotwin/runtime.tar.gz', repo_type='dataset', revision='pinned')
+        self.assertEqual((self.root / 'out/runtime.tar.gz').read_bytes(), b'fixture')
 
     def test_query_relocation_preserves_order_indices_and_goal(self):
         (self.root / "episode.h5").write_bytes(b"fixture")

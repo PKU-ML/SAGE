@@ -1,0 +1,238 @@
+{
+  "robotwin_a2b_assets.tar.gz": {
+    "filename": "robotwin_a2b_assets.tar.gz",
+    "bytes": 11599404880,
+    "sha256": "8a2cf8c02642887c844d97db2547079b00b99baa8929626968977dff039db239",
+    "publication_status": "published",
+    "repo_id": "CLTRAY/SAGE-data",
+    "repo_type": "dataset",
+    "asset_files": 11272,
+    "unpacked_bytes": 12305452079,
+    "scope": "Exact simulator asset inventory in assets.json; no trajectories or checkpoints",
+    "notice": "runtime/robotwin/ASSETS_NOTICE.md",
+    "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+    "parts_manifest": "runtime/robotwin/robotwin_a2b_assets.tar.gz.parts.json",
+    "parts": [
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part000",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part000",
+        "bytes": 536870912,
+        "sha256": "eac47001d68e4f81499b86e6b54f0058cb955e5c4bc333e37f18be082dad3d09",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part001",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part001",
+        "bytes": 536870912,
+        "sha256": "2ee598d3d9dc4d1c0ff4d77b07aa7cca498fb59b00bae0f63f95a4e9f0df84dc",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part002",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part002",
+        "bytes": 536870912,
+        "sha256": "6908907392974ee1b73e7b4faf5da220ff4f7c68980abbfd3b4e3dd56a4ddb44",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part003",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part003",
+        "bytes": 536870912,
+        "sha256": "98aaaa4554b97511a5b1a36b112df84071af0aa849634129756c61ccd1297cbd",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part004",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part004",
+        "bytes": 536870912,
+        "sha256": "98f3b0f303ff7eefdcb765a02bc55a0b52a9a89b0252c3d08048ce46ae6b2f48",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part005",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part005",
+        "bytes": 536870912,
+        "sha256": "0f39895a9ed07167ed495a8c0b677c1a499b24419b2966cfab3f9038682a00b3",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part006",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part006",
+        "bytes": 536870912,
+        "sha256": "e502c0aae86f3604c6b3f32f29c4843993c341f9158ac649b31b14de52bfe9f2",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part007",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part007",
+        "bytes": 536870912,
+        "sha256": "c1a94fc51e022c80a55191ee50924850e7942d3ea03ad68fc569b0a63549a32c",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part008",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part008",
+        "bytes": 536870912,
+        "sha256": "f964129a1c26e9efca8764dc72ce4eb299a4669aa7a4cfdfb5981624868c22dc",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part009",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part009",
+        "bytes": 536870912,
+        "sha256": "1b00e29d51b995100334796b8f0874bef55fa6df37d2c592c38760f83304a664",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part010",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part010",
+        "bytes": 536870912,
+        "sha256": "df3c4b79f08791c38655392b886d5be82f308bc440a196d93e8b5575cdd59672",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part011",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part011",
+        "bytes": 536870912,
+        "sha256": "8d3fb58f8d22ca4c9ddd7460764affb949952b93a89253dd549858f3e38117e0",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part012",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part012",
+        "bytes": 536870912,
+        "sha256": "99e8e9dd95e720271ced3b048d1241e18886d5a39127f40bfa0210b971e7699d",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part013",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part013",
+        "bytes": 536870912,
+        "sha256": "0c3bcb7d10db55188631c0adfe99299401632377954f1b260b17cd85f58357c1",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part014",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part014",
+        "bytes": 536870912,
+        "sha256": "e9faec1d78aa306a0e6035da01fab81994df31bb511c33d318c547984effb6ea",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part015",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part015",
+        "bytes": 536870912,
+        "sha256": "67ddad788fed210f1cfb9664ed0656cd43b618d99a38bdeace50b3b241a4de84",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part016",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part016",
+        "bytes": 536870912,
+        "sha256": "3cd2be6185f837a23ed20d01a40eb9e27c623c3d30c984b94d5e6ccd6830b97b",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part017",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part017",
+        "bytes": 536870912,
+        "sha256": "c7f0166fc51e009701474a894fdbd90e75a3e436992af75500b265190153de41",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part018",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part018",
+        "bytes": 536870912,
+        "sha256": "318d33a495f4c0ff6511369cfd4440fd1f8198245eb04b6a5e3617a27a99f461",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part019",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part019",
+        "bytes": 536870912,
+        "sha256": "e0b49492af0e0cb7b76608a6106a134ea80fd47397ff6325e629747f25634dc8",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part020",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part020",
+        "bytes": 536870912,
+        "sha256": "549e41ac7c51c46253da49c4febb8a24ca78a3bcec6a8cf517c74d6e75159cf2",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_assets.tar.gz.part021",
+        "hf_filename": "runtime/robotwin/robotwin_a2b_assets.tar.gz.part021",
+        "bytes": 325115728,
+        "sha256": "0bb623c50bfdd075f443b5c082b755fff1eb81446d5f73e99180d6da6f932ce0",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "c95b57fc1293adc8d9364163c2db49ac264e8bd3",
+        "publication_status": "published"
+      }
+    ]
+  }
+}

@@ -36,23 +36,30 @@ affect seeded initialization, so do not prune them to save space.
 
 The A2B source snapshot is a small separate MIT-licensed archive. Its 12.31 GB
 simulator-asset inventory preserves the original texture sampling universe.
-Install the locally staged source and assets without changing filenames:
+Both archives are published on HF SAGE-data. Install into a fresh directory;
+the installer verifies archive and per-file SHA256 checksums:
 
 ```bash
-python -m sage.assets --registry runtime/robotwin/source_archive.json \
-  --source-dir "$WEIGHT_MIRROR" --out-dir downloads
-mkdir -p "$ROBOTWIN_ROOT"
-tar -xzf downloads/robotwin_a2b_runtime.tar.gz -C "$ROBOTWIN_ROOT"
-python -m sage.assets --registry runtime/robotwin/assets.json \
-  --source-dir "$ROBOTWIN_ASSET_MIRROR" --out-dir "$ROBOTWIN_ROOT"
+export ROBOTWIN_ROOT="$PWD/.runtime/robotwin-a2b"
+python -m sage.robotwin_runtime --out "$ROBOTWIN_ROOT"
+python -m sage.robotwin_runtime --out "$ROBOTWIN_ROOT" --verify-only
 ```
 
-The asset mirror is rooted above `assets/`. These are required scene/robot
+The asset archive uses independently downloadable 512 MiB parts; rerunning the
+installer reuses verified parts and assembles the original SHA-locked archive.
+Allow about 50 GB for downloaded parts, the assembled archive, extraction, and
+the Hugging Face cache. For offline installation, pass `--source-dir` containing
+the source archive and all asset parts listed in `asset_archive.json`.
+The existing `sage.assets --registry runtime/robotwin/assets.json` command also
+downloads and installs the asset archive when no local mirror is specified.
+These are required scene/robot
 assets, not additional training episodes. Output and cuRobo configuration paths
 are relocated. The source snapshot supports recorded-path evaluation without
 initializing unused cuRobo arm planners; native MPlib TOPP and gripper
 interpolation are unchanged. New arm-path generation still requires cuRobo.
 File-level provenance and the evaluation patch accompany `source_files.json`.
+The two small object-catalog files required at import time are bundled with the
+code and installed from `bootstrap_assets.json` without changing their bytes.
 
 SAPIEN 3.0.0b1 invokes `nvidia-smi` before checking explicit driver settings.
 If that probe hangs, an optional isolated overlay honors existing ICD settings
@@ -63,7 +70,7 @@ python scripts/prepare_sapien_overlay.py \
   --package-dir "$CONDA_PREFIX/lib/python3.10/site-packages/sapien" \
   --out .runtime/sapien-overlay
 export PYTHONPATH="$PWD/.runtime/sapien-overlay${PYTHONPATH:+:$PYTHONPATH}"
-export VK_ICD_FILENAMES=/etc/vulkan/icd.d/nvidia_icd.json
+export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json
 export __EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/10_nvidia.json
 ```
 

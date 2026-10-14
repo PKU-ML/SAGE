@@ -1,0 +1,16 @@
+{
+  "assets/objects/objaverse/list.json": {
+    "filename": "assets/objects/objaverse/list.json",
+    "bytes": 22531,
+    "sha256": "9c33b70f6e91788033d6cc3e1d58fe0ad09ced472679440083b31513f9c4bc6f",
+    "bundled_file": "runtime/robotwin/configs/objaverse_list.json",
+    "publication_status": "bundled"
+  },
+  "assets/objects/same.json": {
+    "filename": "assets/objects/same.json",
+    "bytes": 5865,
+    "sha256": "3bcaa1618ff9d0b50478dd22183f77ca3557d9d5406442b17e39337e68cb5edd",
+    "bundled_file": "runtime/robotwin/configs/same_objects.json",
+    "publication_status": "bundled"
+  }
+}

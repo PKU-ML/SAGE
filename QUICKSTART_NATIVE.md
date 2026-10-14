@@ -103,9 +103,15 @@ and replay requirements.
 
 Use the separate environment in `runtime/robotwin/environment.yml` and set
 `SUITE=robotwin_a2b`. Download models and evaluation data using step 2.
-Install the matching RoboTwin source and scene assets as described in
-[NATIVE.md](NATIVE.md#environment), and set `ROBOTWIN_ROOT` to their common root.
-These simulator dependencies are not included in the HF trajectory archives.
+Install the matching source and simulator assets from HF SAGE-data into a fresh
+runtime directory. These are separate from the trajectory archives:
+
+```bash
+export ROBOTWIN_ROOT="$PWD/.runtime/robotwin-a2b"
+python -m sage.robotwin_runtime --out "$ROBOTWIN_ROOT"
+```
+
+See [NATIVE.md](NATIVE.md#environment) for runtime checks and offline installation.
 
 ```bash
 python -m sage.reproduce_native --suite robotwin_a2b --methods sage \
