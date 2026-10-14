@@ -1,32 +1,371 @@
 {
   "libero_scene2_evaluation.tar": {
     "filename": "libero_scene2_evaluation.tar",
+    "repo_id": "CLTRAY/SAGE-data",
+    "repo_type": "dataset",
+    "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
     "bytes": 19337093120,
     "sha256": "334eefe83e8862d3d6d9634f4d8203b4151617c087735ed790df7479efbd0be4",
-    "publication_status": "local_only"
-  },
-  "libero_caddy_evaluation.tar": {
-    "filename": "libero_caddy_evaluation.tar",
-    "bytes": 8636231680,
-    "sha256": "0b5c7b6d0305d475220108cfee80e5d3e5bd3e9e8f890551b078c7b914d750fb",
-    "publication_status": "local_only"
-  },
-  "robotwin_a2b_evaluation.tar": {
-    "filename": "robotwin_a2b_evaluation.tar",
-    "bytes": 1363968000,
-    "sha256": "66beba1922469acc0250848e33a7ac31cac1f231a12982ce52aa91157d519cd7",
-    "publication_status": "local_only"
+    "publication_status": "published",
+    "hf_filename": "evaluation/libero_scene2_evaluation.tar"
   },
   "libero_scene2_train.tar": {
     "filename": "libero_scene2_train.tar",
+    "repo_id": "CLTRAY/SAGE-data",
+    "repo_type": "dataset",
+    "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
     "bytes": 78915215360,
     "sha256": "00d56620dcbd4b8e8c6ece0b0be7040f5d6f79a88187542b814ae7218079956a",
-    "publication_status": "local_only"
+    "publication_status": "published_in_parts",
+    "parts_manifest": "training/libero_scene2_train.tar.parts.json",
+    "parts_manifest_sha256": "b687a306ccf94ebc50a80944255e8bf07eb7a04307a6c5a3d78378bc3a043177",
+    "parts": [
+      {
+        "filename": "libero_scene2_train.tar.part001",
+        "hf_filename": "training/libero_scene2_train.tar.part001",
+        "bytes": 8589934592,
+        "sha256": "22f74be817b765859703698a963ac4260f1e71100453343ebe9ade455229cd8d",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "libero_scene2_train.tar.part002",
+        "hf_filename": "training/libero_scene2_train.tar.part002",
+        "bytes": 8589934592,
+        "sha256": "81298d229688bc6cd0fbdfd8aadae66182a4dfdb57274976e93b4e5668a7a7f8",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "libero_scene2_train.tar.part003",
+        "hf_filename": "training/libero_scene2_train.tar.part003",
+        "bytes": 8589934592,
+        "sha256": "dbc314697647bd16f0d89b4dfa963140728d37eda99adf85b9e5e0c230e03550",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "libero_scene2_train.tar.part004",
+        "hf_filename": "training/libero_scene2_train.tar.part004",
+        "bytes": 8589934592,
+        "sha256": "b0a1afd73a0c17f9a1e4c284298dad070f38af55af788f0d1e5cb6804d859f1e",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "libero_scene2_train.tar.part005",
+        "hf_filename": "training/libero_scene2_train.tar.part005",
+        "bytes": 8589934592,
+        "sha256": "f42973468a70ce05dce2e49b769f8b24f6b621c7b0fb112432a5aa1b06e7f741",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "libero_scene2_train.tar.part006",
+        "hf_filename": "training/libero_scene2_train.tar.part006",
+        "bytes": 8589934592,
+        "sha256": "e1e05af65768f0368b786d43b38bc5caf0c6cfd1278597d911e25b8301e07e0d",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "libero_scene2_train.tar.part007",
+        "hf_filename": "training/libero_scene2_train.tar.part007",
+        "bytes": 8589934592,
+        "sha256": "f816674d8da288cb177c8f3335b9489ca00d7cf3607423feb74bb7f1a838f0d0",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "libero_scene2_train.tar.part008",
+        "hf_filename": "training/libero_scene2_train.tar.part008",
+        "bytes": 8589934592,
+        "sha256": "a1e304ea6a1aa25f4561a1f1716179194557f437b83beb0bf9e29e2c19959385",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "libero_scene2_train.tar.part009",
+        "hf_filename": "training/libero_scene2_train.tar.part009",
+        "bytes": 8589934592,
+        "sha256": "03c7e4a6b9175000b71fe4e40668842c1dfdc6007d93753a45fcc8f0f50ed9ff",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "libero_scene2_train.tar.part010",
+        "hf_filename": "training/libero_scene2_train.tar.part010",
+        "bytes": 1605804032,
+        "sha256": "a705eb4404c5b2be54a602661186a65d5f7a6c114a05bf821248028afda3a496",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      }
+    ]
   },
   "libero_scene2_validation.tar": {
     "filename": "libero_scene2_validation.tar",
+    "repo_id": "CLTRAY/SAGE-data",
+    "repo_type": "dataset",
+    "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
     "bytes": 9881272320,
     "sha256": "b6fca0de3e04c485a960148685a074ae763c74e48f80bd268d4676a53300823b",
-    "publication_status": "local_only"
+    "publication_status": "published",
+    "hf_filename": "training/libero_scene2_validation.tar"
+  },
+  "libero_caddy_evaluation.tar": {
+    "filename": "libero_caddy_evaluation.tar",
+    "repo_id": "CLTRAY/SAGE-data",
+    "repo_type": "dataset",
+    "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+    "bytes": 8636231680,
+    "sha256": "0b5c7b6d0305d475220108cfee80e5d3e5bd3e9e8f890551b078c7b914d750fb",
+    "publication_status": "published",
+    "hf_filename": "evaluation/libero_caddy_evaluation.tar"
+  },
+  "libero_caddy_train.tar": {
+    "filename": "libero_caddy_train.tar",
+    "repo_id": "CLTRAY/SAGE-data",
+    "repo_type": "dataset",
+    "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+    "bytes": 68432035840,
+    "sha256": "2a1ee0b0305424637233aa6253d27da11f418ed47634c235dff6b3d4a90b4ea9",
+    "publication_status": "published_in_parts",
+    "parts_manifest": "training/libero_caddy_train.tar.parts.json",
+    "parts_manifest_sha256": "5a6c77ae27ce26ee11bc2545a35b55a0b8b080729ebe0f232b24743b061c7591",
+    "parts": [
+      {
+        "filename": "libero_caddy_train.tar.part001",
+        "hf_filename": "training/libero_caddy_train.tar.part001",
+        "bytes": 8589934592,
+        "sha256": "1db40552a3c4b5f307726f263b5e36ce3c5be279b778634341d68024aedc0900",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "libero_caddy_train.tar.part002",
+        "hf_filename": "training/libero_caddy_train.tar.part002",
+        "bytes": 8589934592,
+        "sha256": "0d0d5ba1a943338932a8ed3fc104358665edf93fce45a168ea2deaaa75e1a5f3",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "libero_caddy_train.tar.part003",
+        "hf_filename": "training/libero_caddy_train.tar.part003",
+        "bytes": 8589934592,
+        "sha256": "e341d68ed0f9da0aa7427f7f28af08406da67cccca833197c011d2290c1691b3",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "libero_caddy_train.tar.part004",
+        "hf_filename": "training/libero_caddy_train.tar.part004",
+        "bytes": 8589934592,
+        "sha256": "367139eb8a5a878b8054742a6c797124a1c3703e2156da6f4873d6b8727cfb21",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "libero_caddy_train.tar.part005",
+        "hf_filename": "training/libero_caddy_train.tar.part005",
+        "bytes": 8589934592,
+        "sha256": "44968bea6b8e8dc25f913e056fe665b4ee6d9cab6eaefac17a8f5fdcaa0344df",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "libero_caddy_train.tar.part006",
+        "hf_filename": "training/libero_caddy_train.tar.part006",
+        "bytes": 8589934592,
+        "sha256": "6fb7a0ba3f241933f00dcaf06f97682e9c6283a15d8b71454f324f26a0915775",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "libero_caddy_train.tar.part007",
+        "hf_filename": "training/libero_caddy_train.tar.part007",
+        "bytes": 8589934592,
+        "sha256": "ffea1906504b2b199b92a292c6c388c7ccdd63ebf3e3025edfa33b98d5454af0",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "libero_caddy_train.tar.part008",
+        "hf_filename": "training/libero_caddy_train.tar.part008",
+        "bytes": 8302493696,
+        "sha256": "f8bdd88ef44ef54d2c252c079b2998a684473740c1cfc4568d751e391d728627",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      }
+    ]
+  },
+  "libero_caddy_validation.tar": {
+    "filename": "libero_caddy_validation.tar",
+    "repo_id": "CLTRAY/SAGE-data",
+    "repo_type": "dataset",
+    "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+    "bytes": 8561305600,
+    "sha256": "3bafb6608075fd96022659b4a48d7d1c9e4467175bf90dcf0c75e66c7cd691c2",
+    "publication_status": "published",
+    "hf_filename": "training/libero_caddy_validation.tar"
+  },
+  "robotwin_a2b_evaluation.tar": {
+    "filename": "robotwin_a2b_evaluation.tar",
+    "repo_id": "CLTRAY/SAGE-data",
+    "repo_type": "dataset",
+    "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+    "bytes": 1363968000,
+    "sha256": "66beba1922469acc0250848e33a7ac31cac1f231a12982ce52aa91157d519cd7",
+    "publication_status": "published",
+    "hf_filename": "evaluation/robotwin_a2b_evaluation.tar"
+  },
+  "robotwin_a2b_train.tar": {
+    "filename": "robotwin_a2b_train.tar",
+    "repo_id": "CLTRAY/SAGE-data",
+    "repo_type": "dataset",
+    "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+    "bytes": 70580776960,
+    "sha256": "430a776b118f94bc21dfa1ed9715df6feaf7c1e1b9c5d9dec7d5561a6c03afe3",
+    "publication_status": "published_in_parts",
+    "parts_manifest": "training/robotwin_a2b_train.tar.parts.json",
+    "parts_manifest_sha256": "39c2081a53bbd48dcfea8597a463a440748837d9542f7a9fa3f2fb151c46f570",
+    "parts": [
+      {
+        "filename": "robotwin_a2b_train.tar.part001",
+        "hf_filename": "training/robotwin_a2b_train.tar.part001",
+        "bytes": 8589934592,
+        "sha256": "06b67eba5b0006a9d8d17844a5c87e84d3f2bebff32c8bb6dc9f600b411f5877",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_train.tar.part002",
+        "hf_filename": "training/robotwin_a2b_train.tar.part002",
+        "bytes": 8589934592,
+        "sha256": "4d9983513d438d19bafdda26da1aed6d5daf257c4679876198e143d208b6540f",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_train.tar.part003",
+        "hf_filename": "training/robotwin_a2b_train.tar.part003",
+        "bytes": 8589934592,
+        "sha256": "4f7487c324f8f033ba6434ad8c3f36806a77581ae40fe388a14e84048fb2f41d",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_train.tar.part004",
+        "hf_filename": "training/robotwin_a2b_train.tar.part004",
+        "bytes": 8589934592,
+        "sha256": "620f4f895949122792d16177228a7a88880653752d9d5c6d3764ba9cd86a39e7",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_train.tar.part005",
+        "hf_filename": "training/robotwin_a2b_train.tar.part005",
+        "bytes": 8589934592,
+        "sha256": "6e595e506d8c2221f329eabd71ed06670bc1411ed752a8842dccd154a146e94c",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_train.tar.part006",
+        "hf_filename": "training/robotwin_a2b_train.tar.part006",
+        "bytes": 8589934592,
+        "sha256": "4d3bd7edccf2d70f260cee87e5df5d6113e3060510b3307683329018808244bf",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_train.tar.part007",
+        "hf_filename": "training/robotwin_a2b_train.tar.part007",
+        "bytes": 8589934592,
+        "sha256": "12fade20790eb2f6f50a180a5e714d42c3407630a984f659012a7576272ff427",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_train.tar.part008",
+        "hf_filename": "training/robotwin_a2b_train.tar.part008",
+        "bytes": 8589934592,
+        "sha256": "8aa0ee48fcd94a104b3fe3fc8aa18760a805c55f52208bb088ed5774b1482876",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      },
+      {
+        "filename": "robotwin_a2b_train.tar.part009",
+        "hf_filename": "training/robotwin_a2b_train.tar.part009",
+        "bytes": 1861300224,
+        "sha256": "81f6386a42b27c8e5f5fa91c0dc354bc6ec599cb1f8d74a1cc7c4abfae99990f",
+        "repo_id": "CLTRAY/SAGE-data",
+        "repo_type": "dataset",
+        "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+        "publication_status": "published"
+      }
+    ]
+  },
+  "robotwin_a2b_validation.tar": {
+    "filename": "robotwin_a2b_validation.tar",
+    "repo_id": "CLTRAY/SAGE-data",
+    "repo_type": "dataset",
+    "revision": "7e87e5b0fee414a70945a310d08e18d2f92cffba",
+    "bytes": 8953507840,
+    "sha256": "fa66856b89eb4a9de27cae596293998d2bf5c593cfd64d15e7b377ddb089da80",
+    "publication_status": "published",
+    "hf_filename": "training/robotwin_a2b_validation.tar"
   }
 }
