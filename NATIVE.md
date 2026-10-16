@@ -3,6 +3,7 @@
 Run from the repository root on Linux with an NVIDIA GPU. Model weights,
 datasets and simulator assets are installed separately from the source code.
 Start with the [download and reproduction guide](QUICKSTART_NATIVE.md).
+For A2B collection and model training, see [ROBOTWIN_TRAINING.md](ROBOTWIN_TRAINING.md).
 Model bundles are on [HF SAGE](https://huggingface.co/CLTRAY/SAGE), and trajectory
 archives are on [HF SAGE-data](https://huggingface.co/datasets/CLTRAY/SAGE-data).
 Simulator source and scene assets are installed separately as described below.
@@ -275,6 +276,10 @@ SAGE-data. Both LIBERO component CLIs have passed a one-batch
 training/validation/checkpoint handoff test; this is not a full retraining result.
 
 ## RoboTwin Component Training
+
+For collection and end-to-end A2/B2 world-model training, use the
+[complete A2B recipe](ROBOTWIN_TRAINING.md). The commands below train components
+on an existing matched world model.
 
 Use the ordered stride-1 training and validation manifests and the matching
 three-view world model. These entry points preserve every raw frame, terminal

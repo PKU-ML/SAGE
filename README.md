@@ -58,6 +58,8 @@ These recipes train the subgoal generator and action priors on a frozen world
 model. Architectures and sampling settings are in `configs/training.json`;
 additional recipes are documented in [Protocols](REPRODUCING.md#training)
 and [Native Suites](NATIVE.md).
+RoboTwin A2B collection and end-to-end world-model training are described in
+[the A2B recipe](ROBOTWIN_TRAINING.md).
 
 ## Citation
 

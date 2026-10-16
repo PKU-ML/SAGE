@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/NVlabs/curobo.git",
+  "revision": "0a50de1ba72db304195d59d9d0b1ed269696047f",
+  "tag": "v0.7.7",
+  "source_files": {
+    "src/curobo/wrap/reacher/motion_gen.py": "348ee2fa858b1d651a70fa2b2b5a5d4e240ea724b7817d7769473c3f7a7e46e8",
+    "src/curobo/types/math.py": "6865d911444ddc5ee8e10e86e12eebf757e36793ed07cf6c5d733d1e0a1ab9a4",
+    "src/curobo/curobolib/cpp/kinematics_fused_kernel.cu": "b8da74bdd6523114c84c91115c297a23d53368b836175999dd831b4e6fe880c2"
+  }
+}

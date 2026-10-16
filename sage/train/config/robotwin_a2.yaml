@@ -1,0 +1,125 @@
+output_model_name: robotwin_a2
+subdir: robotwin_a2
+init_checkpoint: null
+num_workers: 0
+train_split: 0.9
+seed: 42
+img_size: 224
+patch_size: 14
+encoder_scale: small
+embed_dim: 384
+encoder_resnet9: false
+train_value_function: false
+projector_loss_weight: 0.001
+dump_object: true
+trainer:
+  max_epochs: 2
+  devices:
+  - 0
+  - 1
+  - 2
+  - 3
+  accelerator: gpu
+  precision: bf16
+  gradient_clip_val: 1.0
+  strategy: ddp_find_unused_parameters_true
+  enable_checkpointing: false
+loader:
+  batch_size: 24
+  num_workers: 4
+  drop_last: true
+  persistent_workers: true
+  prefetch_factor: 2
+  pin_memory: true
+  shuffle: true
+optimizer:
+  type: AdamW
+  lr: 5.0e-05
+  weight_decay: 0.001
+wm:
+  history_size: 3
+  num_preds: 1
+model:
+  _target_: stable_worldmodel.wm.lewm.MultiViewLeWM
+  encoder:
+    _target_: stable_pretraining.backbone.utils.vit_hf
+    size: ${encoder_scale}
+    patch_size: ${patch_size}
+    image_size: ${img_size}
+    pretrained: false
+    use_mask_token: false
+  predictor:
+    _target_: stable_worldmodel.wm.lewm.module.Predictor
+    num_frames: ${wm.history_size}
+    input_dim: 1152
+    hidden_dim: 608
+    output_dim: 1152
+    depth: 8
+    heads: 10
+    mlp_dim: 2432
+    dim_head: 64
+    dropout: 0.1
+    emb_dropout: 0.0
+  action_encoder:
+    _target_: stable_worldmodel.wm.lewm.module.Embedder
+    input_dim: 14
+    emb_dim: 1152
+  projector:
+    _target_: stable_worldmodel.wm.lewm.module.MLP
+    input_dim: 384
+    output_dim: 384
+    hidden_dim: 2048
+    norm_fn:
+      _target_: torch.nn.BatchNorm1d
+      _partial_: true
+  pred_proj:
+    _target_: stable_worldmodel.wm.lewm.module.MLP
+    input_dim: 1152
+    output_dim: 1152
+    hidden_dim: 2048
+    norm_fn:
+      _target_: torch.nn.BatchNorm1d
+      _partial_: true
+  view_keys:
+  - pixels
+  - left_wrist_pixels
+  - right_wrist_pixels
+loss:
+  sigreg:
+    weight: 0.09
+    kwargs:
+      knots: 17
+      num_proj: 1024
+wandb:
+  enabled: false
+data:
+  tail_aligned_windows: true
+  dataset:
+    name: ${oc.env:ROBOTWIN_STRIDE1_LEWM_DATA}/train.json
+    format: robotwin_compressed
+    num_steps: 4
+    frameskip: 1
+    keys_to_load:
+    - pixels
+    - left_wrist_pixels
+    - right_wrist_pixels
+    - action
+    - proprio
+    keys_to_cache:
+    - action
+    - proprio
+  val_dataset:
+    name: ${oc.env:ROBOTWIN_STRIDE1_LEWM_DATA}/validation.json
+    format: robotwin_compressed
+    num_steps: 4
+    frameskip: 1
+    keys_to_load:
+    - pixels
+    - left_wrist_pixels
+    - right_wrist_pixels
+    - action
+    - proprio
+    keys_to_cache:
+    - action
+    - proprio
+checkpoint_interval: 1

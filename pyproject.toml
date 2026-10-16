@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.10,<3.12"
 license = {text = "MIT"}
 dependencies = [
-  "torch>=2.5,<3",
+  "torch>=2.4,<3",
   "numpy>=1.26,<3",
   "h5py>=3.16,<3.17",
   "einops>=0.8,<0.9",
@@ -53,6 +53,9 @@ core = [
 
 [tool.setuptools.packages.find]
 include = ["sage*", "stable_worldmodel*"]
+
+[tool.setuptools.package-data]
+"sage.train" = ["config/*.yaml"]
 
 [tool.ruff]
 line-length = 88

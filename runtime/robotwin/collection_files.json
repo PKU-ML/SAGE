@@ -1,0 +1,450 @@
+{
+  "description/objects_description/047_mouse/base0.json": {
+    "filename": "description/objects_description/047_mouse/base0.json",
+    "bytes": 634,
+    "sha256": "538e99ee65cfa5989a0ec1ca7a2d54e7133d6264a4816201407b0650ae551781",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/047_mouse/base0.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/047_mouse/base1.json": {
+    "filename": "description/objects_description/047_mouse/base1.json",
+    "bytes": 590,
+    "sha256": "40a8746a74a5aef5d3e2aa07c48d89fa2c8122585f1fc7cb02a17095a83d4e50",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/047_mouse/base1.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/047_mouse/base2.json": {
+    "filename": "description/objects_description/047_mouse/base2.json",
+    "bytes": 725,
+    "sha256": "9761ed8b8c2372e1fd28d87299f2f91da7f9c78f539219a9923125747ed20745",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/047_mouse/base2.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/048_stapler/base0.json": {
+    "filename": "description/objects_description/048_stapler/base0.json",
+    "bytes": 705,
+    "sha256": "f2b4afc362667e173eb035ffa33e493982745a967a28defddc6efcca443dcd6a",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/048_stapler/base0.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/048_stapler/base1.json": {
+    "filename": "description/objects_description/048_stapler/base1.json",
+    "bytes": 670,
+    "sha256": "2f7cec14343cb506b5a41c92af1a3de4c2b731d93b46878c301b08284452f2d9",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/048_stapler/base1.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/048_stapler/base2.json": {
+    "filename": "description/objects_description/048_stapler/base2.json",
+    "bytes": 651,
+    "sha256": "c7bf28ab91c034f655d3959f027c2e5835fe4ac7c8882ef02c11fa2965d75952",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/048_stapler/base2.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/048_stapler/base3.json": {
+    "filename": "description/objects_description/048_stapler/base3.json",
+    "bytes": 622,
+    "sha256": "e408234f817dd227d6cbbdbf30c1596d2b9fa030fdf0da67c409d4fb7ed271c8",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/048_stapler/base3.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/048_stapler/base4.json": {
+    "filename": "description/objects_description/048_stapler/base4.json",
+    "bytes": 665,
+    "sha256": "87977541c35f2ec52e6101e9cf2f142902f701e6d70c03eb77dc09c69c681fd4",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/048_stapler/base4.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/048_stapler/base5.json": {
+    "filename": "description/objects_description/048_stapler/base5.json",
+    "bytes": 645,
+    "sha256": "9112de96398164b8ada06dd57d27f83f674e5891c5da2abe93a6757eceacf6a7",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/048_stapler/base5.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/048_stapler/base6.json": {
+    "filename": "description/objects_description/048_stapler/base6.json",
+    "bytes": 704,
+    "sha256": "aecc597aa26e1e52a08ea2c79691d8bfa030335658ea9f0e3e05ea01f32af6ab",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/048_stapler/base6.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/050_bell/base0.json": {
+    "filename": "description/objects_description/050_bell/base0.json",
+    "bytes": 639,
+    "sha256": "543240a1b5b88f5a2ec5975dcbfd865c2eb9b8eda7546775ef3069359225b09f",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/050_bell/base0.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/050_bell/base1.json": {
+    "filename": "description/objects_description/050_bell/base1.json",
+    "bytes": 565,
+    "sha256": "6c4efb216f006a833724dfe4a760c914f305921c850aae457ac48575754f8ea2",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/050_bell/base1.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/057_toycar/base0.json": {
+    "filename": "description/objects_description/057_toycar/base0.json",
+    "bytes": 587,
+    "sha256": "6e979b4ee970ee62b67dd2aa806d36e8c6d5d159f12efaf046b18357398d4a3f",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/057_toycar/base0.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/057_toycar/base1.json": {
+    "filename": "description/objects_description/057_toycar/base1.json",
+    "bytes": 598,
+    "sha256": "7a221b257e025d8fcd888baeadc2d6177913384c44ffca49b71d045d26367152",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/057_toycar/base1.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/057_toycar/base2.json": {
+    "filename": "description/objects_description/057_toycar/base2.json",
+    "bytes": 712,
+    "sha256": "bc40ac2f5eaaf24550efa1c3d4673d95de1ab612962a525e69e54a1aeeef948e",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/057_toycar/base2.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/057_toycar/base3.json": {
+    "filename": "description/objects_description/057_toycar/base3.json",
+    "bytes": 584,
+    "sha256": "41d1a4973a532f3c1d0ea50db795c1c8028cbb7bd11819b75cf0fe5cbdb33ee0",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/057_toycar/base3.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/057_toycar/base4.json": {
+    "filename": "description/objects_description/057_toycar/base4.json",
+    "bytes": 685,
+    "sha256": "cb0643844dbf3b22c67c2736b3eb9070655c3efa9a4b6395eb912c2160d3f52f",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/057_toycar/base4.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/057_toycar/base5.json": {
+    "filename": "description/objects_description/057_toycar/base5.json",
+    "bytes": 619,
+    "sha256": "5e55260417231255c038e1b4c2cea7bb77fc173602e30435cc865bc5e0871ba5",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/057_toycar/base5.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/073_rubikscube/base0.json": {
+    "filename": "description/objects_description/073_rubikscube/base0.json",
+    "bytes": 673,
+    "sha256": "6466e072b5fc6290b710656db19b62e41588df882e9bec6498805e7666c9611d",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/073_rubikscube/base0.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/073_rubikscube/base1.json": {
+    "filename": "description/objects_description/073_rubikscube/base1.json",
+    "bytes": 794,
+    "sha256": "db1c1c5ac379e5f1d0c71433424ec52ae7299e7a1b23b582e1795602cb62dd43",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/073_rubikscube/base1.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/073_rubikscube/base2.json": {
+    "filename": "description/objects_description/073_rubikscube/base2.json",
+    "bytes": 642,
+    "sha256": "1cee7dc418605a067259f739c56f92154c6509980103fcf88d68d5aab5cbb474",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/073_rubikscube/base2.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/075_bread/base0.json": {
+    "filename": "description/objects_description/075_bread/base0.json",
+    "bytes": 612,
+    "sha256": "8d5a915c9b693c831a3fd2d236816ab497434745f6067b50f88c52418ac3034f",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/075_bread/base0.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/075_bread/base1.json": {
+    "filename": "description/objects_description/075_bread/base1.json",
+    "bytes": 577,
+    "sha256": "8118b57d532e74d88a41613a084dfd66e3b13908b723f641356c6fab0b4bd1a7",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/075_bread/base1.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/075_bread/base2.json": {
+    "filename": "description/objects_description/075_bread/base2.json",
+    "bytes": 662,
+    "sha256": "a8a939f1f7b5632e40466eb33048d79ecc5ed3823a46fdde0d36ef8d4dc1233c",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/075_bread/base2.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/075_bread/base3.json": {
+    "filename": "description/objects_description/075_bread/base3.json",
+    "bytes": 589,
+    "sha256": "8ee59771df0c7b0a0ad588f65b7cbb7065d4683ec615bccc6fc860c9c36cb60f",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/075_bread/base3.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/075_bread/base4.json": {
+    "filename": "description/objects_description/075_bread/base4.json",
+    "bytes": 586,
+    "sha256": "fe3fb115877c28da5151603631b2ef7a367304d281409e3ffaa1c4d5aa17a537",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/075_bread/base4.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/075_bread/base5.json": {
+    "filename": "description/objects_description/075_bread/base5.json",
+    "bytes": 607,
+    "sha256": "761e33f9e963a779cc6127e1406fe237ffef63e726bfde1169ba6b7f5f44c8fa",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/075_bread/base5.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/075_bread/base6.json": {
+    "filename": "description/objects_description/075_bread/base6.json",
+    "bytes": 615,
+    "sha256": "f67d4b197180fc646080d565e5298ce106c0054c3896a064d4077d0dbe80a8e2",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/075_bread/base6.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/077_phone/base0.json": {
+    "filename": "description/objects_description/077_phone/base0.json",
+    "bytes": 567,
+    "sha256": "25c28db8ad9b1c29e0c49df6f99e41950c2c74b20c62045093b0cc44b8e7cde8",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/077_phone/base0.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/077_phone/base1.json": {
+    "filename": "description/objects_description/077_phone/base1.json",
+    "bytes": 640,
+    "sha256": "3f15f58aee710bb9b892c6d4c2bb8b67086141dddfcf17eaf1d4745ef590c0e5",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/077_phone/base1.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/077_phone/base2.json": {
+    "filename": "description/objects_description/077_phone/base2.json",
+    "bytes": 695,
+    "sha256": "7ad4e32d38663c6c7cf8ec2d4ecd0989fb980d1ec845f1c62eed98c811fbff51",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/077_phone/base2.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/077_phone/base3.json": {
+    "filename": "description/objects_description/077_phone/base3.json",
+    "bytes": 671,
+    "sha256": "77a34c1610fef659abcc1922da132537e61b35cf0f93fb3a4f84484f91bd9841",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/077_phone/base3.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/077_phone/base4.json": {
+    "filename": "description/objects_description/077_phone/base4.json",
+    "bytes": 624,
+    "sha256": "0bd82bf4bd03d01660d56f7ed6e28dcbfe7c938c7bf205d76f3fe32247197f9f",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/077_phone/base4.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/081_playingcards/base0.json": {
+    "filename": "description/objects_description/081_playingcards/base0.json",
+    "bytes": 710,
+    "sha256": "4b9b0e223c781787328b20da35688a76c2c46ac2cf38caf3aadd126205c2b1d5",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/081_playingcards/base0.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/081_playingcards/base1.json": {
+    "filename": "description/objects_description/081_playingcards/base1.json",
+    "bytes": 690,
+    "sha256": "90ddb05817ea1d711e11ea5f3af6a4e15b1137fc94fbb2b103502878fa12d589",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/081_playingcards/base1.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/081_playingcards/base2.json": {
+    "filename": "description/objects_description/081_playingcards/base2.json",
+    "bytes": 683,
+    "sha256": "0646c43c794ee1f546f7b19c892c6dc26b1252f31ba6211aa1cae4d4c6454d75",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/081_playingcards/base2.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/086_woodenblock/base0.json": {
+    "filename": "description/objects_description/086_woodenblock/base0.json",
+    "bytes": 620,
+    "sha256": "f3a6d86c30ed1e535a5a7229eb8848d6b897a33c3f5e3e870afe13a99b12301e",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/086_woodenblock/base0.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/086_woodenblock/base1.json": {
+    "filename": "description/objects_description/086_woodenblock/base1.json",
+    "bytes": 653,
+    "sha256": "b533fd0c989392492f2930e1059f68edefe7b56f71210ce5c6134d47765433e5",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/086_woodenblock/base1.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/086_woodenblock/base2.json": {
+    "filename": "description/objects_description/086_woodenblock/base2.json",
+    "bytes": 916,
+    "sha256": "b415e0c315bc1cc55615120814eb4ed07faf3d46098262f53a8479c006f09186",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/086_woodenblock/base2.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/086_woodenblock/base3.json": {
+    "filename": "description/objects_description/086_woodenblock/base3.json",
+    "bytes": 752,
+    "sha256": "19a3f8b9f6bd91c6732b99e80de946efff88e3cb25e0e84f1cdd1b38c0462815",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/086_woodenblock/base3.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/086_woodenblock/base4.json": {
+    "filename": "description/objects_description/086_woodenblock/base4.json",
+    "bytes": 728,
+    "sha256": "cea693733a62368d933107c7dd9ce479eb2742f2d0a852fd182daffc91ae0e24",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/086_woodenblock/base4.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/107_soap/base0.json": {
+    "filename": "description/objects_description/107_soap/base0.json",
+    "bytes": 613,
+    "sha256": "bf2e3a18c7b64fc90bf5c3772aac8b7ceff2f30637144bf32214e691b8ebb923",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/107_soap/base0.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/107_soap/base1.json": {
+    "filename": "description/objects_description/107_soap/base1.json",
+    "bytes": 652,
+    "sha256": "ca7bc544a83947de3a623e536aa1d589e5eb3f2666c39d9bf51d0696e7565374",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/107_soap/base1.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/107_soap/base2.json": {
+    "filename": "description/objects_description/107_soap/base2.json",
+    "bytes": 619,
+    "sha256": "2ec95dc219231c4e20a33fa2637dfa3c1b9cc2d5ebd027a4aad275ae4cefb193",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/107_soap/base2.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/107_soap/base3.json": {
+    "filename": "description/objects_description/107_soap/base3.json",
+    "bytes": 595,
+    "sha256": "a42643c8576898fc15e9d3e4049248561da035960a8fdbe2b5d8bca646c61ed7",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/107_soap/base3.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/112_tea-box/base0.json": {
+    "filename": "description/objects_description/112_tea-box/base0.json",
+    "bytes": 628,
+    "sha256": "218b5eb442492938fae78b4827e6c47bcdd1c644e25f8e3d645258ea18116293",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/112_tea-box/base0.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/112_tea-box/base1.json": {
+    "filename": "description/objects_description/112_tea-box/base1.json",
+    "bytes": 618,
+    "sha256": "a7a58cf718cd2e75e65c6f96317f711f9f970edaf202177b4093e98446bfb2b9",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/112_tea-box/base1.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/112_tea-box/base2.json": {
+    "filename": "description/objects_description/112_tea-box/base2.json",
+    "bytes": 574,
+    "sha256": "a3267ba3847420f46a6b07c170510460f54bb70a0b63da2afbbcca0219d9e3a8",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/112_tea-box/base2.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/112_tea-box/base3.json": {
+    "filename": "description/objects_description/112_tea-box/base3.json",
+    "bytes": 578,
+    "sha256": "c4752cc2c5a52282556da712e44b7a5675c551e4f9ca198ef32e2afb7ddf8a21",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/112_tea-box/base3.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/112_tea-box/base4.json": {
+    "filename": "description/objects_description/112_tea-box/base4.json",
+    "bytes": 559,
+    "sha256": "6fe1e70ab754dd366db1c779c3b9631da6d55ee68a872ab387a92f555adf55eb",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/112_tea-box/base4.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/112_tea-box/base5.json": {
+    "filename": "description/objects_description/112_tea-box/base5.json",
+    "bytes": 694,
+    "sha256": "8b90dad2fdf2e9ac673d97f4d017dcb9e3d3ebcfd30e723e13243ea0908c1b24",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/112_tea-box/base5.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/113_coffee-box/base0.json": {
+    "filename": "description/objects_description/113_coffee-box/base0.json",
+    "bytes": 747,
+    "sha256": "caadb006ba4d8a3600df730177b540b8348dc6442c5c8d6bbfd0152080a9f436",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/113_coffee-box/base0.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/113_coffee-box/base1.json": {
+    "filename": "description/objects_description/113_coffee-box/base1.json",
+    "bytes": 715,
+    "sha256": "e8a510c832cae01818155d43345baebe0925ff3ed34b0dcfb1cfc26f605585d8",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/113_coffee-box/base1.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/113_coffee-box/base2.json": {
+    "filename": "description/objects_description/113_coffee-box/base2.json",
+    "bytes": 662,
+    "sha256": "cceb348cb1100a315f7dc7e3880cc07141a38aba35648e60d8af444fefd383b4",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/113_coffee-box/base2.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/113_coffee-box/base3.json": {
+    "filename": "description/objects_description/113_coffee-box/base3.json",
+    "bytes": 634,
+    "sha256": "37e68275c46af2623db0092b8d0d252edb269dd561df7980858a99c9895ef315",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/113_coffee-box/base3.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/113_coffee-box/base4.json": {
+    "filename": "description/objects_description/113_coffee-box/base4.json",
+    "bytes": 704,
+    "sha256": "ac253f81f821f3158b25d4d33141fe0055ceb46272f9f9fb4ec7f2b1fdcde1fe",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/113_coffee-box/base4.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/113_coffee-box/base5.json": {
+    "filename": "description/objects_description/113_coffee-box/base5.json",
+    "bytes": 660,
+    "sha256": "b04bc48440563584c8ccccb3876c17472fc7b1791fb2eadbb3290cc119d6d41b",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/113_coffee-box/base5.json",
+    "publication_status": "bundled"
+  },
+  "description/objects_description/113_coffee-box/base6.json": {
+    "filename": "description/objects_description/113_coffee-box/base6.json",
+    "bytes": 647,
+    "sha256": "fcac2325195146128ebde139cba9012a1cb4138750c1070b5fcf7448edf15ec8",
+    "bundled_file": "runtime/robotwin/collection/description/objects_description/113_coffee-box/base6.json",
+    "publication_status": "bundled"
+  },
+  "description/task_instruction/place_a2b_left.json": {
+    "filename": "description/task_instruction/place_a2b_left.json",
+    "bytes": 2787,
+    "sha256": "4b8a3c065fc3b37412efb393e54149f7ac35f24a275b87657383a2af727a34e9",
+    "bundled_file": "runtime/robotwin/collection/description/task_instruction/place_a2b_left.json",
+    "publication_status": "bundled"
+  },
+  "description/utils/generate_episode_instructions.py": {
+    "filename": "description/utils/generate_episode_instructions.py",
+    "bytes": 11935,
+    "sha256": "0d38cf0f8dd91ca6a1db916284f5cd9a1d8bd2f8f3d2d0c719941ce5e60ebcfc",
+    "bundled_file": "runtime/robotwin/collection/description/utils/generate_episode_instructions.py",
+    "publication_status": "bundled"
+  },
+  "LICENSE": {
+    "filename": "LICENSE",
+    "bytes": 1081,
+    "sha256": "c695d421718e54e6f3a60858f0c601125c3ecc60c199332c15947360561e2a9f",
+    "bundled_file": "runtime/robotwin/collection/LICENSE",
+    "publication_status": "bundled"
+  },
+  "scripts/collect_data.py": {
+    "filename": "scripts/collect_data.py",
+    "bytes": 11926,
+    "sha256": "0ab4ac8028f62cf1dd5edc1a998ba099f80f12e91724ff707b3390930343e1a8",
+    "bundled_file": "runtime/robotwin/collection/scripts/collect_data.py",
+    "publication_status": "bundled"
+  },
+  "scripts/collect_data_fast_lewm.py": {
+    "filename": "scripts/collect_data_fast_lewm.py",
+    "bytes": 8643,
+    "sha256": "2697ffe72ff3a21f8523b8c0d0368ec9cfe9ab4895258cb1e91944c4f4556814",
+    "bundled_file": "runtime/robotwin/collection/scripts/collect_data_fast_lewm.py",
+    "publication_status": "bundled"
+  },
+  "scripts/test_render.py": {
+    "filename": "scripts/test_render.py",
+    "bytes": 1757,
+    "sha256": "a73855ec8003da23f305726bb40896424eddaa702a81ae95533054e7fe2c2ae6",
+    "bundled_file": "runtime/robotwin/collection/scripts/test_render.py",
+    "publication_status": "bundled"
+  }
+}
